@@ -127,8 +127,8 @@ function Index() {
 
     <section className="offers" id="ofertas"><div className="container"><Heading eyebrow="ESCOLHA SEU ACESSO">COMECE HOJE MESMO</Heading>
       <div className="plan-grid">
-        <Plan title="PLANO BÁSICO" image={planBasic.url} old="R$ 67,00" price="17,90" href="https://pay.hotmart.com/K106157682V?checkoutMode=10" items={["Livro 100 Cafés da Manhã","Acesso imediato"]}/>
-        <Plan featured title="PLANO PREMIUM" image={planPremium.url} old="R$ 147,00" price="27,90" href="https://pay.hotmart.com/U106157894R?checkoutMode=10" items={["Livro 100 Cafés da Manhã","Todos os 5 Bônus","Acesso vitalício","Atualizações"]}/>
+        <Plan title="PLANO BÁSICO" image={planBasic.url} old="R$ 67,00" price="17,90" href="https://pay.cakto.com.br/gijwbh7_1122552" items={["Livro 100 Cafés da Manhã","Acesso imediato"]}/>
+        <Plan featured title="PLANO PREMIUM" image={planPremium.url} old="R$ 147,00" price="27,90" href="https://pay.cakto.com.br/x76fyjp_1122582" items={["Livro 100 Cafés da Manhã","Todos os 5 Bônus","Acesso vitalício","Atualizações"]}/>
       </div>
     </div></section>
 
