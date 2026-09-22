@@ -1,145 +1,699 @@
 import { createFileRoute } from "@tanstack/react-router";
-import hero from "../assets/hero-100-transparent-0hmj8zo-.png.asset.json";
-import planBasic from "../assets/plano-basico-100.png.asset.json";
-import planPremium from "../assets/plano-premium-100.png.asset.json";
-import recipe1 from "../assets/recipe-1.webp.asset.json";
-import recipe2 from "../assets/recipe-2.webp.asset.json";
-import recipe3 from "../assets/recipe-3.webp.asset.json";
-import recipe4 from "../assets/recipe-4.webp.asset.json";
-import recipe5 from "../assets/recipe-5.webp.asset.json";
-import recipe6 from "../assets/recipe-6.webp.asset.json";
-import recipe7 from "../assets/recipe-7.webp.asset.json";
-import recipe8 from "../assets/recipe-8.webp.asset.json";
-import recipe9 from "../assets/recipe-9.webp.asset.json";
-import recipe10 from "../assets/recipe-10.webp.asset.json";
-import recipe11 from "../assets/recipe-11.webp.asset.json";
-import recipe12 from "../assets/recipe-12.webp.asset.json";
-import bonus1 from "../assets/bonus-1.webp.asset.json";
-import bonus2 from "../assets/bonus-2.webp.asset.json";
-import bonus3 from "../assets/bonus-3.webp.asset.json";
-import bonus4 from "../assets/bonus-4.webp.asset.json";
-import bonus5 from "../assets/bonus-5.webp.asset.json";
-import avatar1 from "../assets/avatar-1.jpg.asset.json";
-import avatar2 from "../assets/avatar-2.jpg.asset.json";
-import avatar3 from "../assets/avatar-3.jpg.asset.json";
-import avatar4 from "../assets/avatar-4.jpg.asset.json";
-import avatar5 from "../assets/avatar-5.jpg.asset.json";
-import avatar6 from "../assets/avatar-6.jpg.asset.json";
+import { useEffect, useState, type ReactNode } from "react";
+import { Check, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
+const heroProduct = "https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/src/assets/projetos-serralheria-transparente.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "100 Cafés da Manhã Saudáveis para Substituir o Pão" },
-      { name: "description", content: "100 opções práticas, rápidas e saudáveis para variar seu café da manhã sem depender do pão." },
-      { property: "og:title", content: "100 Cafés da Manhã Saudáveis para Substituir o Pão" },
-      { property: "og:description", content: "Receitas simples e deliciosas para transformar seu café da manhã." },
+      { title: "+5.000 Proyectos para Fabricar y Vender" },
+      {
+        name: "description",
+        content:
+          "Biblioteca digital com mais de 5.000 proyectos de herrería para consultar, estudiar, fabricar y vender.",
+      },
+      { name: "author", content: "+5.000 Proyectos para Fabricar y Vender" },
+      { property: "og:title", content: "+5.000 Proyectos para Fabricar y Vender" },
+      {
+        property: "og:description",
+        content:
+          "Amplie as possibilidades da sua oficina com milhares de proyectos e referências de fabricação metálica.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    
   }),
   component: Index,
 });
 
-const recipes = [
-  [recipe1.url, "Escondidinho Cremoso", "175 kcal"], [recipe2.url, "Hambúrguer Artesanal", "230 kcal"],
-  [recipe3.url, "Panqueca Recheada", "125 kcal"], [recipe4.url, "Torta de Carne Moída", "175 kcal"],
-  [recipe5.url, "Bolinho de Carne", "330 kcal"], [recipe6.url, "Carne Moída com Batata", "280 kcal"],
-  [recipe7.url, "Rocambole Recheado", "325 kcal"], [recipe8.url, "Lasanha de Frigideira", "195 kcal"],
-  [recipe9.url, "Macarrão Molho Especial", "195 kcal"], [recipe10.url, "Esfiha de Carne", "180 kcal"],
-  [recipe11.url, "Kafta Grelhada", "180 kcal"], [recipe12.url, "Berinjela Recheada", "275 kcal"],
+const Cta = ({ children }: { children: ReactNode }) => (
+  <a href="#planes" className="cta">
+    {children}
+  </a>
+);
+
+const EmptyMedia = ({ className = "" }: { className?: string }) => (
+  <div aria-hidden="true" className={`empty-media ${className}`} />
+);
+
+const CheckList = ({ items }: { items: string[] }) => (
+  <ul className="check-list">
+    {items.map((item) => (
+      <li key={item}>
+        <Check aria-hidden="true" />
+        <span>{item}</span>
+      </li>
+    ))}
+  </ul>
+);
+
+const benefits: [string, string][] = [
+  [
+    "+5.000 proyectos",
+    "Uma grande variedade de modelos para consultar cuando surja una nueva idea, pedido u oportunidad de fabricación.",
+  ],
+  [
+    "Mais possibilidades de fabricação",
+    "Encontre proyectos de mesas, estanterías, portones, remolques, remolques, estruturas metálicas e muitos outros modelos.",
+  ],
+  [
+    "Referências para sua oficina",
+    "Tenha proyectos organizados para estudar diferentes modelos e encontrar referências antes de começar uma nova fabricação.",
+  ],
+  [
+    "Mais opções para ofrecer",
+    "Amplie o catálogo de piezas que você pode apresentar aos seus clientes e aumente as possibilidades de novos trabalhos.",
+  ],
+];
+
+const forYou: [string, string][] = [
+  [
+    "Quieres aprender nuevos modelos de fabricación",
+    "Ideal para quem quer conhecer diferentes possibilidades de piezas e ter referências para estudar e fabricar.",
+  ],
+  [
+    "Quieres ampliar el catálogo del taller",
+    "Tenha novos modelos para consultar e encontrar ideias de produtos que podem ser oferecidos aos clientes.",
+  ],
+  [
+    "Precisa de referências para novos proyectos",
+    "Uma biblioteca com milhares de proyectos para consultar quando aparecer uma nova peça ou oportunidade.",
+  ],
+  [
+    "Quieres encontrar más posibilidades de venta",
+    "Tenha mais opções de produtos para apresentar aos clientes e transformar novas ideias em oportunidades de fabricação.",
+  ],
+];
+
+const problems = [
+  "Pasar horas buscando referencias para descubrir cómo fabricar una pieza diferente.",
+  "Tener siempre las mismas opciones de productos para fabricar y ofrecer a los clientes.",
+  "Encontrar uma nova oportunidade de trabalho e não ter um proyecto ou modelo para consultar.",
+  "Perder tiempo intentando dibujar y planificar cada nueva pieza desde cero.",
+];
+
+const solutions = [
+  "Ter +5.000 proyectos de herrería organizados para consultar quando precisar.",
+  "Encontrar diferentes modelos de muebles, estruturas, remolques, remolques e muito mais.",
+  "Usar os proyectos como referência para estudar e planejar novas piezas para fabricação.",
+  "Ampliar las posibilidades de productos que puedes fabricar y ofrecer a tus clientes.",
 ];
 
 const bonuses = [
-  [bonus1.url, "+50 Sobremesas Zero Açúcar", "R$ 24,90"],
-  [bonus2.url, "Planejamento Semanal Pronto", "R$ 19,90"],
-  [bonus3.url, "Guia de Lanches Saudáveis", "R$ 17,90"],
-  [bonus4.url, "Lista de Compras Econômica da Semana", "R$ 19,90"],
-  [bonus5.url, "Café da Manhã para Desinchar e Começar o Dia Mais Leve", "R$ 21,90"],
+  {
+    title: "GUÍA DE PRECIOS PARA HERRERÍA",
+    subtitle:
+      "una referencia práctica para organizar costos y calcular el precio de venta",
+    items: [
+      "Organiza los principales costos de fabricación",
+      "Ten una referencia para calcular precios de venta",
+      "Evita olvidar materiales y gastos al calcular tu precio",
+      "Use como apoio para precificar suas piezas",
+    ],
+    value: "R$27",
+  },
+  {
+    title: "CATÁLOGO DE PRODUTOS PARA OFERECER",
+    subtitle:
+      "ideias de piezas para ampliar as opções apresentadas aos seus clientes",
+    items: [
+      "Diversas ideas de productos para incluir en tu catálogo",
+      "Modelos que pueden servir como referencia para nuevos trabajos",
+      "Más opciones para presentar a tus clientes",
+      "Ayuda para descubrir nuevos productos que puedes fabricar",
+    ],
+    value: "R$27",
+  },
+  {
+    title: "CATÁLOGO DE IDEIAS + LISTA DE FORNECEDORES",
+    subtitle:
+      "más referencias para encontrar productos y materiales para tu taller",
+    items: [
+      "Ideias de piezas para estudar e fabricar",
+      "Referencias para ampliar tu catálogo",
+      "Lista de proveedores y materiales relacionados con la fabricación",
+      "Más facilidad para encontrar nuevas posibilidades para tu taller",
+    ],
+    value: "R$47",
+  },
 ];
 
-const reviews = [
-  [avatar1.url, "Patrícia Almeida", "18 de fevereiro de 2026", "“Fiz a crepioca de frango e minha família pediu pra repetir no dia seguinte!”", "103"],
-  [avatar2.url, "Roberta Mendes", "27 de fevereiro de 2026", "“MARAVILHOSO, muita variedade, tá me ajudando bastante na cozinha. Nem acredito que ele é esse valor.”", "98"],
-  [avatar3.url, "Rafael Cardoso", "10 de janeiro de 2026", "“Gostei muito porque não parece aquelas receitas difíceis de dieta. São ideias práticas mesmo, com ingredientes que eu já tenho em casa”", "87"],
-  [avatar4.url, "Juliana Ribeiro", "5 de fevereiro de 2026", "“Nunca imaginei que dava pra fazer tanta coisa no café da manhã! Já testei 4 receitas e todas ficaram uma delícia!”", "142"],
-  [avatar5.url, "Bruno Martins", "23 de janeiro de 2026", "“Eu queria diminuir o pão, mas não sabia o que comer no lugar. O material me ajudou demais, principalmente pelas receitas rápidas”", "76"],
-  [avatar6.url, "Camila Nogueira", "12 de março de 2026", "“Comprei e já fiz a Vitamina de Morango com Banana... ficou incrível! Recomendo pra quem quer economizar e comer bem logo de manhã.”", "119"],
+const faq: [string, string][] = [
+  [
+    "¿Cómo recibiré el material?",
+    "Após a confirmação da compra, você recebe o acesso imediatamente por e-mail e WhatsApp. É só baixar os arquivos e começar a consultar os proyectos.",
+  ],
+  [
+    "¿Qué incluye el plan básico?",
+    "O plano básico inclui o material principal com +5.000 proyectos de herrería para consultar e usar como referência na fabricação.",
+  ],
+  [
+    "¿Qué incluye el plan completo?",
+    "No plano completo você recebe os +5.000 proyectos mais os bônus de precificação, catálogo de produtos, catálogo de ideias e lista de fornecedores.",
+  ],
+  [
+    "¿Necesito saber de herrería para usarlo?",
+    "Os proyectos servem como material de consulta e referência. O aproveitamento depende do seu nível de conhecimento, ferramentas disponíveis e experiência com fabricação.",
+  ],
+  [
+    "¿Sirve para quienes están comenzando?",
+    "Sim. O material pode ser usado por quem está buscando conhecer novos modelos e possibilidades de fabricação, sempre respeitando os conhecimentos e habilidades necessários para executar cada proyecto.",
+  ],
+  [
+    "Quais tipos de proyectos fazem parte do material?",
+    "A biblioteca reúne diferentes categorias, incluindo mesas, estanterías, portones, estruturas metálicas, remolques, remolques, churrasqueiras, escadas e muitos outros modelos.",
+  ],
+  [
+    "¿Necesito alguna aplicación para usarlo?",
+    "Não. Você só precisa abrir os arquivos no celular, tablet ou computador para consultar o material. Se quiser, também pode imprimir os proyectos.",
+  ],
+  [
+    "Posso usar os proyectos como referência para meus clientes?",
+    "Sim. Os proyectos podem servir como referência para estudar modelos e apresentar possibilidades de fabricação aos seus clientes.",
+  ],
+  [
+    "¿El material sirve para cualquier tipo de taller?",
+    "O material reúne diferentes categorias de proyectos de herrería e pode ser usado como biblioteca de referências, conforme as ferramentas, equipamentos e conhecimentos disponíveis na sua oficina.",
+  ],
+  [
+    "Posso imprimir os proyectos?",
+    "Sí. Después de recibir el material, puedes imprimir los archivos según tus necesidades de consulta.",
+  ],
+  [
+    "¿Existe garantía?",
+    "Sí. Tienes 15 días de garantía para acceder y probar el material. Si no es lo que necesitas, puedes solicitar el reembolso dentro de ese plazo.",
+  ],
+  [
+    "¿El acceso es por tiempo limitado?",
+    "No. El acceso al material queda habilitado para que puedas consultarlo cuando lo necesites.",
+  ],
 ];
 
-const faqs = [
-  ["Como vou receber o material?", "Após a confirmação do pagamento, você receberá o acesso ao material imediatamente no seu e-mail."],
-  ["O livro pode ser impresso?", "Sim. Você pode acessar pelo celular, tablet ou computador e também imprimir o material se preferir."],
-  ["Tem receitas para quem está de dieta?", "Sim. O guia reúne opções leves, nutritivas e variadas para diferentes objetivos alimentares."],
-  ["Não sei cozinhar muito bem... serve pra mim?", "Serve sim. As receitas foram pensadas para serem simples, rápidas e feitas com ingredientes acessíveis."],
-  ["Posso acessar pelo celular?", "Sim. O material funciona em qualquer celular, tablet ou computador."],
-  ["E se eu não gostar? Tem garantia?", "Você tem 30 dias para testar. Se não gostar, pode solicitar o reembolso integral."],
-];
-
-function Cta() {
-  return <a className="cta" href="#ofertas">QUERO AS RECEITAS AGORA <span>→</span></a>;
+function TimeUnit({ value, label }: { value: number; label: string }) {
+  return (
+    <div className="time">
+      <strong>{String(value).padStart(2, "0")}</strong>
+      <small>{label}</small>
+    </div>
+  );
 }
 
-function Heading({ eyebrow, children }: { eyebrow: string; children: React.ReactNode }) {
-  return <div className="section-heading"><span>{eyebrow}</span><h2>{children}</h2></div>;
+function Urgency() {
+  const compute = () => 827 - (Math.floor(Date.now() / 1000) % 618);
+  const [seconds, setSeconds] = useState(827);
+
+  useEffect(() => {
+    setSeconds(compute());
+    const id = window.setInterval(() => setSeconds(compute()), 1000);
+    return () => window.clearInterval(id);
+  }, []);
+
+  return (
+    <section className="urgency">
+      <div className="narrow urgency-inner">
+        <h2>⏰ Aproveite a condição especial para acessar os +5.000 proyectos</h2>
+        <div className="timer">
+          <TimeUnit value={Math.floor(seconds / 60)} label="min" />
+          <b>:</b>
+          <TimeUnit value={seconds % 60} label="seg" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Carousel({ landscape = false }: { landscape?: boolean }) {
+  const images = [
+    "4115A40C-EBFA-42C4-8CE0-566C1D040B24.PNG",
+    "5B2DC197-2EE3-4E84-BCDF-447EE008C158.PNG",
+    "8D3241E1-4E2D-4AEA-8A08-0EF9BCF9F61C.PNG",
+    "ChatGPT Image 21 de set. de 2026, 13_09_40.PNG",
+    "ChatGPT Image 21 de set. de 2026, 13_22_05.PNG",
+    "ChatGPT Image 21 de set. de 2026, 13_23_47.PNG",
+    "F066A463-1669-43FB-97E8-02ACE3FB3694.PNG",
+    "F2CB89E0-9718-4FE8-956B-1C5F9BE00462.PNG",
+  ];
+
+  const imageUrl = (file: string) =>
+    `https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/${encodeURIComponent(file)}`;
+
+  return (
+    <div className={`carousel ${landscape ? "carousel-landscape" : "carousel-portrait"}`} aria-label="Carrossel automático de proyectos">
+      <div className="carousel-track">
+        {[...images, ...images].map((file, i) => (
+          <div className="carousel-item" key={`${file}-${i}`}>
+            <img
+              src={imageUrl(file)}
+              alt={`Proyecto de herrería ${(i % images.length) + 1}`}
+              loading="eager"
+              decoding="async"
+              draggable={false}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Price({
+  old,
+  price,
+  installments,
+  save,
+}: {
+  old: string;
+  price: string;
+  installments: string;
+  save: string;
+}) {
+  return (
+    <div className="price">
+      <p>de {old} por:</p>
+      <div>
+        <small>R$</small>
+        <strong>{price}</strong>
+      </div>
+      <p>{installments}</p>
+      <b>🔥 Ahorras {save}</b>
+    </div>
+  );
+}
+
+function Testimonials() {
+  const testimonialImages = [
+    "https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/marcos.png",
+    "https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/samuel.png",
+    "https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/gilberto.png",
+  ];
+  const testimonialNames = ["Marcos", "Samuel", "Gilberto"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const id = window.setInterval(() => setIndex((i) => (i + 1) % testimonialImages.length), 4000);
+    return () => window.clearInterval(id);
+  }, []);
+
+  return (
+    <section className="section section-alt testimonials">
+      <div className="container">
+        <h2>MIRA LO QUE DICEN SOBRE EL MATERIAL</h2>
+        <p>
+          Feedbacks de quem buscou mais proyectos e referências para ampliar suas
+          possibilidades na fabricação.
+        </p>
+        <div className="testimonial-card">
+          <img
+            className="testimonial-image testimonial-photo"
+            src={testimonialImages[index]}
+            alt={"Testimonio de " + testimonialNames[index]}
+            loading="lazy"
+            decoding="async"
+            draggable={false}
+          />
+          <div className="stars" aria-label="5 estrelas e 1723 reseñas">
+            ★★★★★ <span>(1723 reseñas)</span>
+          </div>
+        </div>
+        <div className="testimonial-nav">
+          <button
+            aria-label="Testimonio anterior"
+            onClick={() => setIndex((index - 1 + testimonialImages.length) % testimonialImages.length)}
+          >
+            <ChevronLeft />
+          </button>
+          <div>
+            {Array.from({ length: testimonialImages.length }).map((_, i) => (
+              <button
+                key={i}
+                aria-label={`Ir para o depoimento ${i + 1}`}
+                className={i === index ? "active" : ""}
+                onClick={() => setIndex(i)}
+              />
+            ))}
+          </div>
+          <button
+            aria-label="Siguiente testimonio"
+            onClick={() => setIndex((index + 1) % testimonialImages.length)}
+          >
+            <ChevronRight />
+          </button>
+        </div>
+        <Cta>QUERO GARANTIR OS +5.000 PROJETOS</Cta>
+      </div>
+    </section>
+  );
 }
 
 function Index() {
-  return <main>
-    <div className="promo">🔥 ESSA PROMOÇÃO ACABA HOJE!</div>
-    <section className="hero-pattern hero">
-      <div className="container hero-inner">
-        <span className="tag">CHEGA DE COMER PÃO TODOS OS DIAS</span>
-        <h1><em>100 CAFÉS DA MANHÃ SAUDÁVEIS</em> <strong>PARA<br /> SUBSTITUIR O PÃO</strong></h1>
-        <img className="hero-image" src={hero.url} alt="Livro digital 100 Cafés da Manhã com acesso pelo celular" />
-        <p className="lead">Descubra 100 opções diferentes para variar seu café da manhã de forma saudável, prática e saborosa, sem depender do pão e sem cair na mesmice.</p>
-        <Cta />
-        <p className="secure">🔒 Compra segura • Acesso imediato • 30 dias de garantia</p>
-        <div className="stats"><div><b>2.400+</b><span>Compradores</span></div><div><b>100</b><span>Receitas</span></div><div><b>30 DIAS</b><span>Garantia</span></div></div>
-      </div>
-    </section>
+  const today = new Intl.DateTimeFormat("es-419").format(new Date());
 
-    <section className="audience"><div className="container"><Heading eyebrow="FEITO PARA VOCÊ">PARA QUEM É ESTE GUIA?</Heading>
-      <div className="check-grid">{["Não quer depender do pão no café da manhã todos os dias","Busca opções simples e saudáveis","Não sabe o que comer no lugar do pão","Quer opções completas para variar","Quer ideias rápidas para a semana"].map(x=><div key={x}><i>✓</i>{x}</div>)}</div>
-    </div></section>
+  return (
+    <main>
+      <div className="topbar">⚡ Oferta especial disponible solo hoy {today}</div>
 
-    <section className="routine"><div className="container"><Heading eyebrow="SIMPLES DE VERDADE">TUDO PENSADO PARA FACILITAR SUA ROTINA</Heading>
-      <div className="feature-grid">
-        <article><div className="feature-icon">⏱</div><small>APENAS 5 MIN</small><h3>Receitas prontas em poucos minutos</h3><p>Opções rápidas para você começar o dia bem, até na rotina mais corrida.</p></article>
-        <article><div className="feature-icon">◎</div><small>SEM COMPLICAÇÕES</small><h3>Ingredientes simples e acessíveis</h3><p>Baratos, fáceis de encontrar e que você provavelmente já tem em casa.</p></article>
-        <article><div className="feature-icon">▣</div><small>ONDE VOCÊ QUISER</small><h3>Acesso em qualquer dispositivo</h3><p>Celular, tablet, computador ou impressão. Consulte sempre que precisar.</p></article>
-      </div>
-    </div></section>
+      <section className="hero">
+        <div className="narrow hero-inner">
+          <h1>
+            APRENDE <mark>+5.000 PROJETOS</mark> PARA{" "}
+            <mark>FABRICAR Y VENDER</mark>
+          </h1>
+          <img
+            className="hero-product"
+            src={heroProduct}
+            alt="Mais de cinco mil proyectos de herrería para fabricar e vender"
+          />
+          <p className="support">
+            Accede a uma biblioteca completa de proyectos de herrería
+            para consultar, estudar e encontrar novas piezas para fabricar e
+            ofrecer aos seus clientes.
+          </p>
+          <CheckList
+            items={[
+              "+5.000 proyectos de herrería para consultar e usar como referência",
+              "Encontre modelos de mesas, estanterías, portones, remolques, remolques, estruturas e muito mais",
+              "Amplie as possibilidades do que você pode fabricar e ofrecer aos seus clientes",
+            ]}
+          />
+          <Cta>👉 ACCEDER AGORA</Cta>
+          <p className="delivery">
+            Recibes todo de inmediato, directamente en tu
+            <br /> WhatsApp y correo electrónico
+          </p>
+        </div>
+      </section>
 
-    <section className="recipes"><div className="container wide"><Heading eyebrow="ALGUMAS DAS DELÍCIAS">VEJA O QUE VOCÊ VAI PREPARAR</Heading>
-      <div className="recipe-grid">{recipes.map(([src,name,kcal])=><article className="recipe" key={name}><div><img src={src} alt={name}/><span>{kcal}</span></div><h3>{name}</h3></article>)}</div>
-      <Cta />
-    </div></section>
+      <Urgency />
 
-    <section className="bonuses"><div className="container wide"><Heading eyebrow="OFERTA ESPECIAL">VOCÊ TAMBÉM RECEBE 5 BÔNUS EXCLUSIVOS</Heading>
-      <p className="section-copy">Materiais complementares para simplificar sua rotina, organizar a semana e tornar sua alimentação ainda mais variada.</p>
-      <div className="bonus-grid">{bonuses.map(([src,name,price],i)=><article className="bonus" key={name}><img src={src} alt={name}/><div><small>BÔNUS {i+1}</small><h3>{name}</h3><p>De <s>{price}</s> por</p><b>GRÁTIS</b></div></article>)}</div>
-      <div className="bonus-total">Valor total dos bônus: <s>R$ 96,00</s><strong>HOJE INCLUSOS GRATUITAMENTE!</strong></div>
-    </div></section>
+      <section className="previews section-alt">
+        <div className="container">
+          <h2>MIRA ALGUNOS DE LOS PROYECTOS DISPONIBLES</h2>
+        </div>
+        <Carousel />
+        <div className="narrow centered">
+          <p>
+            Tudo já vem organizado para você consultar os proyectos e encontrar
+            referências para diferentes tipos de fabricação sem precisar começar
+            cada ideia do zero.
+          </p>
+          <div className="process">
+            <b>📲 ACCEDE</b>
+            <span>➡</span>
+            <b>📐 CONSULTA</b>
+            <span className="down">⬇</span>
+            <b>🔧 FABRICA E VENDE!</b>
+          </div>
+          <Cta>👉 QUIERO LOS +5.000 PROYECTOS</Cta>
+        </div>
+        <Carousel />
+      </section>
 
-    <section className="reviews"><div className="container wide"><Heading eyebrow="QUEM COMPROU, APROVOU">RESULTADOS DE QUEM JÁ ESTÁ VARIANDO O CAFÉ DA MANHÃ</Heading>
-      <div className="review-grid">{reviews.map(([src,name,date,text,likes])=><article className="review" key={name}><div className="review-head"><img src={src} alt={name}/><div><h3>{name}</h3><span className="stars">★★★★★</span><small>{date}</small></div></div><p>{text}</p><footer>♡ &nbsp; {likes} pessoas acharam útil</footer></article>)}</div>
-    </div></section>
+      <section className="section light">
+        <div className="container">
+          <h2>
+            UNA BIBLIOTECA COMPLETA PARA AMPLIAR TUS POSIBILIDADES EN
+            HERRERÍA
+          </h2>
+          <div className="grid-two">
+            {benefits.map(([title, text]) => (
+              <article className="info-card" key={title}>
+                <span className="card-icon">
+                  <Check />
+                </span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="centered">
+            <Cta>QUERO ACCEDER OS PROJETOS</Cta>
+          </div>
+        </div>
+      </section>
 
-    <section className="offers" id="ofertas"><div className="container"><Heading eyebrow="ESCOLHA SEU ACESSO">COMECE HOJE MESMO</Heading>
-      <div className="plan-grid">
-        <Plan title="PLANO BÁSICO" image={planBasic.url} old="R$ 67,00" price="17,90" href="https://pay.cakto.com.br/gijwbh7_1122552" items={["Livro 100 Cafés da Manhã","Acesso imediato"]}/>
-        <Plan featured title="PLANO PREMIUM" image={planPremium.url} old="R$ 147,00" price="27,90" href="https://pay.cakto.com.br/x76fyjp_1122582" items={["Livro 100 Cafés da Manhã","Todos os 5 Bônus","Acesso vitalício","Atualizações"]}/>
-      </div>
-    </div></section>
+      <section className="section">
+        <div className="container">
+          <h2>
+            ¿HAS PENSADO EN TENER MILES DE PROYECTOS PARA CONSULTAR SIN NECESITAR
+            COMENZAR CADA PIEZA DESDE CERO?
+          </h2>
+          <img
+            className="problem-image"
+            src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/gg02.png"
+            alt="Proyecto de herrería para consulta e fabricação"
+            loading="eager"
+            decoding="async"
+            draggable={false}
+          />
+          <div className="problem-grid">
+            <ul>
+              {problems.map((item) => (
+                <li key={item}>
+                  <span>❌</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <ul>
+              {solutions.map((item) => (
+                <li key={item}>
+                  <span>✅</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="centered">
+            <Cta>QUIERO VER LOS +5.000 PROYECTOS</Cta>
+          </div>
+        </div>
+        <Carousel landscape />
+      </section>
 
-    <section className="guarantee"><div className="container guarantee-inner"><div className="seal"><b>30</b><span>DIAS DE<br/>GARANTIA</span></div><div><span>Risco zero</span><h2>GARANTIA INCONDICIONAL DE 30 DIAS</h2><p>Você pode acessar todo o material e testar por 30 dias. Se por qualquer motivo não gostar, basta solicitar o reembolso e devolveremos 100% do seu dinheiro.</p></div></div></section>
+      <section className="section section-alt">
+        <div className="container">
+          <h2>ESTE MATERIAL ES IDEAL PARA TI SI...</h2>
+          <div className="grid-two">
+            {forYou.map(([title, text]) => (
+              <article className="info-card" key={title}>
+                <span className="card-icon">
+                  <Check />
+                </span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="centered">
+            <Cta>QUIERO COMENZAR AHORA</Cta>
+          </div>
+        </div>
+      </section>
 
-    <section className="faq"><div className="container"><Heading eyebrow="TIRE SUAS DÚVIDAS">PERGUNTAS FREQUENTES</Heading><div className="faq-list">{faqs.map(([q,a])=><details key={q}><summary>{q}<span>＋</span></summary><p>{a}</p></details>)}</div></div></section>
-    <section className="final"><div className="container"><h2>PRONTA PARA TRANSFORMAR SEU CAFÉ DA MANHÃ?</h2><p>Escolha seu plano e receba o acesso imediatamente após a confirmação do pagamento.</p><Cta/><small>🔒 Pagamento 100% seguro</small></div></section>
-    <footer className="site-footer"><p>© 2026 100 Cafés da Manhã Saudáveis. Todos os direitos reservados.</p><p>Este produto não substitui o acompanhamento de um profissional de saúde.</p></footer>
-  </main>;
-}
+      <section className="section receive">
+        <div className="container">
+          <h2>TODO LO QUE VAS A RECIBIR</h2>
+          <article className="main-material">
+            <span className="badge">ACCESO INMEDIATO</span>
+            <img className="material-image" src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/gugudada.png" alt="Tudo o que você vai receber" loading="lazy" decoding="async" draggable={false} />
+            <h3>+5.000 PROJETOS PARA FABRICAR Y VENDER</h3>
+            <CheckList
+              items={[
+                "+5.000 proyectos de herrería organizados para consulta",
+                "Modelos de mesas, estanterías, portones, remolques, remolques e estruturas",
+                "Proyectos para estudar diferentes possibilidades de fabricação",
+                "Referências para ampliar o catálogo de produtos da sua oficina",
+                "Acesso digital imediato",
+              ]}
+            />
+            <p className="delivery-box">
+              Recibes todo de inmediato, directamente en tu WhatsApp y correo electrónico
+            </p>
+          </article>
+          <div className="bonus-heading">
+            <h2>EL PLAN COMPLETO INCLUYE AÚN MÁS</h2>
+            <p>
+              Você também vai receber 4 bônus complementares para aproveitar
+              ainda mais os proyectos
+            </p>
+          </div>
+          <div className="bonus-grid">
+            {bonuses.map((bonus, i) => (
+              <article className="bonus-card" key={bonus.title}>
+                <span className="bonus-label">
+                  BONO {i + 1}
+                  {i === 2 ? " E 4" : ""}
+                </span>
+                <img
+                  className="bonus-image"
+                  src={[
+                    "https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/bonus%201%20.png",
+                    "https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/bonus%202%20.png",
+                    "https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/bonus%203%20e%204%20.png",
+                  ][i]}
+                  alt={i === 2 ? "Bono 3 e 4" : `Bono ${i + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                  draggable={false}
+                />
+                <h3>{bonus.title}</h3>
+                <p>{bonus.subtitle}</p>
+                <CheckList items={bonus.items} />
+                <div className="value">
+                  <s>{bonus.value}</s>
+                  <span>→</span>
+                  <strong>GRATIS</strong>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-function Plan({ title,image,old,price,href,items,featured=false }: {title:string;image:string;old:string;price:string;href:string;items:string[];featured?:boolean}) {
-  return <article className={`plan ${featured ? "featured" : ""}`}>{featured && <div className="best">MAIS VENDIDO • RECOMENDADO</div>}<h3>{title}</h3><img src={image} alt={title}/><ul>{items.map(x=><li key={x}>✓ {x}</li>)}</ul><p>De <s>{old}</s> por apenas</p><div className="price"><sup>R$</sup><b>{price}</b></div><small>Pagamento único • Sem mensalidades</small><a href={href}>ESCOLHER ESTE PLANO <span>→</span></a></article>;
+      <section id="planes" className="section section-alt plans">
+        <div className="container">
+          <div className="offer-label">⏰ OFERTA ESPECIAL</div>
+          <h2>ESCOLHA A MELHOR FORMA DE ACCEDER OS PROJETOS</h2>
+          <div className="plans-grid">
+            <article className="plan basic">
+              <h3>PLAN BÁSICO</h3>
+              <img className="plan-image" src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/plano%20basico%202.png" alt="Plano Básico" loading="lazy" decoding="async" draggable={false} />
+              <CheckList
+                items={[
+                  "+5.000 proyectos para fabricar e vender",
+                  "Proyectos de mesas, estanterías, portones e muebles metálicos",
+                  "Modelos de remolques, remolques e estruturas",
+                  "Acesso imediato ao material digital",
+                ]}
+              />
+              <Price
+                old="R$47,90"
+                price="14,90"
+                installments="o 4 cuotas de R$5,00 con tarjeta"
+                save="R$30,00"
+              />
+              <a className="cta" href="https://pay.cakto.com.br/y68c6tk_1128010">
+                QUIERO EL PLAN BÁSICO
+              </a>
+            </article>
+            <article className="plan complete">
+              <div className="bestseller">MÁS VENDIDO</div>
+              <h3>PLAN COMPLETO</h3>
+              <img className="plan-image" src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/plano%20premium%20.png" alt="Plano Completo" loading="lazy" decoding="async" draggable={false} />
+              <span className="bonus-badge">⚡ MAIS PROJETOS + BONO</span>
+              <CheckList
+                items={[
+                  "+5.000 proyectos para fabricar e vender",
+                  "🎁 Bono 1 - Guia de Precificação para Serralheria",
+                  "🎁 Bono 2 - Catálogo de Produtos para Oferecer",
+                  "🎁 Bono 3 - Catálogo de Ideias",
+                  "🎁 Bono 4 - Lista de Fornecedores",
+                  "Acceso inmediato por WhatsApp y correo electrónico",
+                ]}
+              />
+              <Price
+                old="R$128,90"
+                price="24,90"
+                installments="o 6 cuotas de R$5,48 con tarjeta"
+                save="R$101,00"
+              />
+              <a className="cta" href="https://pay.cakto.com.br/4s7b73g_1128073">
+                QUERO O PLAN COMPLETO
+              </a>
+              <EmptyMedia className="secure-seal" />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <Testimonials />
+
+      <section className="section guarantee">
+        <div className="container guarantee-card">
+          <span className="badge">🔒 Riesgo cero para ti</span>
+         <img
+  className="guarantee-seal-image"
+  src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/selo.PNG"
+  alt="Sello de garantía de 15 días — satisfacción o reembolso"
+  loading="lazy"
+  decoding="async"
+  draggable={false}
+  style={{
+    width: "min(100%, 260px)",
+    height: "auto",
+    maxHeight: 300,
+    objectFit: "contain",
+    display: "block",
+    margin: ".25rem auto 1rem",
+    borderRadius: 18,
+  }}
+/>
+          <div>
+            <h2>
+              GARANTIA DE 15 DIAS <mark>SATISFAÇÃO OU REEMBOLSO</mark>
+            </h2>
+            <p>No tienes que comprar a ciegas.</p>
+            <p>
+              Después de la compra, tienes <strong>15 dias</strong> para acessar o
+              material, abrir os proyectos e testar o conteúdo para ver se ele faz
+              sentido para sua rotina de fabricação.
+            </p>
+            <p>
+              Si por cualquier motivo sientes que no era lo que necesitabas,
+              solo tienes que solicitar el reembolso dentro de ese plazo.
+            </p>
+            <p>Sin burocracia. Sin dolores de cabeza. Sin complicaciones.</p>
+            <div className="guarantee-box">
+              O risco fica com a gente para você testar o material com
+              tranquilidade e ver se os proyectos fazem sentido para sua oficina.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt faq">
+        <div className="faq-wrap">
+          <h2>PERGUNTAS FREQUENTES</h2>
+          {faq.map(([question, answer]) => (
+            <details key={question}>
+              <summary>
+                {question}
+                <ChevronDown />
+              </summary>
+              <p>{answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <footer>
+        <div className="container">
+          <p>
+            Copyright © 2026 | +5.000 Proyectos para Fabricar y Vender
+            <br />
+            Todos os direitos reservados.
+          </p>
+          <p>
+            Este site não é afiliado ao Facebook™, Instagram™, Google™ ou
+            qualquer outra plataforma mencionada.
+          </p>
+          <p>
+            Todos os direitos sobre a obra “+5.000 Proyectos para Fabricar e
+            Vender” são reservados ao produtor, nos termos da Lei nº 9.610/98
+            (Lei de Direitos Autorais).
+          </p>
+          <p>
+            Este produto é um material digital de consulta e referência para
+            herrería. Os resultados podem variar conforme o conhecimento, as
+            ferramentas, a experiência e a aplicação de cada pessoa.
+          </p>
+        </div>
+      </footer>
+    </main>
+  );
 }
