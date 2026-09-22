@@ -525,9 +525,9 @@ function Index() {
                 <img
                   className="bonus-image"
                   src={[
-                    "https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/bonus%201%20.png",
-                    "https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/bonus%202%20.png",
-                    "https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/bonus%203%20e%204%20.png",
+                    "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%201%20latam%20.png",
+                    "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%202%20LATAM.png",
+                    "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%203%20LATAM.png",
                   ][i]}
                   alt={i === 2 ? "Bono 3 e 4" : `Bono ${i + 1}`}
                   loading="lazy"
