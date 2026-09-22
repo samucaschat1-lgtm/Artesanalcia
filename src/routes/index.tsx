@@ -146,7 +146,7 @@ const faq: [string, string][] = [
   ],
   [
     "¿Qué incluye el plan básico?",
-    "O plano básico inclui o material principal com +5.000 proyectos de herrería para consultar y usar como referencia na fabricação.",
+    "El plan básico incluye el material principal con +5.000 proyectos de herrería para consultar y usar como referencia en la fabricación.",
   ],
   [
     "¿Qué incluye el plan completo?",
@@ -495,7 +495,7 @@ function Index() {
           <article className="main-material">
             <span className="badge">ACCESO INMEDIATO</span>
             <img className="material-image" src="https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/gugudada2.png" alt="Todo lo que vas a recibir" loading="lazy" decoding="async" draggable={false} />
-            <h3>+5.000 PROJETOS PARA FABRICAR Y VENDER</h3>
+            <h3>+5.000 PROYECTOS PARA FABRICAR Y VENDER</h3>
             <CheckList
               items={[
                 "+5.000 proyectos de herrería organizados para consulta",
@@ -529,7 +529,7 @@ function Index() {
                     "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%202%20LATAM.png",
                     "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%203%20LATAM.png",
                   ][i]}
-                  alt={i === 2 ? "Bono 3 e 4" : `Bono ${i + 1}`}
+                  alt={i === 2 ? "Bonos 3 y 4" : `Bono ${i + 1}`}
                   loading="lazy"
                   decoding="async"
                   draggable={false}
@@ -558,7 +558,7 @@ function Index() {
               <img className="plan-image" src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/plano%20basico%202.png" alt="Plano Básico" loading="lazy" decoding="async" draggable={false} />
               <CheckList
                 items={[
-                  "+5.000 proyectos para fabricar e vender",
+                  "+5.000 proyectos para fabricar y vender",
                   "Proyectos de mesas, estanterías, portones y muebles metálicos",
                   "Modelos de remolques y estructuras",
                   "Acceso inmediato al material digital",
@@ -581,7 +581,7 @@ function Index() {
               <span className="bonus-badge">⚡ MÁS PROYECTOS + BONOS</span>
               <CheckList
                 items={[
-                  "+5.000 proyectos para fabricar e vender",
+                  "+5.000 proyectos para fabricar y vender",
                   "🎁 Bono 1 - Guía de Precios para Herrería",
                   "🎁 Bono 2 - Catálogo de Productos para Ofrecer",
                   "🎁 Bono 3 - Catálogo de Ideas",
