@@ -272,7 +272,7 @@ function Price({
     <div className="price">
       <p>de {old} por:</p>
       <div>
-        <small>R$</small>
+        <small>$</small>
         <strong>{price}</strong>
       </div>
       <p>{installments}</p>
@@ -572,10 +572,10 @@ function Index() {
                 ]}
               />
               <Price
-                old="R$47,90"
-                price="14,90"
-                installments="o 4 cuotas de R$5,00 con tarjeta"
-                save="R$30,00"
+                old="$19"
+                price="7"
+                installments="o 4 cuotas de $2,50 con tarjeta"
+                save="$12"
               />
               <a className="cta" href="https://pay.cakto.com.br/y68c6tk_1128010">
                 QUIERO EL PLAN BÁSICO
@@ -597,10 +597,10 @@ function Index() {
                 ]}
               />
               <Price
-                old="R$128,90"
-                price="24,90"
-                installments="o 6 cuotas de R$5,48 con tarjeta"
-                save="R$101,00"
+                old="$39"
+                price="14"
+                installments="o 6 cuotas de $2,33 con tarjeta"
+                save="$25"
               />
               <a className="cta" href="https://pay.cakto.com.br/4s7b73g_1128073">
                 QUERO O PLAN COMPLETO
