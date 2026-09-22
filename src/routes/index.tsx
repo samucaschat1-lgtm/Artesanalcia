@@ -225,18 +225,18 @@ function Urgency() {
 
 function Carousel({ landscape = false }: { landscape?: boolean }) {
   const images = [
-    "4115A40C-EBFA-42C4-8CE0-566C1D040B24.PNG",
-    "5B2DC197-2EE3-4E84-BCDF-447EE008C158.PNG",
-    "8D3241E1-4E2D-4AEA-8A08-0EF9BCF9F61C.PNG",
-    "ChatGPT Image 21 de set. de 2026, 13_09_40.PNG",
-    "ChatGPT Image 21 de set. de 2026, 13_22_05.PNG",
-    "ChatGPT Image 21 de set. de 2026, 13_23_47.PNG",
-    "F066A463-1669-43FB-97E8-02ACE3FB3694.PNG",
-    "F2CB89E0-9718-4FE8-956B-1C5F9BE00462.PNG",
+    "CARRETILHA.png",
+    "ESCALERA INDUSTRIAL.png",
+    "ESTANTE UNDUSTRIAL.png",
+    "MESA DE CENTRO.png",
+    "MESA DE COMEDOR.png",
+    "Mesa Y BANCO.png",
+    "PARRILLA PARA CARBON.png",
+    "PORTON CORREDIZO.png",
   ];
 
   const imageUrl = (file: string) =>
-    `https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/${encodeURIComponent(file)}`;
+    `https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/${encodeURIComponent(file)}`;
 
   return (
     <div className={`carousel ${landscape ? "carousel-landscape" : "carousel-portrait"}`} aria-label="Carrusel automático de proyectos">
