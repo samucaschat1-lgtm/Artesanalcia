@@ -494,7 +494,7 @@ function Index() {
           <h2>TODO LO QUE VAS A RECIBIR</h2>
           <article className="main-material">
             <span className="badge">ACCESO INMEDIATO</span>
-            <img className="material-image" src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/gugudada.png" alt="Todo lo que vas a recibir" loading="lazy" decoding="async" draggable={false} />
+            <img className="material-image" src="https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/gugudada2.png" alt="Todo lo que vas a recibir" loading="lazy" decoding="async" draggable={false} />
             <h3>+5.000 PROJETOS PARA FABRICAR Y VENDER</h3>
             <CheckList
               items={[
