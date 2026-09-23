@@ -277,7 +277,7 @@ function Price({
         <strong>{price}</strong>
       </div>
       <p>{installments}</p>
-      <b>🔥 Ahorras {save}</b>
+        <b>🔥 Ahorras {save}</b>
     </div>
   );
 }function Index() {
