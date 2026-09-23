@@ -429,7 +429,7 @@ function Price({
             <span className="badge">ACCESO INMEDIATO</span>
             <img
               className="material-image"
-              src="https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/gugudada2.png"
+              src="/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_42_45.png"
               alt="Todo lo que vas a recibir"
               loading="lazy"
               decoding="async"
