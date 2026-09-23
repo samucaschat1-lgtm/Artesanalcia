@@ -501,7 +501,7 @@ function Price({
 
         <img
   className="plan-image"
-  src=src="/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_09_34.png"
+  src="/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_09_34.png"
   alt="Plano Básico"
   loading="lazy"
   decoding="async"
@@ -537,7 +537,7 @@ function Price({
 
         <img
   className="plan-image"
-  src=src="/8E1EA8BD-6531-4B5D-82FC-2A0B99F7AB17.PNG"
+  src="/8E1EA8BD-6531-4B5D-82FC-2A0B99F7AB17.PNG"
   alt="Plano Premium"
   loading="lazy"
   decoding="async"
