@@ -567,7 +567,6 @@ function Price({
         />
 
         <div className="local-currency-notice">
-          <b>🔥 Ahorras $25</b>
           <p className="mt-2 text-sm text-gray-600">
             💳 Tu pago se convierte a tu moneda local.
           </p>
