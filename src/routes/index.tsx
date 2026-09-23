@@ -1,18 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { Check, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
+
 const heroProduct = "/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_09_34.png";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "+5.000 Proyectos para Fabricar y Vender" },
+      { title: "+100 Proyectos para Fabricar y Vender" },
       {
         name: "description",
         content:
           "Biblioteca digital con más de 5.000 proyectos de herrería para consultar, estudiar, fabricar y vender.",
       },
-      { name: "author", content: "+5.000 Proyectos para Fabricar y Vender" },
-      { property: "og:title", content: "+5.000 Proyectos para Fabricar y Vender" },
+      { name: "author", content: "+100 Proyectos para Fabricar y Vender" },
+      { property: "og:title", content: "+100 Proyectos para Fabricar y Vender" },
       {
         property: "og:description",
         content:
@@ -21,7 +23,6 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    
   }),
   component: Index,
 });
@@ -49,7 +50,7 @@ const CheckList = ({ items }: { items: string[] }) => (
 
 const benefits: [string, string][] = [
   [
-    "+5.000 proyectos",
+    "+100 proyectos",
     "Una gran variedad de modelos para consultar cuando surja una nueva idea, pedido u oportunidad de fabricación.",
   ],
   [
@@ -93,13 +94,11 @@ const problems = [
 ];
 
 const solutions = [
-  "Tener +5.000 proyectos de herrería organizados para consultar cuando los necesites.",
+  "Tener +100 proyectos de herrería organizados para consultar cuando los necesites.",
   "Encontrar diferentes modelos de muebles, estructuras, remolques y mucho más.",
   "Usar los proyectos como referencia para estudiar y planificar nuevas piezas para fabricar.",
   "Ampliar las posibilidades de productos que puedes fabricar y ofrecer a tus clientes.",
-];
-
-const bonuses = [
+];const bonuses = [
   {
     title: "GUÍA DE PRECIOS PARA HERRERÍA",
     subtitle:
@@ -145,11 +144,11 @@ const faq: [string, string][] = [
   ],
   [
     "¿Qué incluye el plan básico?",
-    "El plan básico incluye el material principal con +5.000 proyectos de herrería para consultar y usar como referencia en la fabricación.",
+    "El plan básico incluye el material principal con +100 proyectos de herrería para consultar y usar como referencia en la fabricación.",
   ],
   [
     "¿Qué incluye el plan completo?",
-    "En el plan completo recibes los +5.000 proyectos más los bonos de precios, catálogo de productos, catálogo de ideas y lista de proveedores.",
+    "En el plan completo recibes los +100 proyectos más los bonos de precios, catálogo de productos, catálogo de ideas y lista de proveedores.",
   ],
   [
     "¿Necesito saber de herrería para usarlo?",
@@ -211,7 +210,7 @@ function Urgency() {
   return (
     <section className="urgency">
       <div className="narrow urgency-inner">
-        <h2>⏰ Aprovecha la condición especial para acceder a los +5.000 proyectos</h2>
+        <h2>⏰ Aprovecha la condición especial para acceder a los +100 proyectos</h2>
         <div className="timer">
           <TimeUnit value={Math.floor(seconds / 60)} label="min" />
           <b>:</b>
@@ -238,7 +237,10 @@ function Carousel({ landscape = false }: { landscape?: boolean }) {
     `https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/${encodeURIComponent(file)}`;
 
   return (
-    <div className={`carousel ${landscape ? "carousel-landscape" : "carousel-portrait"}`} aria-label="Carrusel automático de proyectos">
+    <div
+      className={`carousel ${landscape ? "carousel-landscape" : "carousel-portrait"}`}
+      aria-label="Carrusel automático de proyectos"
+    >
       <div className="carousel-track">
         {[...images, ...images].map((file, i) => (
           <div className="carousel-item" key={`${file}-${i}`}>
@@ -278,73 +280,7 @@ function Price({
       <b>🔥 Ahorras {save}</b>
     </div>
   );
-}
-
-function Testimonials() {
-  const testimonialImages = [
-    "https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/marcos.png",
-    "https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/samuel.png",
-    "https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/gilberto.png",
-  ];
-  const testimonialNames = ["Marcos", "Samuel", "Gilberto"];
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const id = window.setInterval(() => setIndex((i) => (i + 1) % testimonialImages.length), 4000);
-    return () => window.clearInterval(id);
-  }, []);
-
-  return (
-    <section className="section section-alt testimonials">
-      <div className="container">
-        <h2>MIRA LO QUE DICEN SOBRE EL MATERIAL</h2>
-        <p>
-          Opiniones de quienes buscaron más proyectos y referencias para ampliar sus posibilidades de fabricación.
-        </p>
-        <div className="testimonial-card">
-          <img
-            className="testimonial-image testimonial-photo"
-            src={testimonialImages[index]}
-            alt={"Testimonio de " + testimonialNames[index]}
-            loading="lazy"
-            decoding="async"
-            draggable={false}
-          />
-          <div className="stars" aria-label="5 estrellas y 1723 reseñas">
-            ★★★★★ <span>(1723 reseñas)</span>
-          </div>
-        </div>
-        <div className="testimonial-nav">
-          <button
-            aria-label="Testimonio anterior"
-            onClick={() => setIndex((index - 1 + testimonialImages.length) % testimonialImages.length)}
-          >
-            <ChevronLeft />
-          </button>
-          <div>
-            {Array.from({ length: testimonialImages.length }).map((_, i) => (
-              <button
-                key={i}
-                aria-label={`Ir al testimonio ${i + 1}`}
-                className={i === index ? "active" : ""}
-                onClick={() => setIndex(i)}
-              />
-            ))}
-          </div>
-          <button
-            aria-label="Siguiente testimonio"
-            onClick={() => setIndex((index + 1) % testimonialImages.length)}
-          >
-            <ChevronRight />
-          </button>
-        </div>
-        <Cta>QUIERO ASEGURAR LOS +5.000 PROYECTOS</Cta>
-      </div>
-    </section>
-  );
-}
-
-function Index() {
+}function Index() {
   const today = new Intl.DateTimeFormat("es-419").format(new Date());
 
   return (
@@ -354,7 +290,7 @@ function Index() {
       <section className="hero">
         <div className="narrow hero-inner">
           <h1>
-            APRENDE <mark>+5.000 PROYECTOS</mark> PARA{" "}
+            APRENDE <mark>+100 PROYECTOS</mark> PARA{" "}
             <mark>FABRICAR Y VENDER</mark>
           </h1>
           <img
@@ -367,7 +303,7 @@ function Index() {
           </p>
           <CheckList
             items={[
-              "+5.000 proyectos de herrería para consultar y usar como referencia",
+              "+100 proyectos de herrería para consultar y usar como referencia",
               "Encuentra modelos de mesas, estanterías, portones, remolques, estructuras y mucho más",
               "Amplía las posibilidades de lo que puedes fabricar y ofrecer a tus clientes",
             ]}
@@ -398,7 +334,7 @@ function Index() {
             <span className="down">⬇</span>
             <b>🔧 FABRICA E VENDE!</b>
           </div>
-          <Cta>👉 QUIERO LOS +5.000 PROYECTOS</Cta>
+          <Cta>👉 QUIERO LOS +100 PROYECTOS</Cta>
         </div>
         <Carousel />
       </section>
@@ -460,7 +396,7 @@ function Index() {
             </ul>
           </div>
           <div className="centered">
-            <Cta>QUIERO VER LOS +5.000 PROYECTOS</Cta>
+            <Cta>QUIERO VER LOS +100 PROYECTOS</Cta>
           </div>
         </div>
         <Carousel landscape />
@@ -486,18 +422,23 @@ function Index() {
             <Cta>QUIERO COMENZAR AHORA</Cta>
           </div>
         </div>
-      </section>
-
-      <section className="section receive">
+      </section>      <section className="section receive">
         <div className="container">
           <h2>TODO LO QUE VAS A RECIBIR</h2>
           <article className="main-material">
             <span className="badge">ACCESO INMEDIATO</span>
-            <img className="material-image" src="https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/gugudada2.png" alt="Todo lo que vas a recibir" loading="lazy" decoding="async" draggable={false} />
-            <h3>+5.000 PROYECTOS PARA FABRICAR Y VENDER</h3>
+            <img
+              className="material-image"
+              src="https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/gugudada2.png"
+              alt="Todo lo que vas a recibir"
+              loading="lazy"
+              decoding="async"
+              draggable={false}
+            />
+            <h3>+100 PROYECTOS PARA FABRICAR Y VENDER</h3>
             <CheckList
               items={[
-                "+5.000 proyectos de herrería organizados para consulta",
+                "+100 proyectos de herrería organizados para consulta",
                 "Modelos de mesas, estanterías, portones, remolques y estructuras",
                 "Proyectos para estudiar diferentes posibilidades de fabricación",
                 "Referencias para ampliar el catálogo de productos de tu taller",
@@ -508,12 +449,14 @@ function Index() {
               Recibes todo de inmediato, directamente en tu WhatsApp y correo electrónico
             </p>
           </article>
+
           <div className="bonus-heading">
             <h2>EL PLAN COMPLETO INCLUYE AÚN MÁS</h2>
             <p>
               También recibirás 4 bonos complementarios para aprovechar aún más los proyectos
             </p>
           </div>
+
           <div className="bonus-grid">
             {bonuses.map((bonus, i) => (
               <article className="bonus-card" key={bonus.title}>
@@ -554,10 +497,17 @@ function Index() {
           <div className="plans-grid">
             <article className="plan basic">
               <h3>PLAN BÁSICO</h3>
-              <img className="plan-image" src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/plano%20basico%202.png" alt="Plano Básico" loading="lazy" decoding="async" draggable={false} />
+              <img
+                className="plan-image"
+                src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/plano%20basico%202.png"
+                alt="Plano Básico"
+                loading="lazy"
+                decoding="async"
+                draggable={false}
+              />
               <CheckList
                 items={[
-                  "+5.000 proyectos para fabricar y vender",
+                  "+100 proyectos para fabricar y vender",
                   "Proyectos de mesas, estanterías, portones y muebles metálicos",
                   "Modelos de remolques y estructuras",
                   "Acceso inmediato al material digital",
@@ -573,14 +523,22 @@ function Index() {
                 QUIERO EL PLAN BÁSICO
               </a>
             </article>
+
             <article className="plan complete">
               <div className="bestseller">MÁS VENDIDO</div>
               <h3>PLAN COMPLETO</h3>
-              <img className="plan-image" src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/plano%20premium%20.png" alt="Plano Completo" loading="lazy" decoding="async" draggable={false} />
+              <img
+                className="plan-image"
+                src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/plano%20premium%20.png"
+                alt="Plano Completo"
+                loading="lazy"
+                decoding="async"
+                draggable={false}
+              />
               <span className="bonus-badge">⚡ MÁS PROYECTOS + BONOS</span>
               <CheckList
                 items={[
-                  "+5.000 proyectos para fabricar y vender",
+                  "+100 proyectos para fabricar y vender",
                   "🎁 Bono 1 - Guía de Precios para Herrería",
                   "🎁 Bono 2 - Catálogo de Productos para Ofrecer",
                   "🎁 Bono 3 - Catálogo de Ideas",
@@ -603,28 +561,26 @@ function Index() {
         </div>
       </section>
 
-      <Testimonials />
-
       <section className="section guarantee">
         <div className="container guarantee-card">
           <span className="badge">🔒 Riesgo cero para ti</span>
-         <img
-  className="guarantee-seal-image"
-  src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/selo.PNG"
-  alt="Sello de garantía de 15 días — satisfacción o reembolso"
-  loading="lazy"
-  decoding="async"
-  draggable={false}
-  style={{
-    width: "min(100%, 260px)",
-    height: "auto",
-    maxHeight: 300,
-    objectFit: "contain",
-    display: "block",
-    margin: ".25rem auto 1rem",
-    borderRadius: 18,
-  }}
-/>
+          <img
+            className="guarantee-seal-image"
+            src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/selo.PNG"
+            alt="Sello de garantía de 15 días — satisfacción o reembolso"
+            loading="lazy"
+            decoding="async"
+            draggable={false}
+            style={{
+              width: "min(100%, 260px)",
+              height: "auto",
+              maxHeight: 300,
+              objectFit: "contain",
+              display: "block",
+              margin: ".25rem auto 1rem",
+              borderRadius: 18,
+            }}
+          />
           <div>
             <h2>
               GARANTÍA DE 15 DÍAS <mark>SATISFACCIÓN O REEMBOLSO</mark>
@@ -663,7 +619,7 @@ function Index() {
       <footer>
         <div className="container">
           <p>
-            Copyright © 2026 | +5.000 Proyectos para Fabricar y Vender
+            Copyright © 2026 | +100 Proyectos para Fabricar y Vender
             <br />
             Todos los derechos reservados.
           </p>
@@ -671,7 +627,7 @@ function Index() {
             Este sitio no está afiliado a Facebook™, Instagram™, Google™ ni a ninguna otra plataforma mencionada.
           </p>
           <p>
-            Todos los derechos sobre la obra “+5.000 Proyectos para Fabricar y Vender” están reservados al productor, de acuerdo con la legislación aplicable.
+            Todos los derechos sobre la obra “+100 Proyectos para Fabricar y Vender” están reservados al productor, de acuerdo con la legislación aplicable.
           </p>
           <p>
             Este producto es un material digital de consulta y referencia para herrería. Los resultados pueden variar según los conocimientos, las herramientas, la experiencia y la aplicación de cada persona.
