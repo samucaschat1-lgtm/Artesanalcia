@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { Check, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
-const heroProduct = "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2015_27_06.png";
-
+const heroProduct =  "/ChatGPT Image 22 de set. de 2026, 23_09_34.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
