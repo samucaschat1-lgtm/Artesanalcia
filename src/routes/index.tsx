@@ -523,6 +523,10 @@ function Price({
           save="$14"
         />
 
+        <div className="local-currency-notice">
+          <p>💳 Tu pago se convierte a tu moneda local.</p>
+        </div>
+
         <a
           className="cta"
           href="https://pay.cakto.com.br/y68c6tk_1128010"
@@ -567,9 +571,7 @@ function Price({
         />
 
         <div className="local-currency-notice">
-          <p className="mt-2 text-sm text-gray-600">
-            💳 Tu pago se convierte a tu moneda local.
-          </p>
+          <p>💳 Tu pago se convierte a tu moneda local.</p>
         </div>
 
         <a
