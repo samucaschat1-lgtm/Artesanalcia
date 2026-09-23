@@ -564,7 +564,7 @@ function Price({
         />
 
         <Price
-          old="$39"
+          old="$38"
           price="8"
           installments="pago único de $8"
           save="$30"
