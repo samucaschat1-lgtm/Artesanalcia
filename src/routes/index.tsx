@@ -500,14 +500,13 @@ function Price({
         <h3>PLAN BÁSICO</h3>
 
         <img
-          className="plan-image"
-          src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/plano%20basico%202.png"
-          alt="Plano Básico"
-          loading="lazy"
-          decoding="async"
-          draggable={false}
-        />
-
+  className="plan-image"
+  src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_09_34.png"
+  alt="Plano Básico"
+  loading="lazy"
+  decoding="async"
+  draggable={false}
+/>
         <CheckList
           items={[
             "+100 proyectos para fabricar y vender",
@@ -537,13 +536,13 @@ function Price({
         <h3>PLAN COMPLETO</h3>
 
         <img
-          className="plan-image"
-          src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/plano%20premium%20.png"
-          alt="Plano Completo"
-          loading="lazy"
-          decoding="async"
-          draggable={false}
-        />
+  className="plan-image"
+  src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/8E1EA8BD-6531-4B5D-82FC-2A0B99F7AB17.PNG"
+  alt="Plano Premium"
+  loading="lazy"
+  decoding="async"
+  draggable={false}
+/>
 
         <span className="bonus-badge">
           ⚡ MÁS PROYECTOS + BONOS
