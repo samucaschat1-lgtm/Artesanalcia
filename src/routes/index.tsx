@@ -491,76 +491,101 @@ function Price({
       </section>
 
       <section id="planes" className="section section-alt plans">
-        <div className="container">
-          <div className="offer-label">⏰ OFERTA ESPECIAL</div>
-          <h2>ELIGE LA MEJOR FORMA DE ACCEDER A LOS PROYECTOS</h2>
-          <div className="plans-grid">
-            <article className="plan basic">
-              <h3>PLAN BÁSICO</h3>
-              <img
-                className="plan-image"
-                src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/plano%20basico%202.png"
-                alt="Plano Básico"
-                loading="lazy"
-                decoding="async"
-                draggable={false}
-              />
-              <CheckList
-                items={[
-                  "+100 proyectos para fabricar y vender",
-                  "Proyectos de mesas, estanterías, portones y muebles metálicos",
-                  "Modelos de remolques y estructuras",
-                  "Acceso inmediato al material digital",
-                ]}
-              />
-              <Price
-                old="$19"
-                price="7"
-                installments="o 4 cuotas de $2,50 con tarjeta"
-                save="$12"
-              />
-              <a className="cta" href="https://pay.cakto.com.br/y68c6tk_1128010">
-                QUIERO EL PLAN BÁSICO
-              </a>
-            </article>
+  <div className="container">
+    <div className="offer-label">⏰ OFERTA ESPECIAL</div>
+    <h2>ELIGE LA MEJOR FORMA DE ACCEDER A LOS PROYECTOS</h2>
 
-            <article className="plan complete">
-              <div className="bestseller">MÁS VENDIDO</div>
-              <h3>PLAN COMPLETO</h3>
-              <img
-                className="plan-image"
-                src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/plano%20premium%20.png"
-                alt="Plano Completo"
-                loading="lazy"
-                decoding="async"
-                draggable={false}
-              />
-              <span className="bonus-badge">⚡ MÁS PROYECTOS + BONOS</span>
-              <CheckList
-                items={[
-                  "+100 proyectos para fabricar y vender",
-                  "🎁 Bono 1 - Guía de Precios para Herrería",
-                  "🎁 Bono 2 - Catálogo de Productos para Ofrecer",
-                  "🎁 Bono 3 - Catálogo de Ideas",
-                  "🎁 Bono 4 - Lista de Proveedores",
-                  "Acceso inmediato por WhatsApp y correo electrónico",
-                ]}
-              />
-              <Price
-                old="$39"
-                price="14"
-                installments="o 6 cuotas de $2,33 con tarjeta"
-                save="$25"
-              />
-              <a className="cta" href="https://pay.cakto.com.br/4s7b73g_1128073">
-                QUIERO EL PLAN COMPLETO
-              </a>
-              <EmptyMedia className="secure-seal" />
-            </article>
-          </div>
+    <div className="plans-grid">
+      <article className="plan basic">
+        <h3>PLAN BÁSICO</h3>
+
+        <img
+          className="plan-image"
+          src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/plano%20basico%202.png"
+          alt="Plano Básico"
+          loading="lazy"
+          decoding="async"
+          draggable={false}
+        />
+
+        <CheckList
+          items={[
+            "+100 proyectos para fabricar y vender",
+            "Proyectos de mesas, estanterías, portones y muebles metálicos",
+            "Modelos de remolques y estructuras",
+            "Acceso inmediato al material digital",
+          ]}
+        />
+
+        <Price
+          old="$19"
+          price="5"
+          installments="pago único de $5"
+          save="$14"
+        />
+
+        <a
+          className="cta"
+          href="https://pay.cakto.com.br/y68c6tk_1128010"
+        >
+          QUIERO EL PLAN BÁSICO
+        </a>
+      </article>
+
+      <article className="plan complete">
+        <div className="bestseller">MÁS VENDIDO</div>
+        <h3>PLAN COMPLETO</h3>
+
+        <img
+          className="plan-image"
+          src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/plano%20premium%20.png"
+          alt="Plano Completo"
+          loading="lazy"
+          decoding="async"
+          draggable={false}
+        />
+
+        <span className="bonus-badge">
+          ⚡ MÁS PROYECTOS + BONOS
+        </span>
+
+        <CheckList
+          items={[
+            "+100 proyectos para fabricar y vender",
+            "🎁 Bono 1 - Guía de Precios para Herrería",
+            "🎁 Bono 2 - Catálogo de Productos para Ofrecer",
+            "🎁 Bono 3 - Catálogo de Ideas",
+            "🎁 Bono 4 - Lista de Proveedores",
+            "Acceso inmediato por WhatsApp y correo electrónico",
+          ]}
+        />
+
+        <Price
+          old="$39"
+          price="9"
+          installments="pago único de $9"
+          save="$30"
+        />
+
+        <div className="local-currency-notice">
+          <b>🔥 Ahorras $25</b>
+          <p className="mt-2 text-sm text-gray-600">
+            💳 Tu pago se convierte a tu moneda local.
+          </p>
         </div>
-      </section>
 
+        <a
+          className="cta"
+          href="https://pay.cakto.com.br/4s7b73g_1128073"
+        >
+          QUIERO EL PLAN COMPLETO
+        </a>
+
+        <EmptyMedia className="secure-seal" />
+      </article>
+    </div>
+  </div>
+</section>
       <section className="section guarantee">
         <div className="container guarantee-card">
           <span className="badge">🔒 Riesgo cero para ti</span>
