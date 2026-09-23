@@ -529,7 +529,7 @@ function Price({
 
         <a
           className="cta"
-          href="https://pay.cakto.com.br/y68c6tk_1128010"
+          href="https://pay.hotmart.com/T107722244V?off=3a1ek6wc&checkoutMode=10"
         >
           QUIERO EL PLAN BÁSICO
         </a>
@@ -576,7 +576,7 @@ function Price({
 
         <a
           className="cta"
-          href="https://pay.cakto.com.br/4s7b73g_1128073"
+          href="https://pay.hotmart.com/T107722244V?off=igxudoqu&checkoutMode=10"
         >
           QUIERO EL PLAN COMPLETO
         </a>
