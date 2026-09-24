@@ -619,7 +619,7 @@ function Price({
                 name: "Andrés Pérez",
                 place: "Taller metálico · Guadalajara",
                 text: "Estaba empezando y no sabía por dónde arrancar. Con los proyectos pude estudiar modelos de parrillas y estructuras, y fabricar mis primeras piezas con seguridad. Muy recomendable.",
-                avatar: "/__l5e/assets-v1/73a6e883-d466-4d15-abfa-70099ccf3cdf/avatar-4.jpg",
+                avatar: "/sr.jpg",
               },
             ].map((review) => (
               <article className="review-card" key={review.name}>
