@@ -41,3 +41,13 @@
 .hero .price strong{font-size:3.25rem}
 .hero .price>b{margin-top:.45rem}
 .hero .support{margin-top:0;margin-bottom:.75rem}
+
+
+/* Performance: evita renderizar secciones fora da primeira tela antes de serem necessárias */
+@media (min-width: 768px){
+  .previews,.section:not(.hero),.urgency,footer{content-visibility:auto;contain-intrinsic-size:1px 700px}
+}
+@media (max-width: 767px){
+  .previews,.section,footer{content-visibility:auto;contain-intrinsic-size:1px 600px}
+}
+.carousel-track{backface-visibility:hidden;transform:translateZ(0)}
