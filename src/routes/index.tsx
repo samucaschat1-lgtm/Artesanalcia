@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { Check, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
+import avatarHomem1 from "@/assets/avatar-homem-1.jpg";
+import avatarHomem2 from "@/assets/avatar-homem-2.jpg";
+import avatarHomem4 from "@/assets/avatar-homem-4.jpg";
 
 const heroProduct = "/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_09_34.png";
 
@@ -598,13 +601,13 @@ function Price({
                 name: "Carlos Martínez",
                 place: "Taller de herrería · Ciudad de México",
                 text: "Tenía siempre los mismos modelos para ofrecer. Ahora, cuando un cliente pide algo diferente, abro la biblioteca y ya tengo varios proyectos para mostrarle. Se cerró mi primer portón corredizo en dos semanas.",
-                avatar: "/__l5e/assets-v1/8ffacbdf-cf6c-48d6-90d9-d8a8ea4a0525/avatar-1.jpg",
+                avatar: avatarHomem1,
               },
               {
                 name: "Jorge Ramírez",
                 place: "Metálicas y soldadura · Bogotá",
                 text: "Lo mejor es tener todo organizado en un solo lugar. Antes perdía horas buscando referencias por internet; ahora consulto el proyecto, saco mis medidas y directo al taller. Ahorra muchísimo tiempo.",
-                avatar: "/__l5e/assets-v1/600a3c8f-5875-423c-b547-63f2510e8add/avatar-2.jpg",
+                avatar: avatarHomem2,
               },
               {
                 name: "Luis Alvarado",
