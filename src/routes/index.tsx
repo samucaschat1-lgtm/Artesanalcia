@@ -607,7 +607,7 @@ function Price({
                 name: "Jorge Ramírez",
                 place: "Metálicas y soldadura · Bogotá",
                 text: "Lo mejor es tener todo organizado en un solo lugar. Antes perdía horas buscando referencias por internet; ahora consulto el proyecto, saco mis medidas y directo al taller. Ahorra muchísimo tiempo.",
-                avatar: "/__l5e/assets-v1/600a3c8f-5875-423c-b547-63f2510e8add/avatar-2.jpg",
+                avatar: avatarHomem2,
               },
               {
                 name: "Luis Alvarado",
