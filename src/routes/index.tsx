@@ -586,6 +586,66 @@ function Price({
     </div>
   </div>
 </section>
+      <section className="section section-alt reviews">
+        <div className="container">
+          <h2>LO QUE DICEN QUIENES YA USAN LOS PROYECTOS</h2>
+          <p className="reviews-sub">
+            Herreros y talleres que ampliaron sus posibilidades de fabricación con la biblioteca.
+          </p>
+          <div className="reviews-grid">
+            {[
+              {
+                name: "Carlos M.",
+                place: "Taller de herrería · Ciudad de México",
+                text: "Tenía siempre los mismos modelos para ofrecer. Ahora, cuando un cliente pide algo diferente, abro la biblioteca y ya tengo varios proyectos para mostrarle. Se cerró mi primer portón corredizo en dos semanas.",
+                avatar: "/__l5e/assets-v1/8ffacbdf-cf6c-48d6-90d9-d8a8ea4a0525/avatar-1.jpg",
+              },
+              {
+                name: "Jorge R.",
+                place: "Metálicas y soldadura · Bogotá",
+                text: "Lo mejor es tener todo organizado en un solo lugar. Antes perdía horas buscando referencias por internet; ahora consulto el proyecto, saco mis medidas y directo al taller. Ahorra muchísimo tiempo.",
+                avatar: "/__l5e/assets-v1/600a3c8f-5875-423c-b547-63f2510e8add/avatar-2.jpg",
+              },
+              {
+                name: "Luis A.",
+                place: "Herrería y muebles metálicos · Lima",
+                text: "Las mesas y estanterías me sirvieron para ampliar el catálogo de mi taller. Presenté tres modelos nuevos a mis clientes y ya me pidieron dos. La inversión se recuperó con el primer trabajo.",
+                avatar: "/__l5e/assets-v1/2fc360f6-88de-4ea4-879d-e74415296c4d/avatar-3.jpg",
+              },
+              {
+                name: "Andrés P.",
+                place: "Taller metálico · Guadalajara",
+                text: "Estaba empezando y no sabía por dónde arrancar. Con los proyectos pude estudiar modelos de parrillas y estructuras, y fabricar mis primeras piezas con seguridad. Muy recomendable.",
+                avatar: "/__l5e/assets-v1/73a6e883-d466-4d15-abfa-70099ccf3cdf/avatar-4.jpg",
+              },
+            ].map((review) => (
+              <article className="review-card" key={review.name}>
+                <div className="review-stars" aria-label="5 de 5 estrellas">
+                  ★★★★★
+                </div>
+                <p className="review-text">“{review.text}”</p>
+                <div className="review-author">
+                  <img
+                    src={review.avatar}
+                    alt={review.name}
+                    loading="lazy"
+                    decoding="async"
+                    draggable={false}
+                  />
+                  <div>
+                    <strong>{review.name}</strong>
+                    <span>{review.place}</span>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="centered">
+            <Cta>👉 QUIERO ACCEDER A LOS PROYECTOS</Cta>
+          </div>
+        </div>
+      </section>
+
       <section className="section guarantee">
         <div className="container guarantee-card">
           <span className="badge">🔒 Riesgo cero para ti</span>
