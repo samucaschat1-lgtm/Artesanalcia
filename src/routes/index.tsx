@@ -70,25 +70,6 @@ const benefits: [string, string][] = [
   ],
 ];
 
-const forYou: [string, string][] = [
-  [
-    "Quieres aprender nuevos modelos de fabricación",
-    "Ideal para quienes quieren conocer diferentes posibilidades de piezas y tener referencias para estudiar y fabricar.",
-  ],
-  [
-    "Quieres ampliar el catálogo del taller",
-    "Ten nuevos modelos para consultar y encontrar ideas de productos que puedes ofrecer a tus clientes.",
-  ],
-  [
-    "Necesitas referencias para nuevos proyectos",
-    "Una biblioteca con miles de proyectos para consultar cuando aparezca una nueva pieza u oportunidad.",
-  ],
-  [
-    "Quieres encontrar más posibilidades de venta",
-    "Ten más opciones de productos para presentar a tus clientes y transformar nuevas ideas en oportunidades de fabricación.",
-  ],
-];
-
 const problems = [
   "Pasar horas buscando referencias para descubrir cómo fabricar una pieza diferente.",
   "Tener siempre las mismas opciones de productos para fabricar y ofrecer a los clientes.",
@@ -250,7 +231,7 @@ function Carousel({ landscape = false }: { landscape?: boolean }) {
             <img
               src={imageUrl(file)}
               alt={`Proyecto de herrería ${(i % images.length) + 1}`}
-              loading="eager"
+              loading="lazy"
               decoding="async"
               draggable={false}
             />
@@ -384,7 +365,7 @@ function Price({
             className="problem-image"
             src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/gg02.png"
             alt="Proyecto de herrería para consulta y fabricación"
-            loading="eager"
+            loading="lazy"
             decoding="async"
             draggable={false}
           />
