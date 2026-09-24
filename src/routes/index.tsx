@@ -613,7 +613,7 @@ function Price({
                 name: "Luis Alvarado",
                 place: "Herrería y muebles metálicos · Lima",
                 text: "Las mesas y estanterías me sirvieron para ampliar el catálogo de mi taller. Presenté tres modelos nuevos a mis clientes y ya me pidieron dos. La inversión se recuperó con el primer trabajo.",
-                avatar: "/__l5e/assets-v1/2fc360f6-88de-4ea4-879d-e74415296c4d/avatar-3.jpg",
+                avatar: "/sr2.jpg",
               },
               {
                 name: "Andrés Pérez",
