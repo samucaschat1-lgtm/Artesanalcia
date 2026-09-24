@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { Check, ChevronDown } from "lucide-react";
+import avatarHomem1 from "@/assets/avatar-homem-1.jpg";
+import avatarHomem2 from "@/assets/avatar-homem-2.jpg";
 const heroProduct = "/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_09_34.png";
 
 export const Route = createFileRoute("/")({
@@ -214,7 +216,7 @@ function Carousel({ landscape = false }: { landscape?: boolean }) {
   ];
 
   const imageUrl = (file: string) =>
-    `https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/${encodeURIComponent(file)}`;
+    `https://raw.githubusercontent.com/samucaschat1-lgtm/proyectosparafabricar/main/public/${encodeURIComponent(file)}`;
 
   return (
     <div
