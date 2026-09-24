@@ -601,7 +601,7 @@ function Price({
                 name: "Carlos Martínez",
                 place: "Taller de herrería · Ciudad de México",
                 text: "Tenía siempre los mismos modelos para ofrecer. Ahora, cuando un cliente pide algo diferente, abro la biblioteca y ya tengo varios proyectos para mostrarle. Se cerró mi primer portón corredizo en dos semanas.",
-                avatar: "/__l5e/assets-v1/8ffacbdf-cf6c-48d6-90d9-d8a8ea4a0525/avatar-1.jpg",
+                avatar: avatarHomem1,
               },
               {
                 name: "Jorge Ramírez",
