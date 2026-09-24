@@ -1,0 +1,80 @@
+name: Optimize images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public/**"
+      - "src/**"
+      - ".github/workflows/optimize-images.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install WebP encoder
+        run: sudo apt-get update && sudo apt-get install -y webp
+
+      - name: Convert heavy images to WebP
+        shell: bash
+        run: |
+          set -e
+          shopt -s nullglob
+          for file in public/*; do
+            case "$file" in
+              *.png|*.PNG|*.jpg|*.JPG|*.jpeg|*.JPEG)
+                size=$(stat -c%s "$file")
+                if [ "$size" -gt 200000 ]; then
+                  base="${file%.*}"
+                  echo "Optimizing: $file"
+                  cwebp -quiet -q 82 -m 6 -resize 1600 1600 "$file" -o "${base}.webp"
+                fi
+                ;;
+            esac
+          done
+
+      - name: Use optimized WebP assets in source
+        shell: python
+        run: |
+          from pathlib import Path
+          from urllib.parse import quote
+
+          public = Path("public")
+          source_files = list(Path("src").rglob("*.tsx")) + list(Path("src").rglob("*.ts")) + list(Path("src").rglob("*.css"))
+
+          for image in public.iterdir():
+              if image.suffix.lower() not in {".png", ".jpg", ".jpeg"}:
+                  continue
+              webp = image.with_suffix(".webp")
+              if not webp.exists():
+                  continue
+
+              old_name = image.name
+              new_name = webp.name
+              encoded_old = quote(old_name, safe="")
+              encoded_new = quote(new_name, safe="")
+
+              for path in source_files:
+                  text = path.read_text(encoding="utf-8")
+                  updated = text.replace(encoded_old, encoded_new).replace(old_name, new_name)
+                  if updated != text:
+                      path.write_text(updated, encoding="utf-8")
+
+      - name: Commit optimized assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public src
+          if git diff --cached --quiet; then
+            echo "No image changes to commit."
+            exit 0
+          fi
+          git commit -m "perf: optimize heavy images to WebP"
+          git push
