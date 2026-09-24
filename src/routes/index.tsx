@@ -598,21 +598,25 @@ function Price({
                 name: "Carlos M.",
                 place: "Taller de herrería · Ciudad de México",
                 text: "Tenía siempre los mismos modelos para ofrecer. Ahora, cuando un cliente pide algo diferente, abro la biblioteca y ya tengo varios proyectos para mostrarle. Se cerró mi primer portón corredizo en dos semanas.",
+                avatar: "/__l5e/assets-v1/8ffacbdf-cf6c-48d6-90d9-d8a8ea4a0525/avatar-1.jpg",
               },
               {
                 name: "Jorge R.",
                 place: "Metálicas y soldadura · Bogotá",
                 text: "Lo mejor es tener todo organizado en un solo lugar. Antes perdía horas buscando referencias por internet; ahora consulto el proyecto, saco mis medidas y directo al taller. Ahorra muchísimo tiempo.",
+                avatar: "/__l5e/assets-v1/600a3c8f-5875-423c-b547-63f2510e8add/avatar-2.jpg",
               },
               {
                 name: "Luis A.",
                 place: "Herrería y muebles metálicos · Lima",
                 text: "Las mesas y estanterías me sirvieron para ampliar el catálogo de mi taller. Presenté tres modelos nuevos a mis clientes y ya me pidieron dos. La inversión se recuperó con el primer trabajo.",
+                avatar: "/__l5e/assets-v1/2fc360f6-88de-4ea4-879d-e74415296c4d/avatar-3.jpg",
               },
               {
                 name: "Andrés P.",
                 place: "Taller metálico · Guadalajara",
                 text: "Estaba empezando y no sabía por dónde arrancar. Con los proyectos pude estudiar modelos de parrillas y estructuras, y fabricar mis primeras piezas con seguridad. Muy recomendable.",
+                avatar: "/__l5e/assets-v1/73a6e883-d466-4d15-abfa-70099ccf3cdf/avatar-4.jpg",
               },
             ].map((review) => (
               <article className="review-card" key={review.name}>
@@ -622,15 +626,8 @@ function Price({
                 <p className="review-text">“{review.text}”</p>
                 <div className="review-author">
                   <img
-                    src={
-                      [
-                        "/__l5e/assets-v1/8ffacbdf-cf6c-48d6-90d9-d8a8ea4a0525/avatar-1.jpg",
-                        "/__l5e/assets-v1/600a3c8f-5875-423c-b547-63f2510e8add/avatar-2.jpg",
-                        "/__l5e/assets-v1/1b1d7c47-4f2e-4f7e-8b31-0f9c0a0f5b3c/avatar-3.jpg",
-                        "/__l5e/assets-v1/9f0e63a2-8a44-4a58-9b7d-1c2d3e4f5a6b/avatar-4.jpg",
-                      ][0]
-                    }
-                    alt=""
+                    src={review.avatar}
+                    alt={review.name}
                     loading="lazy"
                     decoding="async"
                     draggable={false}
