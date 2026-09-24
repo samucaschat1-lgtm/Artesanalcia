@@ -1,10 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
-import { Check, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
-import avatarHomem1 from "@/assets/avatar-homem-1.jpg";
-import avatarHomem2 from "@/assets/avatar-homem-2.jpg";
-import avatarHomem4 from "@/assets/avatar-homem-4.jpg";
-
+import { Check, ChevronDown } from "lucide-react";
 const heroProduct = "/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_09_34.png";
 
 export const Route = createFileRoute("/")({
@@ -232,6 +228,7 @@ function Carousel({ landscape = false }: { landscape?: boolean }) {
               src={imageUrl(file)}
               alt={`Proyecto de herrería ${(i % images.length) + 1}`}
               loading="lazy"
+              fetchPriority="low"
               decoding="async"
               draggable={false}
             />
@@ -282,6 +279,7 @@ function Price({
             src={heroProduct}
             fetchPriority="high"
             loading="eager"
+            decoding="async"
             alt="Más de cinco mil proyectos de herrería para fabricar y vender"
           />
 
