@@ -3,7 +3,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Check, ChevronDown } from "lucide-react";
 import avatarHomem1 from "@/assets/avatar-homem-1.jpg";
 import avatarHomem2 from "@/assets/avatar-homem-2.jpg";
-const heroProduct = "/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_09_34.png";
+const heroProduct = "/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_09_34.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -205,14 +205,14 @@ function Urgency() {
 
 function Carousel({ landscape = false }: { landscape?: boolean }) {
   const images = [
-    "CARRETILHA.png",
-    "ESCALERA INDUSTRIAL.png",
-    "ESTANTE UNDUSTRIAL.png",
-    "MESA DE CENTRO.png",
-    "MESA DE COMEDOR.png",
-    "Mesa Y BANCO.png",
-    "PARRILLA PARA CARBON.png",
-    "PORTON CORREDIZO.png",
+    "CARRETILHA.webp",
+    "ESCALERA INDUSTRIAL.webp",
+    "ESTANTE UNDUSTRIAL.webp",
+    "MESA DE CENTRO.webp",
+    "MESA DE COMEDOR.webp",
+    "Mesa Y BANCO.webp",
+    "PARRILLA PARA CARBON.webp",
+    "PORTON CORREDIZO.webp",
   ];
 
   const imageUrl = (file: string) =>
@@ -404,7 +404,7 @@ function Price({
             <span className="badge">ACCESO INMEDIATO</span>
             <img
               className="material-image"
-              src="/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_42_45.png"
+              src="/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_42_45.webp"
               alt="Todo lo que vas a recibir"
               loading="lazy"
               decoding="async"
@@ -442,9 +442,9 @@ function Price({
                 <img
                   className="bonus-image"
                   src={[
-                    "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%201%20latam%20.png",
-                    "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%202%20LATAM.png",
-                    "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%203%20LATAM.png",
+                    "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%201%20latam%20.webp",
+                    "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%202%20LATAM.webp",
+                    "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%203%20LATAM.webp",
                   ][i]}
                   alt={i === 2 ? "Bonos 3 y 4" : `Bono ${i + 1}`}
                   loading="lazy"
@@ -476,7 +476,7 @@ function Price({
 
         <img
   className="plan-image"
-  src="/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_09_34.png"
+  src="/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_09_34.webp"
   alt="Plano Básico"
   loading="lazy"
   decoding="async"
@@ -516,7 +516,7 @@ function Price({
 
         <img
   className="plan-image"
-  src="/8E1EA8BD-6531-4B5D-82FC-2A0B99F7AB17.PNG"
+  src="/8E1EA8BD-6531-4B5D-82FC-2A0B99F7AB17.webp"
   alt="Plano Premium"
   loading="lazy"
   decoding="async"
