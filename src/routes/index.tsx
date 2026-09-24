@@ -280,6 +280,8 @@ function Price({
           <img
             className="hero-product"
             src={heroProduct}
+            fetchPriority="high"
+            loading="eager"
             alt="Más de cinco mil proyectos de herrería para fabricar y vender"
           />
 
