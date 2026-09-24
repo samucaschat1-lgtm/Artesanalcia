@@ -518,9 +518,9 @@ function Price({
 
         <Price
           old="$19"
-          price="3"
-          installments="pago único de $3"
-          save="$16"
+          price="4"
+          installments="pago único de $4"
+          save="$15"
         />
 
         <div className="local-currency-notice">
@@ -565,9 +565,9 @@ function Price({
 
         <Price
           old="$38"
-          price="6"
-          installments="pago único de $6"
-          save="$32"
+          price="8"
+          installments="pago único de $8"
+          save="$30"
         />
 
         <div className="local-currency-notice">
