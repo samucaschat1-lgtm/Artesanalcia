@@ -33,3 +33,11 @@
 .review-author strong{display:block;font-size:.92rem}
 .review-author span{display:block;color:var(--muted-foreground);font-size:.8rem}
 @media (min-width:768px){.reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Ajuste de espaçamento do preço no hero */
+.hero-product{margin-bottom:.2rem}
+.hero .price{margin:.35rem 0 .7rem}
+.hero .price p{margin:.1rem 0}
+.hero .price strong{font-size:3.25rem}
+.hero .price>b{margin-top:.45rem}
+.hero .support{margin-top:0;margin-bottom:.75rem}
