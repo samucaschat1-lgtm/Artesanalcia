@@ -414,26 +414,7 @@ function Price({
       </section>
 
       <section className="section section-alt">
-        <div className="container">
-          <h2>ESTE MATERIAL ES IDEAL PARA TI SI...</h2>
-          <div className="grid-two">
-            {forYou.map(([title, text]) => (
-              <article className="info-card" key={title}>
-                <span className="card-icon">
-                  <Check />
-                </span>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-          <div className="centered">
-            <Cta>QUIERO COMENZAR AHORA</Cta>
-          </div>
-        </div>
-      </section>      <section className="section receive">
+      <section className="section receive">
         <div className="container">
           <h2>TODO LO QUE VAS A RECIBIR</h2>
           <article className="main-material">
