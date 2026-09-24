@@ -301,6 +301,14 @@ function Price({
             src={heroProduct}
             alt="Más de cinco mil proyectos de herrería para fabricar y vender"
           />
+
+          <Price
+            old="$19"
+            price="4"
+            installments="pago único de $4"
+            save="$15"
+          />
+
           <p className="support">
             Accede a una biblioteca completa de proyectos de herrería para consultar, estudiar y encontrar nuevas piezas para fabricar y ofrecer a tus clientes.
           </p>
