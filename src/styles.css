@@ -770,3 +770,12 @@ body{
   transform:scaleY(0.72) !important;
   transform-origin:center center !important;
 }
+
+
+/* Esticar horizontalmente os mockups substituídos */
+.cacha-page .hero-mockup,
+.cacha-page .plan.simple .basic-mockup,
+.cacha-page .plan.featured > img{
+  transform:scaleX(1.12) scaleY(0.72) !important;
+  transform-origin:center center !important;
+}
