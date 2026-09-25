@@ -242,3 +242,16 @@ body,.cacha-page,button,input,textarea,select{font-family:var(--font-sans)}
   .bonus-marquee .marquee-track{gap:12px;animation-duration:32s}
   .bonus-marquee img{width:190px;height:245px;border-radius:12px}
 }
+
+
+/* Ajuste dos carrosseis: o primeiro permanece compacto e o segundo volta ao tamanho original */
+.preview .marquee:not(.preview-large) img{width:170px;height:215px}
+.preview .preview-large img{width:195px;height:250px}
+@media(max-width:850px){
+  .preview .marquee:not(.preview-large) img{width:170px;height:215px}
+  .preview .preview-large img{width:195px;height:250px}
+}
+@media(max-width:520px){
+  .preview .marquee:not(.preview-large) img{width:125px;height:165px}
+  .preview .preview-large img{width:145px;height:190px}
+}
