@@ -110,8 +110,14 @@ function Index() {
       </section>
 
       <section className="payment section">
-        <h3>🔒 Formas de pagamento</h3><p>Cartão de crédito em até 5x sem juros ou Pix aprovado na hora</p>
-        <div className="pay-icons"><span>VISA</span><span>mastercard</span><span>ELO</span><span>PIX</span></div>
+        <h3>🔒 Formas de pagamento</h3>
+        <p>Cartão de crédito em até 5x sem juros ou Pix aprovado na hora</p>
+        <div className="pay-icons" aria-label="Formas de pagamento">
+          <img src="https://cdn.simpleicons.org/visa/1434CB" alt="Visa"/>
+          <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="Mastercard"/>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Logotipo_da_Elo.svg" alt="Elo"/>
+          <img src="https://cdn.simpleicons.org/pix/32BCAD" alt="Pix"/>
+        </div>
         <img src={IMG+"selo-compra-segura-600.webp"} alt="Compra segura, satisfação garantida e privacidade protegida" className="seal"/>
         <img src={IMG+"garantia-7-dias-risco-zero-420.webp"} alt="Selo de garantia de 7 dias com risco zero" className="guarantee-img"/>
       </section>
