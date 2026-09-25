@@ -43,3 +43,13 @@ body,.cacha-page,button,input,textarea,select{font-family:var(--font-sans)}
 
 /* Formas de pagamento */
 .payment h3{color:var(--brown);font-size:22px;margin-bottom:8px}.payment>p{color:var(--muted);font-weight:600}.pay-icons{display:flex;justify-content:center;align-items:center;gap:18px;margin:20px auto 28px;min-height:32px}.pay-icons img{width:56px;height:32px;object-fit:contain;display:block;padding:0;border:0;background:transparent}.pay-icons img:nth-child(3){width:58px}.pay-icons img:nth-child(4){width:56px}@media(max-width:520px){.pay-icons{gap:14px;margin:18px auto 24px}.pay-icons img{width:48px;height:28px}.pay-icons img:nth-child(3){width:50px}.pay-icons img:nth-child(4){width:48px}}
+\n/* Carrossel contínuo dos resultados compartilhados */
+.testimonial-carousel{width:100%;overflow:hidden;margin:35px auto 0;padding:4px 0 12px}
+.testimonial-track{display:flex;gap:18px;width:max-content;animation:testimonials-left 34s linear infinite;will-change:transform}
+.testimonial-carousel:hover .testimonial-track{animation-play-state:paused}
+.testimonial-track .testimonial-image{width:320px;flex:0 0 320px;padding:0;overflow:hidden}
+.testimonial-track .testimonial-image img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;border-radius:15px}
+@keyframes testimonials-left{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 9px))}}
+@media(max-width:850px){.testimonial-track .testimonial-image{width:300px;flex-basis:300px}}
+@media(max-width:520px){.testimonial-carousel{margin-top:28px}.testimonial-track{gap:12px;animation-duration:28s}.testimonial-track .testimonial-image{width:285px;flex-basis:285px}@keyframes testimonials-left{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 6px))}}}
+@media(prefers-reduced-motion:reduce){.testimonial-track{animation:none}}
