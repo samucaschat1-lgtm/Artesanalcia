@@ -779,3 +779,26 @@ body{
   transform:scaleX(1.12) scaleY(0.72) !important;
   transform-origin:center center !important;
 }
+
+
+/* Restaurar proporção natural das imagens substituídas */
+.cacha-page .hero-mockup,
+.cacha-page .plan.simple .basic-mockup,
+.cacha-page .plan.featured > img{
+  transform:none !important;
+  aspect-ratio:auto !important;
+  width:auto !important;
+  height:auto !important;
+  max-width:100% !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+}
+.cacha-page .hero-mockup{max-width:min(620px,96%) !important;}
+.cacha-page .plan.simple .basic-mockup{max-width:min(350px,100%) !important;}
+.cacha-page .plan.featured > img{max-width:min(390px,100%) !important;}
+@media(max-width:520px){
+  .cacha-page .hero-mockup,
+  .cacha-page .plan.simple .basic-mockup,
+  .cacha-page .plan.featured > img{max-width:100% !important;}
+}
