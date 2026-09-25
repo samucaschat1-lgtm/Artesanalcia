@@ -5,16 +5,16 @@ import { Check, ChevronDown } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "+500 Archivos STL de Juguetes y Modelos 3D" },
+      { title: "+500 Arquivos STL de Brinquedos e Modelos 3D" },
       {
         name: "description",
-        content: "Más de 500 archivos STL de juguetes y modelos 3D listos para descargar e imprimir.",
+        content: "Más de 500 arquivos STL de brinquedos e modelos 3D listos para baixar e imprimir.",
       },
-      { name: "author", content: "+500 Archivos STL de Juguetes y Modelos 3D" },
-      { property: "og:title", content: "+500 Archivos STL de Juguetes y Modelos 3D" },
+      { name: "author", content: "+500 Arquivos STL de Brinquedos e Modelos 3D" },
+      { property: "og:title", content: "+500 Arquivos STL de Brinquedos e Modelos 3D" },
       {
         property: "og:description",
-        content: "Una biblioteca digital de archivos STL para imprimir juguetes, figuras y modelos 3D.",
+        content: "Una biblioteca digital de arquivos STL para imprimir juguetes, figuras y modelos 3D.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -45,21 +45,21 @@ const CheckList = ({ items }: { items: string[] }) => (
 );
 
 const benefits: [string, string][] = [
-  ["+500 archivos STL", "Una gran variedad de archivos 3D para descargar, organizar y tener siempre disponibles cuando quieras imprimir algo nuevo."],
-  ["Juguetes y modelos 3D", "Encuentra diferentes categorías de juguetes, figuras, personajes, objetos decorativos y modelos para impresión 3D."],
-  ["Listos para imprimir", "Ten una biblioteca digital de archivos STL para consultar y elegir tus próximos modelos de impresión."],
-  ["Más opciones para crear", "Amplía tu colección de modelos 3D y descubre nuevas piezas para imprimir, personalizar y coleccionar."],
+  ["+500 arquivos STL", "Una gran variedad de archivos 3D para baixar, organizar y tener siempre disponibles quando quiser imprimir algo nuevo."],
+  ["Juguetes y modelos 3D", "Encontre diferentes categorias de juguetes, figuras, personagens, objetos decorativos y modelos para impressão 3D."],
+  ["Prontos para imprimir", "Ten una biblioteca digital de arquivos STL para consultar y elegir tus próximos modelos de impresión."],
+  ["Mais opções para criar", "Amplie tu colección de modelos 3D y descubre nuevas piezas para imprimir, personalizar y coleccionar."],
 ];
 
 const problems = [
-  "Pasar horas buscando archivos STL en diferentes sitios para encontrar un modelo que te interese.",
-  "Tener pocas opciones de juguetes y modelos 3D para imprimir en tu colección.",
+  "Pasar horas buscando arquivos STL en diferentes sitios para encontrar un modelo que te interese.",
+  "Ter pocas opciones de brinquedos e modelos 3D para imprimir en tu colección.",
   "Encontrar una idea para imprimir y no tener un archivo STL adecuado para comenzar.",
   "Perder tiempo buscando, organizando y separando archivos de diferentes fuentes.",
 ];
 
 const solutions = [
-  "Tener +500 archivos STL organizados para consultar cuando quieras imprimir algo nuevo.",
+  "Ter +500 arquivos STL organizados para consultar quando quiser imprimir algo nuevo.",
   "Encontrar juguetes, figuras y modelos 3D para diferentes momentos y proyectos.",
   "Elegir rápidamente un modelo y tener el archivo listo para llevar a tu flujo de impresión.",
   "Ampliar tu biblioteca digital y descubrir nuevas posibilidades para imprimir y personalizar.",
@@ -86,19 +86,19 @@ const bonuses = [
 ];
 
 const faq: [string, string][] = [
-  ["¿Cómo recibiré el material?", "Después de confirmar la compra, recibirás acceso al material digital para descargar los archivos y comenzar a consultar tu biblioteca STL."],
-  ["¿Qué incluye el plan básico?", "El plan básico incluye el material principal con +500 archivos STL de juguetes y modelos 3D para descargar e imprimir."],
-  ["¿Qué incluye el plan completo?", "El plan completo incluye los +500 archivos STL más los bonos complementarios para ampliar y organizar tu biblioteca de modelos 3D."],
-  ["¿Necesito una impresora 3D para usarlo?", "Los archivos están pensados para impresión 3D. Puedes descargarlos y utilizarlos según tu impresora, materiales y configuración."],
-  ["¿Sirve para quienes están comenzando?", "Sí. La biblioteca puede servir como fuente de modelos para conocer diferentes posibilidades de impresión 3D, respetando las configuraciones y conocimientos necesarios para cada modelo."],
-  ["¿Qué tipos de modelos forman parte del material?", "La biblioteca está enfocada en juguetes y modelos 3D, incluyendo figuras, personajes, objetos y diferentes modelos para imprimir."],
-  ["¿Qué es un archivo STL?", "STL es uno de los formatos más utilizados para modelos destinados a impresión 3D. Puedes abrirlo o prepararlo en el software compatible con tu impresora."],
+  ["¿Cómo recibiré el material?", "Após a confirmação da compra, você receberá acceso al material digital para baixar los archivos y comenzar a consultar tu biblioteca STL."],
+  ["¿Qué inclui el plan básico?", "O plano básico inclui el material principal con +500 arquivos STL de brinquedos e modelos 3D para baixar e imprimir."],
+  ["¿Qué inclui el plan completo?", "O plano completo inclui los +500 arquivos STL más los bonos complementarios para ampliar y organizar tu biblioteca de modelos 3D."],
+  ["¿Necesito una impresora 3D para usarlo?", "Los archivos están pensados para impressão 3D. Você pode baixarlos y utilizarlos según tu impresora, materiales y configuración."],
+  ["¿Sirve para quienes están comenzando?", "Sí. La biblioteca puede servir como fuente de modelos para conocer diferentes posibilidades de impressão 3D, respetando las configuraciones y conocimientos necesarios para cada modelo."],
+  ["¿Qué tipos de modelos forman parte del material?", "La biblioteca está enfocada en brinquedos e modelos 3D, incluindo figuras, personagens, objetos y diferentes modelos para imprimir."],
+  ["¿Qué es un archivo STL?", "STL es uno de los formatos más utilizados para modelos destinados a impressão 3D. Você pode abrirlo o prepararlo en el software compatible con tu impresora."],
   ["¿Puedo imprimir los modelos en mi casa?", "Sí, siempre que cuentes con una impresora 3D compatible y realices la preparación y configuración adecuadas para cada archivo."],
   ["¿Puedo personalizar los modelos?", "Depende del archivo y del software que utilices. Muchos modelos pueden ser escalados o modificados antes de imprimirlos."],
-  ["¿Necesito alguna aplicación para usarlo?", "Necesitarás un programa compatible para abrir o preparar los archivos STL antes de enviarlos a tu impresora 3D."],
-  ["¿Puedo guardar los archivos?", "Sí. Después de recibir el material, puedes descargar y organizar los archivos en tu dispositivo según tus necesidades."],
+  ["¿Necesito alguna aplicación para usarlo?", "Você precisará un programa compatible para abrir o preparar los arquivos STL antes de enviarlos a tu impresora 3D."],
+  ["¿Puedo guardar los archivos?", "Sí. Después de recibir el material, puedes baixar y organizar los archivos en tu dispositivo según tus necesidades."],
   ["¿Existe garantía?", "Sí. Tienes 15 días de garantía para acceder y probar el material. Si no es lo que necesitas, puedes solicitar el reembolso dentro de ese plazo."],
-  ["¿El acceso es por tiempo limitado?", "No. Una vez recibido el material, puedes conservar los archivos para consultarlos cuando quieras."],
+  ["¿El acceso es por tiempo limitado?", "No. Una vez recibido el material, puedes conservar los archivos para consultarlos quando quiser."],
 ];
 
 function TimeUnit({ value, label }: { value: number; label: string }) {
@@ -123,7 +123,7 @@ function Urgency() {
   return (
     <section className="urgency">
       <div className="narrow urgency-inner">
-        <h2>⏰ ⏰ Aprovecha la condición especial para acceder a los +500 archivos STL</h2>
+        <h2>⏰ ⏰ Aprovecha la condición especial para acceder a los +500 arquivos STL</h2>
         <div className="timer">
           <TimeUnit value={Math.floor(seconds / 60)} label="min" />
           <b>:</b>
@@ -194,13 +194,13 @@ function Price({
           />
 
           <p className="support">
-            Accede a una biblioteca digital con +500 archivos STL de juguetes y modelos 3D para descargar, preparar e imprimir.
+            Accede a una biblioteca digital con +500 arquivos STL de brinquedos e modelos 3D para baixar, preparar e imprimir.
           </p>
           <CheckList
             items={[
-              "+500 archivos STL para descargar y usar en tus impresiones 3D",
-              "Encuentra juguetes, figuras, personajes, objetos y modelos 3D de diferentes categorías",
-              "Amplía tu biblioteca de modelos y descubre nuevas posibilidades para imprimir y personalizar",
+              "+500 arquivos STL para baixar y usar en tus impresiones 3D",
+              "Encontre juguetes, figuras, personagens, objetos y modelos 3D de diferentes categorias",
+              "Amplie tu biblioteca de modelos y descubre nuevas posibilidades para imprimir y personalizar",
             ]}
           />
           <Cta>👉 ACCEDER AHORA</Cta>
@@ -215,12 +215,12 @@ function Price({
 
       <section className="previews section-alt">
         <div className="container">
-          <h2>MIRA ALGUNOS DE LOS MODELOS 3D</h2>
+          <h2>VEJA ALGUNS DOS MODELOS 3D</h2>
         </div>
         <Carousel />
         <div className="narrow centered">
           <p>
-            Todo viene organizado para que puedas consultar, descargar y elegir tus próximos modelos 3D sin perder tiempo buscando archivos en diferentes lugares.
+            Todo viene organizado para que puedas consultar, baixar y elegir tus próximos modelos 3D sin perder tiempo buscando archivos en diferentes lugares.
           </p>
           <div className="process">
             <b>📲 DESCARGA</b><span>➡</span><b>📁 ELIGE</b><span className="down">⬇</span><b>🖨️ IMPRIME!</b>
@@ -279,7 +279,7 @@ function Price({
             </ul>
           </div>
           <div className="centered">
-            <Cta>QUIERO VER LOS +500 ARCHIVOS STL</Cta>
+            <Cta>QUERO VER OS +500 ARQUIVOS STL</Cta>
           </div>
         </div>
         <Carousel landscape />
@@ -288,18 +288,18 @@ function Price({
       <section className="section section-alt">
       <section className="section receive">
         <div className="container">
-          <h2>TODO LO QUE VAS A RECIBIR</h2>
+          <h2>TUDO O QUE VOCÊ VAI RECEBER</h2>
           <article className="main-material">
             <span className="badge">ACCESO INMEDIATO</span>
             <EmptyMedia className="material-image empty-image-placeholder" />
             <h3>+500 ARCHIVOS STL DE JUGUETES Y MODELOS 3D</h3>
             <CheckList
               items={[
-                "+500 archivos STL organizados para descargar",
-                "Juguetes, figuras, personajes y modelos 3D",
-                "Archivos STL para explorar diferentes posibilidades de impresión 3D",
+                "+500 arquivos STL organizados para baixar",
+                "Juguetes, figuras, personagens y modelos 3D",
+                "Archivos STL para explorar diferentes posibilidades de impressão 3D",
                 "Más modelos para ampliar tu biblioteca de impresión",
-                "Acceso digital inmediato a los archivos STL",
+                "Acceso digital inmediato a los arquivos STL",
               ]}
             />
             <p className="delivery-box">
@@ -310,7 +310,7 @@ function Price({
           <div className="bonus-heading">
             <h2>EL PLAN COMPLETO INCLUYE AÚN MÁS MODELOS</h2>
             <p>
-              También recibirás bonos complementarios para ampliar aún más tu biblioteca de modelos 3D
+              También você receberá bonos complementarios para ampliar aún más tu biblioteca de modelos 3D
             </p>
           </div>
 
@@ -348,9 +348,9 @@ function Price({
         <EmptyMedia className="plan-image empty-image-placeholder" />
         <CheckList
           items={[
-            "+500 archivos STL de juguetes y modelos 3D",
+            "+500 arquivos STL de brinquedos e modelos 3D",
             "Juguetes, figuras y modelos 3D para imprimir",
-            "Modelos 3D de diferentes categorías",
+            "Modelos 3D de diferentes categorias",
             "Acceso inmediato al material digital",
           ]}
         />
@@ -386,7 +386,7 @@ function Price({
 
         <CheckList
           items={[
-            "+500 archivos STL de juguetes y modelos 3D",
+            "+500 arquivos STL de brinquedos e modelos 3D",
             "🎁 Bono 1 - Guía de Precios para Herrería",
             "🎁 Bono 2 - Catálogo de Productos para Ofrecer",
             "🎁 Bono 3 - Catálogo de Ideas",
@@ -420,15 +420,15 @@ function Price({
 </section>
       <section className="section section-alt reviews">
         <div className="container">
-          <h2>LO QUE DICEN QUIENES YA USAN LOS MODELOS 3D</h2>
+          <h2>O QUE DIZEM QUEM JÁ USA OS MODELOS 3D</h2>
           <p className="reviews-sub">
-            Personas que ampliaron su biblioteca de modelos para impresión 3D.
+            Personas que ampliaron su biblioteca de modelos para impressão 3D.
           </p>
           <div className="reviews-grid">
             {[
               {
                 name: "Carlos Martínez",
-                place: "Taller de impresión 3D · Ciudad de México",
+                place: "Taller de impressão 3D · Ciudad de México",
                 text: "Tenía siempre los mismos modelos para ofrecer. Ahora, cuando un cliente pide algo diferente, abro la biblioteca y ya tengo varios proyectos para mostrarle. Se cerró mi primer portón corredizo en dos semanas.",
                 avatar: null,
               },
@@ -514,7 +514,7 @@ function Price({
       <footer>
         <div className="container">
           <p>
-            Copyright © 2026 | +500 Archivos STL de Juguetes y Modelos 3D
+            Copyright © 2026 | +500 Arquivos STL de Brinquedos e Modelos 3D
             <br />
             Todos los derechos reservados.
           </p>
@@ -522,10 +522,10 @@ function Price({
             Este sitio no está afiliado a Facebook™, Instagram™, Google™ ni a ninguna otra plataforma mencionada.
           </p>
           <p>
-            Todos los derechos sobre el material digital “+500 Archivos STL de Juguetes y Modelos 3D” están reservados al productor, de acuerdo con la legislación aplicable.
+            Todos los derechos sobre el material digital “+500 Arquivos STL de Brinquedos e Modelos 3D” están reservados al productor, de acuerdo con la legislación aplicable.
           </p>
           <p>
-            Este producto es un material digital de consulta y referencia para impresión 3D. Los resultados pueden variar según los conocimientos, las herramientas, la experiencia y la aplicación de cada persona.
+            Este producto es un material digital de consulta y referencia para impressão 3D. Los resultados pueden variar según los conocimientos, las herramientas, la experiencia y la aplicación de cada persona.
           </p>
         </div>
       </footer>
