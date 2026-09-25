@@ -506,3 +506,49 @@ body{
     max-width:min(330px,100%) !important;
   }
 }
+
+
+/* Proteção global contra imagens achatadas ou esticadas */
+.cacha-page img{
+  box-sizing:border-box;
+  max-width:100%;
+}
+.cacha-page .hero-mockup,
+.cacha-page .basic-mockup,
+.cacha-page .plan.featured > img,
+.cacha-page .testimonial-image img,
+.cacha-page .bonus-card img,
+.cacha-page .seal,
+.cacha-page .guarantee-img{
+  height:auto !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center center;
+  transform:none !important;
+}
+
+/* As imagens dos planos nunca recebem dimensões forçadas */
+.cacha-page .plan.simple .basic-mockup{
+  width:min(350px,100%) !important;
+  height:auto !important;
+}
+.cacha-page .plan.featured > img{
+  width:min(390px,100%) !important;
+  height:auto !important;
+}
+
+@media(max-width:520px){
+  .cacha-page .plan.simple .basic-mockup{
+    width:min(330px,100%) !important;
+  }
+  .cacha-page .plan.featured > img{
+    width:min(330px,100%) !important;
+  }
+}
+
+/* Carrosséis: mantêm formato visual sem esticar o arquivo */
+.cacha-page .marquee img{
+  object-fit:cover;
+  object-position:center;
+}
