@@ -7,6 +7,9 @@ const CAKTO_FULL = "https://pay.cakto.com.br/v2muve7";
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    links: [
+      { rel: "preload", as: "image", href: IMG + "mockup-novo-800-q80.webp", fetchpriority: "high" },
+    ],
     meta: [
       { title: "+150 Receitas de Cachaça Artesanal" },
       { name: "description", content: "Biblioteca de Cachaças Artesanais com mais de 150 receitas, infusões, drinks e materiais extras." },
@@ -45,7 +48,7 @@ function Index() {
       <section className="hero">
         <div className="eyebrow">BIBLIOTECA DE CACHAÇAS ARTESANAIS</div>
         <h1><em>+150 Receitas de Cachaça Artesanal</em> Para Começar a Produzir na sua própria casa</h1>
-        <img className="hero-mockup" src={IMG + "mockup-novo-800-q80.webp"} alt="Kit +150 Receitas de Cachaças Artesanais" />
+        <img className="hero-mockup" src={IMG + "mockup-novo-800-q80.webp" fetchPriority="high" decoding="async" alt="Kit +150 Receitas de Cachaças Artesanais" />
         <p className="lead">Explore receitas, infusões e combinações com frutas brasileiras para preparar sabores especiais e valorizar nossa tradição. Um universo de aromas e sabores em um só material.</p>
         <ul className="checks">
           <li>Receitas explicadas passo a passo</li><li>Infusões com frutas do Brasil</li><li>Drinks, licores e combinações variadas</li><li>Material digital para consultar no celular</li>
@@ -62,9 +65,9 @@ function Index() {
         <div className="section-kicker">+150 RECEITAS NO MATERIAL COMPLETO</div>
         <h2>Tradição e sabores para inspirar suas receitas:</h2>
         <a className="text-link" href="#oferta">Ver receitas completas ↓</a>
-        <div className="marquee"><div className="marquee-track">{[...Array(2)].flatMap((_,set)=>["img-6-440.webp","img-9-440.webp","img-1-440.webp","img-4-440.webp","img-7-440.webp","img-2-440.webp","img-5-440.webp"].map((x,i)=><img key={"r"+set+i} src={IMG+x} alt={"Receita de cachaça "+(i+1)} />))}</div></div>
+        <div className="marquee"><div className="marquee-track">{[...Array(2)].flatMap((_,set)=>["img-6-440.webp","img-9-440.webp","img-1-440.webp","img-4-440.webp","img-7-440.webp","img-2-440.webp","img-5-440.webp"].map((x,i)=><img key={"r"+set+i} src={IMG+x} alt={"Receita de cachaça "+(i+1)} loading="lazy" decoding="async" />))}</div></div>
         <h2>Uma prévia do que você vai receber</h2>
-        <div className="marquee marquee-reverse preview-large"><div className="marquee-track">{[...Array(2)].flatMap((_,set)=>["previa-set23-6-800.webp","previa-set23-8-800.webp","previa-set23-10-800.webp","previa-set23-1-800.webp","previa-set23-3-800.webp","previa-set23-5-800.webp","previa-set23-7-800.webp"].map((x,i)=><img key={"p"+set+i} src={IMG+x} alt={"Prévia "+(i+1)} />))}</div></div>
+        <div className="marquee marquee-reverse preview-large"><div className="marquee-track">{[...Array(2)].flatMap((_,set)=>["previa-set23-6-800.webp","previa-set23-8-800.webp","previa-set23-10-800.webp","previa-set23-1-800.webp","previa-set23-3-800.webp","previa-set23-5-800.webp","previa-set23-7-800.webp"].map((x,i)=><img key={"p"+set+i} src={IMG+x} alt={"Prévia "+(i+1)} loading="lazy" decoding="async" />))}</div></div>
         <a className="cta" href="#oferta">QUERO ACESSO AO MATERIAL COMPLETO</a>
       </section>
 
@@ -99,7 +102,7 @@ function Index() {
         <h2>Uma coleção completa. Cinco bônus para ir além.</h2>
         <p className="section-intro">Do cuidado com a sua cachaça à combinação perfeita à mesa: conheça os materiais que acompanham o Kit Completo.</p>
         <div className="bonus-grid">
-          {bonuses.map(([tag,img,title,desc])=><article className="bonus-card" key={img}><span>{tag}</span><img src={IMG+img} alt={"Capa do "+title}/><h3>{title}</h3><p>{desc}</p><b>BÔNUS GRÁTIS NO KIT</b><div className="bonus-price"><s>R$18,00</s> <strong>POR R$0,00</strong></div><small>Incluso no Kit Completo</small></article>)}
+          {bonuses.map(([tag,img,title,desc])=><article className="bonus-card" key={img}><span>{tag}</span><img src={IMG+img} alt={"Capa do "+title} loading="lazy" decoding="async"/><h3>{title}</h3><p>{desc}</p><b>BÔNUS GRÁTIS NO KIT</b><div className="bonus-price"><s>R$18,00</s> <strong>POR R$0,00</strong></div><small>Incluso no Kit Completo</small></article>)}
         </div>
         <div className="bonus-total">Valor total dos 5 bônus: <s>R$90,00</s><br/><strong>VOCÊ PAGA PELOS 5 BÔNUS</strong><br/><b><s>R$0,00</s></b><span>Todos inclusos na compra do Kit Completo, sem custo adicional.</span></div>
       </section>
@@ -113,7 +116,7 @@ function Index() {
         <h2>Escolha como quer começar hoje:</h2>
         <div className="plans">
           <article className="plan simple"><h3>40 RECEITAS DE CACHAÇAS</h3><ul><li>Material 100% digital</li><li>Acesso imediato após a compra</li></ul><div className="price">R$10,00</div><a className="cta" href={CAKTO_40}>QUERO 40 RECEITAS</a></article>
-          <article className="plan featured"><div className="badge">⭐ MELHOR CUSTO-BENEFÍCIO</div><img src={IMG+"mockup-novo-800-q80.webp"} alt="Kit completo com mais de 150 receitas de cachaças artesanais"/><h3>KIT COMPLETO +150 RECEITAS</h3><p>Para quem quer explorar a tradição da cachaça, descobrir novos sabores e ter um repertório completo sempre à mão.</p><h4>O que está incluído:</h4><ul><li>+150 receitas de cachaças artesanais</li><li>Manual de Higiene e de Conservação</li><li>Guia de Precificação e Apresentação Profissional</li><li>50 Drinks e Coquetéis</li><li>Guia de Madeiras e Sabores</li><li>Guia de Harmonização</li><li>Material 100% digital</li><li>Acesso imediato</li><li>Garantia de 7 dias</li></ul><s>R$97,00</s><div className="installments">5x de <strong>R$4,98</strong></div><div className="cash">ou <strong>R$24,90 à vista</strong></div><a className="cta" href={CAKTO_FULL}>QUERO O KIT COMPLETO POR R$24,90</a><small>Pagamento único • Acesso imediato • Garantia de 7 dias</small></article>
+          <article className="plan featured"><div className="badge">⭐ MELHOR CUSTO-BENEFÍCIO</div><img src={IMG+"mockup-novo-800-q80.webp"} alt="Kit completo com mais de 150 receitas de cachaças artesanais" loading="lazy" decoding="async"/><h3>KIT COMPLETO +150 RECEITAS</h3><p>Para quem quer explorar a tradição da cachaça, descobrir novos sabores e ter um repertório completo sempre à mão.</p><h4>O que está incluído:</h4><ul><li>+150 receitas de cachaças artesanais</li><li>Manual de Higiene e de Conservação</li><li>Guia de Precificação e Apresentação Profissional</li><li>50 Drinks e Coquetéis</li><li>Guia de Madeiras e Sabores</li><li>Guia de Harmonização</li><li>Material 100% digital</li><li>Acesso imediato</li><li>Garantia de 7 dias</li></ul><s>R$97,00</s><div className="installments">5x de <strong>R$4,98</strong></div><div className="cash">ou <strong>R$24,90 à vista</strong></div><a className="cta" href={CAKTO_FULL}>QUERO O KIT COMPLETO POR R$24,90</a><small>Pagamento único • Acesso imediato • Garantia de 7 dias</small></article>
         </div>
       </section>
 
@@ -123,11 +126,11 @@ function Index() {
         <div className="pay-icons" aria-label="Formas de pagamento">
           <img src="https://cdn.simpleicons.org/visa/1434CB" alt="Visa" width="56" height="32" loading="lazy" decoding="async"/>
           <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="Mastercard" width="56" height="32" loading="lazy" decoding="async"/>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Logotipo_da_Elo.svg" alt="Elo" width="56" height="32" loading="lazy" decoding="async"/>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Logotipo_da_Elo.svg" alt="Elo" width="56" height="32" loading="lazy" decoding="async" />
           <img src="https://cdn.simpleicons.org/pix/32BCAD" alt="Pix" width="56" height="32" loading="lazy" decoding="async"/>
         </div>
-        <img src={IMG+"selo-compra-segura-600.webp"} alt="Compra segura, satisfação garantida e privacidade protegida" className="seal"/>
-        <img src={IMG+"garantia-7-dias-risco-zero-420.webp"} alt="Selo de garantia de 7 dias com risco zero" className="guarantee-img"/>
+        <img src={IMG+"selo-compra-segura-600.webp"} alt="Compra segura, satisfação garantida e privacidade protegida" className="seal" loading="lazy" decoding="async"/>
+        <img src={IMG+"garantia-7-dias-risco-zero-420.webp"} alt="Selo de garantia de 7 dias com risco zero" loading="lazy" decoding="async" className="guarantee-img"/>
       </section>
 
       <section className="risk section"><div className="section-kicker">🛡️ VOCÊ COMPRA SEM RISCO</div><h2>Conheça o material por 7 dias</h2><p>Explore o material com tranquilidade. Se precisar solicitar o reembolso dentro do prazo, siga as condições da plataforma.</p></section>
