@@ -97,7 +97,7 @@ function Index() {
         <div className="bonus-grid">
           {bonuses.map(([tag,img,title,desc])=><article className="bonus-card" key={img}><span>{tag}</span><img src={IMG+img} alt={"Capa do "+title}/><h3>{title}</h3><p>{desc}</p><b>BÔNUS GRÁTIS NO KIT</b><div className="bonus-price"><s>R$18,00</s> <strong>POR R$0,00</strong></div><small>Incluso no Kit Completo</small></article>)}
         </div>
-        <div className="bonus-total">Valor total dos 5 bônus: <s>R$90,00</s><br/><strong>VOCÊ PAGA PELOS 5 BÔNUS</strong><br/><b>R$0,00</b><span>Todos inclusos na compra do Kit Completo, sem custo adicional.</span></div>
+        <div className="bonus-total">Valor total dos 5 bônus: <s>R$90,00</s><br/><strong>VOCÊ PAGA PELOS 5 BÔNUS</strong><br/><b><s>R$0,00</s></b><span>Todos inclusos na compra do Kit Completo, sem custo adicional.</span></div>
       </section>
 
       <section className="secure section">
