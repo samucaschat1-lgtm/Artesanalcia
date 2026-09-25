@@ -22,10 +22,9 @@ export const Route = createFileRoute("/")({
 });
 
 function Countdown() {
-  const initialSeconds = 13 * 60 + 56;
-  const [seconds, setSeconds] = useState(initialSeconds);
+  const [seconds, setSeconds] = useState(13 * 60 + 56);
   useEffect(() => {
-    const timer = setInterval(() => setSeconds((s) => (s > 0 ? s - 1 : initialSeconds)), 1000);
+    const timer = setInterval(() => setSeconds((s) => (s > 0 ? s - 1 : 13 * 60 + 56)), 1000);
     return () => clearInterval(timer);
   }, []);
   const m = String(Math.floor(seconds / 60)).padStart(2, "0");
@@ -33,7 +32,7 @@ function Countdown() {
   return <>{m}:{s}</>;
 }
 
-const bonuses: readonly (readonly [string, string, string, string])[] = [
+const bonuses = [
   ["BÔNUS 01", "bonus-1-600.webp", "Manual de Higiene e de Conservação", "Conheça os cuidados de higiene, armazenamento e conservação da sua cachaça."],
   ["BÔNUS 02", "bonus-2-600.webp", "Guia de Precificação e Apresentação Profissional", "Organize seus custos e aprimore a apresentação do seu produto artesanal."],
   ["BÔNUS 03", "bonus-3-600.webp", "50 Drinks e Coquetéis", "Explore 50 combinações para levar criatividade e tradição a cada brinde."],
