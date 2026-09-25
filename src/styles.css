@@ -255,3 +255,33 @@ body,.cacha-page,button,input,textarea,select{font-family:var(--font-sans)}
   .preview .marquee:not(.preview-large) img{width:125px;height:165px}
   .preview .preview-large img{width:210px;height:270px}
 }
+
+
+/* Padroniza o botão do plano de 40 receitas com os demais CTAs */
+.plan.simple .cta,
+.plan.simple a[href*="4468wep"]{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:62px;
+  width:100%;
+  background:linear-gradient(180deg,#39d353 0%,#18a83a 52%,#0f8f31 100%);
+  color:#fff;
+  font-family:var(--font-sans);
+  font-size:16px;
+  font-weight:900;
+  letter-spacing:.035em;
+  border:2px solid #58e66d;
+  border-radius:14px;
+  padding:17px 30px;
+  box-shadow:0 5px 0 #087326,0 12px 28px #16a53a66,inset 0 1px 0 #ffffff55;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:0 1px 2px #075c20;
+}
+.plan.simple a[href*="4468wep"]:after{content:"→";font-size:23px;line-height:1;font-weight:900;margin-left:2px}
+.plan.simple a[href*="4468wep"]:hover{filter:brightness(1.08) saturate(1.08);transform:translateY(-3px);box-shadow:0 7px 0 #087326,0 17px 34px #16a53a80,inset 0 1px 0 #ffffff66}
+.plan.simple a[href*="4468wep"]:active{transform:translateY(2px);box-shadow:0 3px 0 #087326,0 8px 16px #16a53a55}
+@media(max-width:520px){.plan.simple a[href*="4468wep"]{min-height:62px;font-size:14px;padding:17px 18px}}
