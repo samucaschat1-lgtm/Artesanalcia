@@ -60,7 +60,7 @@ function Index() {
         <a className="text-link" href="#oferta">Ver receitas completas ↓</a>
         <div className="marquee"><div className="marquee-track">{[...Array(2)].flatMap((_,set)=>["receita-1-600.webp","receita-2-600.webp","receita-3-600.webp","receita-4-600.webp","receita-5-600.webp","receita-6-600.webp","receita-7-600.webp","receita-8-600.webp","receita-9-600.webp","receita-10-600.webp"].map((x,i)=><img key={"r"+set+i} src={IMG+x} alt={"Receita de cachaça "+(i+1)} />))}</div></div>
         <h2>Uma prévia do que você vai receber</h2>
-        <div className="marquee marquee-reverse"><div className="marquee-track">{[...Array(2)].flatMap((_,set)=>["previa-1-600.webp","previa-2-600.webp","previa-3-600.webp","previa-4-600.webp","previa-5-600.webp","previa-6-600.webp","previa-7-600.webp","previa-8-600.webp","previa-9-600.webp","previa-10-600.webp"].map((x,i)=><img key={"p"+set+i} src={IMG+x} alt={"Prévia "+(i+1)} />))}</div></div>
+        <div className="marquee marquee-reverse"><div className="marquee-track">{[...Array(2)].flatMap((_,set)=>["previa-set23-6-800.webp","previa-set23-8-800.webp","previa-set23-10-800.webp","previa-set23-1-800.webp","previa-set23-3-800.webp","previa-set23-5-800.webp","previa-set23-7-800.webp"].map((x,i)=><img key={"p"+set+i} src={IMG+x} alt={"Prévia "+(i+1)} />))}</div></div>
         <a className="cta" href="#oferta">QUERO ACESSO AO MATERIAL COMPLETO</a>
       </section>
 
