@@ -834,3 +834,8 @@ body{
   transform:scaleX(1.10) scaleY(0.94) !important;
   transform-origin:center center !important;
 }
+
+/* Redução exclusiva do tamanho da imagem do Hero */
+.cacha-page .hero-mockup{
+  max-width:min(560px,90%) !important;
+}
