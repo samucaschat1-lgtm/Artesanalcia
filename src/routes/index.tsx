@@ -8,7 +8,8 @@ const CAKTO_FULL = "https://pay.cakto.com.br/hu9et7p_1138688";
 export const Route = createFileRoute("/")({
   head: () => ({
     links: [
-      { rel: "preload", as: "image", href: IMG + "mockup-novo-800-q80.webp" },
+      { rel: "preload", as: "image", href: "/5116834A-F50E-4E6B-9B7E-8A5CE3A5CBB6.webp", fetchPriority: "high" },
+      { rel: "preconnect", href: "https://maisde150receitasdecachacas.vercel.app" },
     ],
     meta: [
       { title: "+200 Batidas de Cachaça Artesanal" },
@@ -48,7 +49,7 @@ function Index() {
       <section className="hero">
         <div className="eyebrow">BIBLIOTECA DE CACHAÇAS ARTESANAIS</div>
         <h1><em>+200 Batidas de Cachaça Artesanal</em> Para Começar a Produzir na sua própria casa</h1>
-        <img className="hero-mockup" src="/5116834A-F50E-4E6B-9B7E-8A5CE3A5CBB6.webp" fetchPriority="high" decoding="async" alt="Kit +200 Batidas de Cachaças Artesanais" />
+        <img className="hero-mockup" src="/5116834A-F50E-4E6B-9B7E-8A5CE3A5CBB6.webp" width="1600" height="1600" fetchPriority="high" decoding="async" alt="Kit +200 Batidas de Cachaças Artesanais" />
         <p className="lead">Explore batidas, infusões e combinações com frutas brasileiras para preparar sabores especiais e valorizar nossa tradição. Um universo de aromas e sabores em um só material.</p>
         <ul className="checks">
           <li>Batidas explicadas passo a passo</li><li>Infusões com frutas do Brasil</li><li>Drinks, licores e combinações variadas</li><li>Material digital para consultar no celular</li>
@@ -116,8 +117,8 @@ function Index() {
         <div className="section-kicker">⏰ OFERTA POR TEMPO LIMITADO</div>
         <h2>Escolha como quer começar hoje:</h2>
         <div className="plans">
-          <article className="plan simple"><img className="basic-mockup" src="/5116834A-F50E-4E6B-9B7E-8A5CE3A5CBB6.webp" alt="+200 batidas de cachaças artesanais" loading="lazy" decoding="async"/><h3>KIT +200 BATIDAS</h3><ul><li>Material 100% digital</li><li>Acesso imediato após a compra</li></ul><div className="price">R$10,00</div><a className="cta" href={CAKTO_40}>QUERO O KIT +200 POR R$10,00</a></article>
-          <article className="plan featured"><div className="badge">⭐ MELHOR CUSTO-BENEFÍCIO</div><img src="/704AF2B4-946F-437D-B364-D4AB9BCAD364.webp" alt="Kit completo com mais de 200 batidas de cachaças artesanais" loading="lazy" decoding="async"/><h3>KIT COMPLETO +200 BATIDAS + BÔNUS</h3><p>Para quem quer explorar a tradição da cachaça, descobrir novos sabores e ter um repertório completo sempre à mão.</p><h4>O que está incluído:</h4><ul><li>+200 batidas de cachaças artesanais</li><li>Manual de Higiene e de Conservação</li><li>Guia de Precificação e Apresentação Profissional</li><li>50 Drinks e Coquetéis</li><li>Guia de Madeiras e Sabores</li><li>Guia de Harmonização</li><li>Material 100% digital</li><li>Acesso imediato</li><li>Garantia de 7 dias</li></ul><s>R$97,00</s><div className="installments">5x de <strong>R$4,98</strong></div><div className="cash">ou <strong>R$24,90 à vista</strong></div><a className="cta" href={CAKTO_FULL}>QUERO O KIT COMPLETO POR R$24,90</a><small>Pagamento único • Acesso imediato • Garantia de 7 dias</small></article>
+          <article className="plan simple"><img className="basic-mockup" width="1600" height="1600" src="/5116834A-F50E-4E6B-9B7E-8A5CE3A5CBB6.webp" alt="+200 batidas de cachaças artesanais" loading="lazy" decoding="async"/><h3>KIT +200 BATIDAS</h3><ul><li>Material 100% digital</li><li>Acesso imediato após a compra</li></ul><div className="price">R$10,00</div><a className="cta" href={CAKTO_40}>QUERO O KIT +200 POR R$10,00</a></article>
+          <article className="plan featured"><div className="badge">⭐ MELHOR CUSTO-BENEFÍCIO</div><img width="1600" height="1600" src="/704AF2B4-946F-437D-B364-D4AB9BCAD364.webp" alt="Kit completo com mais de 200 batidas de cachaças artesanais" loading="lazy" decoding="async"/><h3>KIT COMPLETO +200 BATIDAS + BÔNUS</h3><p>Para quem quer explorar a tradição da cachaça, descobrir novos sabores e ter um repertório completo sempre à mão.</p><h4>O que está incluído:</h4><ul><li>+200 batidas de cachaças artesanais</li><li>Manual de Higiene e de Conservação</li><li>Guia de Precificação e Apresentação Profissional</li><li>50 Drinks e Coquetéis</li><li>Guia de Madeiras e Sabores</li><li>Guia de Harmonização</li><li>Material 100% digital</li><li>Acesso imediato</li><li>Garantia de 7 dias</li></ul><s>R$97,00</s><div className="installments">5x de <strong>R$4,98</strong></div><div className="cash">ou <strong>R$24,90 à vista</strong></div><a className="cta" href={CAKTO_FULL}>QUERO O KIT COMPLETO POR R$24,90</a><small>Pagamento único • Acesso imediato • Garantia de 7 dias</small></article>
         </div>
       </section>
 
