@@ -1,25 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { Check, ChevronDown } from "lucide-react";
-import avatarHomem1 from "@/assets/avatar-homem-1.jpg";
-import avatarHomem2 from "@/assets/avatar-homem-2.jpg";
-const heroProduct = "/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_09_34.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "+100 Proyectos para Fabricar y Vender" },
+      { title: "+500 Archivos STL de Juguetes y Modelos 3D" },
       {
         name: "description",
-        content:
-          "Biblioteca digital con más de 5.000 proyectos de herrería para consultar, estudiar, fabricar y vender.",
+        content: "Más de 500 archivos STL de juguetes y modelos 3D listos para descargar e imprimir.",
       },
-      { name: "author", content: "+100 Proyectos para Fabricar y Vender" },
-      { property: "og:title", content: "+100 Proyectos para Fabricar y Vender" },
+      { name: "author", content: "+500 Archivos STL de Juguetes y Modelos 3D" },
+      { property: "og:title", content: "+500 Archivos STL de Juguetes y Modelos 3D" },
       {
         property: "og:description",
-        content:
-          "Amplía las posibilidades de tu taller con miles de proyectos y referencias de fabricación metálica.",
+        content: "Una biblioteca digital de archivos STL para imprimir juguetes, figuras y modelos 3D.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -50,124 +45,60 @@ const CheckList = ({ items }: { items: string[] }) => (
 );
 
 const benefits: [string, string][] = [
-  [
-    "+100 proyectos",
-    "Una gran variedad de modelos para consultar cuando surja una nueva idea, pedido u oportunidad de fabricación.",
-  ],
-  [
-    "Más posibilidades de fabricación",
-    "Encuentra proyectos de mesas, estanterías, portones, remolques, estructuras metálicas y muchos otros modelos.",
-  ],
-  [
-    "Referencias para tu taller",
-    "Ten proyectos organizados para estudiar diferentes modelos y encontrar referencias antes de comenzar una nueva fabricación.",
-  ],
-  [
-    "Más opciones para ofrecer",
-    "Amplía el catálogo de piezas que puedes presentar a tus clientes y aumenta las posibilidades de nuevos trabajos.",
-  ],
+  ["+500 archivos STL", "Una gran variedad de archivos 3D para descargar, organizar y tener siempre disponibles cuando quieras imprimir algo nuevo."],
+  ["Juguetes y modelos 3D", "Encuentra diferentes categorías de juguetes, figuras, personajes, objetos decorativos y modelos para impresión 3D."],
+  ["Listos para imprimir", "Ten una biblioteca digital de archivos STL para consultar y elegir tus próximos modelos de impresión."],
+  ["Más opciones para crear", "Amplía tu colección de modelos 3D y descubre nuevas piezas para imprimir, personalizar y coleccionar."],
 ];
 
 const problems = [
-  "Pasar horas buscando referencias para descubrir cómo fabricar una pieza diferente.",
-  "Tener siempre las mismas opciones de productos para fabricar y ofrecer a los clientes.",
-  "Encontrar una nueva oportunidad de trabajo y no tener un proyecto o modelo para consultar.",
-  "Perder tiempo intentando dibujar y planificar cada nueva pieza desde cero.",
+  "Pasar horas buscando archivos STL en diferentes sitios para encontrar un modelo que te interese.",
+  "Tener pocas opciones de juguetes y modelos 3D para imprimir en tu colección.",
+  "Encontrar una idea para imprimir y no tener un archivo STL adecuado para comenzar.",
+  "Perder tiempo buscando, organizando y separando archivos de diferentes fuentes.",
 ];
 
 const solutions = [
-  "Tener +100 proyectos de herrería organizados para consultar cuando los necesites.",
-  "Encontrar diferentes modelos de muebles, estructuras, remolques y mucho más.",
-  "Usar los proyectos como referencia para estudiar y planificar nuevas piezas para fabricar.",
-  "Ampliar las posibilidades de productos que puedes fabricar y ofrecer a tus clientes.",
-];const bonuses = [
+  "Tener +500 archivos STL organizados para consultar cuando quieras imprimir algo nuevo.",
+  "Encontrar juguetes, figuras y modelos 3D para diferentes momentos y proyectos.",
+  "Elegir rápidamente un modelo y tener el archivo listo para llevar a tu flujo de impresión.",
+  "Ampliar tu biblioteca digital y descubrir nuevas posibilidades para imprimir y personalizar.",
+];
+const bonuses = [
   {
-    title: "GUÍA DE PRECIOS PARA HERRERÍA",
-    subtitle:
-      "una referencia práctica para organizar costos y calcular el precio de venta",
-    items: [
-      "Organiza los principales costos de fabricación",
-      "Ten una referencia para calcular precios de venta",
-      "Evita olvidar materiales y gastos al calcular tu precio",
-      "Úsalo como apoyo para calcular el precio de tus piezas",
-    ],
+    title: "COLECCIÓN EXTRA DE FIGURAS 3D",
+    subtitle: "modelos adicionales para ampliar tu biblioteca de impresión",
+    items: ["Más figuras para imprimir", "Nuevos modelos para coleccionar", "Ideas para personalizar tus impresiones", "Archivos organizados para facilitar tu consulta"],
     value: "$27",
   },
   {
-    title: "CATÁLOGO DE PRODUCTOS PARA OFRECER",
-    subtitle:
-      "ideas de piezas para ampliar las opciones que presentas a tus clientes",
-    items: [
-      "Diversas ideas de productos para incluir en tu catálogo",
-      "Modelos que pueden servir como referencia para nuevos trabajos",
-      "Más opciones para presentar a tus clientes",
-      "Ayuda para descubrir nuevos productos que puedes fabricar",
-    ],
+    title: "CATÁLOGO DE IDEAS PARA IMPRESIÓN 3D",
+    subtitle: "referencias para descubrir qué puedes imprimir",
+    items: ["Ideas de juguetes y objetos 3D", "Diferentes estilos de modelos", "Referencias para tus próximas impresiones", "Más variedad para tu colección"],
     value: "$27",
   },
   {
-    title: "CATÁLOGO DE IDEAS + LISTA DE PROVEEDORES",
-    subtitle:
-      "más referencias para encontrar productos y materiales para tu taller",
-    items: [
-      "Ideas de piezas para estudiar y fabricar",
-      "Referencias para ampliar tu catálogo",
-      "Lista de proveedores y materiales relacionados con la fabricación",
-      "Más facilidad para encontrar nuevas posibilidades para tu taller",
-    ],
+    title: "PACK EXTRA + GUÍA DE ORGANIZACIÓN",
+    subtitle: "más archivos y una forma práctica de mantener tu biblioteca organizada",
+    items: ["Modelos adicionales", "Categorías para organizar tus STL", "Ideas para separar tus archivos", "Más facilidad para encontrar tus modelos"],
     value: "$47",
   },
 ];
 
 const faq: [string, string][] = [
-  [
-    "¿Cómo recibiré el material?",
-    "Después de confirmar la compra, recibirás acceso inmediato por correo electrónico y WhatsApp. Solo tienes que descargar los archivos y comenzar a consultar los proyectos.",
-  ],
-  [
-    "¿Qué incluye el plan básico?",
-    "El plan básico incluye el material principal con +100 proyectos de herrería para consultar y usar como referencia en la fabricación.",
-  ],
-  [
-    "¿Qué incluye el plan completo?",
-    "En el plan completo recibes los +100 proyectos más los bonos de precios, catálogo de productos, catálogo de ideas y lista de proveedores.",
-  ],
-  [
-    "¿Necesito saber de herrería para usarlo?",
-    "Los proyectos sirven como material de consulta y referencia. El aprovechamiento depende de tu nivel de conocimientos, las herramientas disponibles y tu experiencia en fabricación.",
-  ],
-  [
-    "¿Sirve para quienes están comenzando?",
-    "Sí. El material puede ser utilizado por quienes buscan conocer nuevos modelos y posibilidades de fabricación, siempre respetando los conocimientos y habilidades necesarios para ejecutar cada proyecto.",
-  ],
-  [
-    "¿Qué tipos de proyectos forman parte del material?",
-    "La biblioteca reúne diferentes categorías, incluyendo mesas, estanterías, portones, estructuras metálicas, remolques, parrillas, escaleras y muchos otros modelos.",
-  ],
-  [
-    "¿Necesito alguna aplicación para usarlo?",
-    "No. Solo necesitas abrir los archivos en tu celular, tablet o computadora para consultar el material. Si quieres, también puedes imprimir los proyectos.",
-  ],
-  [
-    "¿Puedo usar los proyectos como referencia para mis clientes?",
-    "Sí. Los proyectos pueden servir como referencia para estudiar modelos y presentar posibilidades de fabricación a tus clientes.",
-  ],
-  [
-    "¿El material sirve para cualquier tipo de taller?",
-    "El material reúne diferentes categorías de proyectos de herrería y puede utilizarse como biblioteca de referencias, según las herramientas, equipos y conocimientos disponibles en tu taller.",
-  ],
-  [
-    "¿Puedo imprimir los proyectos?",
-    "Sí. Después de recibir el material, puedes imprimir los archivos según tus necesidades de consulta.",
-  ],
-  [
-    "¿Existe garantía?",
-    "Sí. Tienes 15 días de garantía para acceder y probar el material. Si no es lo que necesitas, puedes solicitar el reembolso dentro de ese plazo.",
-  ],
-  [
-    "¿El acceso es por tiempo limitado?",
-    "No. El acceso al material queda habilitado para que puedas consultarlo cuando lo necesites.",
-  ],
+  ["¿Cómo recibiré el material?", "Después de confirmar la compra, recibirás acceso al material digital para descargar los archivos y comenzar a consultar tu biblioteca STL."],
+  ["¿Qué incluye el plan básico?", "El plan básico incluye el material principal con +500 archivos STL de juguetes y modelos 3D para descargar e imprimir."],
+  ["¿Qué incluye el plan completo?", "El plan completo incluye los +500 archivos STL más los bonos complementarios para ampliar y organizar tu biblioteca de modelos 3D."],
+  ["¿Necesito una impresora 3D para usarlo?", "Los archivos están pensados para impresión 3D. Puedes descargarlos y utilizarlos según tu impresora, materiales y configuración."],
+  ["¿Sirve para quienes están comenzando?", "Sí. La biblioteca puede servir como fuente de modelos para conocer diferentes posibilidades de impresión 3D, respetando las configuraciones y conocimientos necesarios para cada modelo."],
+  ["¿Qué tipos de modelos forman parte del material?", "La biblioteca está enfocada en juguetes y modelos 3D, incluyendo figuras, personajes, objetos y diferentes modelos para imprimir."],
+  ["¿Qué es un archivo STL?", "STL es uno de los formatos más utilizados para modelos destinados a impresión 3D. Puedes abrirlo o prepararlo en el software compatible con tu impresora."],
+  ["¿Puedo imprimir los modelos en mi casa?", "Sí, siempre que cuentes con una impresora 3D compatible y realices la preparación y configuración adecuadas para cada archivo."],
+  ["¿Puedo personalizar los modelos?", "Depende del archivo y del software que utilices. Muchos modelos pueden ser escalados o modificados antes de imprimirlos."],
+  ["¿Necesito alguna aplicación para usarlo?", "Necesitarás un programa compatible para abrir o preparar los archivos STL antes de enviarlos a tu impresora 3D."],
+  ["¿Puedo guardar los archivos?", "Sí. Después de recibir el material, puedes descargar y organizar los archivos en tu dispositivo según tus necesidades."],
+  ["¿Existe garantía?", "Sí. Tienes 15 días de garantía para acceder y probar el material. Si no es lo que necesitas, puedes solicitar el reembolso dentro de ese plazo."],
+  ["¿El acceso es por tiempo limitado?", "No. Una vez recibido el material, puedes conservar los archivos para consultarlos cuando quieras."],
 ];
 
 function TimeUnit({ value, label }: { value: number; label: string }) {
@@ -192,7 +123,7 @@ function Urgency() {
   return (
     <section className="urgency">
       <div className="narrow urgency-inner">
-        <h2>⏰ Aprovecha la condición especial para acceder a los +100 proyectos</h2>
+        <h2>⏰ ⏰ Aprovecha la condición especial para acceder a los +500 archivos STL</h2>
         <div className="timer">
           <TimeUnit value={Math.floor(seconds / 60)} label="min" />
           <b>:</b>
@@ -204,36 +135,13 @@ function Urgency() {
 }
 
 function Carousel({ landscape = false }: { landscape?: boolean }) {
-  const images = [
-    "CARRETILHA.webp",
-    "ESCALERA INDUSTRIAL.webp",
-    "ESTANTE UNDUSTRIAL.webp",
-    "MESA DE CENTRO.webp",
-    "MESA DE COMEDOR.webp",
-    "Mesa Y BANCO.webp",
-    "PARRILLA PARA CARBON.webp",
-    "PORTON CORREDIZO.webp",
-  ];
-
-  const imageUrl = (file: string) =>
-    `https://raw.githubusercontent.com/samucaschat1-lgtm/proyectosparafabricar/main/public/${encodeURIComponent(file)}`;
-
+  const placeholders = Array.from({ length: 8 }, (_, i) => i);
   return (
-    <div
-      className={`carousel ${landscape ? "carousel-landscape" : "carousel-portrait"}`}
-      aria-label="Carrusel automático de proyectos"
-    >
+    <div className={`carousel ${landscape ? "carousel-landscape" : "carousel-portrait"}`} aria-label="Espacios reservados para futuros modelos 3D">
       <div className="carousel-track">
-        {[...images, ...images].map((file, i) => (
-          <div className="carousel-item" key={`${file}-${i}`}>
-            <img
-              src={imageUrl(file)}
-              alt={`Proyecto de herrería ${(i % images.length) + 1}`}
-              loading="lazy"
-              fetchPriority="low"
-              decoding="async"
-              draggable={false}
-            />
+        {[...placeholders, ...placeholders].map((i, index) => (
+          <div className="carousel-item" key={`placeholder-${i}-${index}`}>
+            <EmptyMedia className="carousel-placeholder" />
           </div>
         ))}
       </div>
@@ -273,17 +181,10 @@ function Price({
       <section className="hero">
         <div className="narrow hero-inner">
           <h1>
-            APRENDE <mark>+100 PROYECTOS</mark> PARA{" "}
-            <mark>FABRICAR Y VENDER</mark>
+            DESCUBRE <mark>+500 ARCHIVOS STL</mark> DE
+            <mark>JUGUETES Y MODELOS 3D</mark>
           </h1>
-          <img
-            className="hero-product"
-            src={heroProduct}
-            fetchPriority="high"
-            loading="eager"
-            decoding="async"
-            alt="Más de cinco mil proyectos de herrería para fabricar y vender"
-          />
+          <EmptyMedia className="hero-product empty-image-placeholder" />
 
           <Price
             old="$19"
@@ -293,13 +194,13 @@ function Price({
           />
 
           <p className="support">
-            Accede a una biblioteca completa de proyectos de herrería para consultar, estudiar y encontrar nuevas piezas para fabricar y ofrecer a tus clientes.
+            Accede a una biblioteca digital con +500 archivos STL de juguetes y modelos 3D para descargar, preparar e imprimir.
           </p>
           <CheckList
             items={[
-              "+100 proyectos de herrería para consultar y usar como referencia",
-              "Encuentra modelos de mesas, estanterías, portones, remolques, estructuras y mucho más",
-              "Amplía las posibilidades de lo que puedes fabricar y ofrecer a tus clientes",
+              "+500 archivos STL para descargar y usar en tus impresiones 3D",
+              "Encuentra juguetes, figuras, personajes, objetos y modelos 3D de diferentes categorías",
+              "Amplía tu biblioteca de modelos y descubre nuevas posibilidades para imprimir y personalizar",
             ]}
           />
           <Cta>👉 ACCEDER AHORA</Cta>
@@ -314,21 +215,17 @@ function Price({
 
       <section className="previews section-alt">
         <div className="container">
-          <h2>MIRA ALGUNOS DE LOS PROYECTOS DISPONIBLES</h2>
+          <h2>MIRA ALGUNOS DE LOS MODELOS 3D</h2>
         </div>
         <Carousel />
         <div className="narrow centered">
           <p>
-            Todo viene organizado para que consultes los proyectos y encuentres referencias para diferentes tipos de fabricación sin tener que comenzar cada idea desde cero.
+            Todo viene organizado para que puedas consultar, descargar y elegir tus próximos modelos 3D sin perder tiempo buscando archivos en diferentes lugares.
           </p>
           <div className="process">
-            <b>📲 ACCEDE</b>
-            <span>➡</span>
-            <b>📐 CONSULTA</b>
-            <span className="down">⬇</span>
-            <b>🔧 FABRICA E VENDE!</b>
+            <b>📲 DESCARGA</b><span>➡</span><b>📁 ELIGE</b><span className="down">⬇</span><b>🖨️ IMPRIME!</b>
           </div>
-          <Cta>👉 QUIERO LOS +100 PROYECTOS</Cta>
+          <Cta>👉 QUIERO LOS +500 ARCHIVOS STL</Cta>
         </div>
         <Carousel />
       </section>
@@ -336,7 +233,7 @@ function Price({
       <section className="section light">
         <div className="container">
           <h2>
-            UNA BIBLIOTECA COMPLETA PARA AMPLIAR TUS POSIBILIDADES EN HERRERÍA
+            UNA BIBLIOTECA COMPLETA DE MODELOS PARA IMPRESIÓN 3D
           </h2>
           <div className="grid-two">
             {benefits.map(([title, text]) => (
@@ -360,17 +257,9 @@ function Price({
       <section className="section">
         <div className="container">
           <h2>
-            ¿HAS PENSADO EN TENER MILES DE PROYECTOS PARA CONSULTAR SIN NECESITAR
-            COMENZAR CADA PIEZA DESDE CERO?
+            ¿HAS PENSADO EN TENER +500 ARCHIVOS STL PARA ELEGIR TU PRÓXIMA IMPRESIÓN?
           </h2>
-          <img
-            className="problem-image"
-            src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/gg02.png"
-            alt="Proyecto de herrería para consulta y fabricación"
-            loading="lazy"
-            decoding="async"
-            draggable={false}
-          />
+          <EmptyMedia className="problem-image empty-image-placeholder" />
           <div className="problem-grid">
             <ul>
               {problems.map((item) => (
@@ -402,22 +291,15 @@ function Price({
           <h2>TODO LO QUE VAS A RECIBIR</h2>
           <article className="main-material">
             <span className="badge">ACCESO INMEDIATO</span>
-            <img
-              className="material-image"
-              src="/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_42_45.webp"
-              alt="Todo lo que vas a recibir"
-              loading="lazy"
-              decoding="async"
-              draggable={false}
-            />
-            <h3>+100 PROYECTOS PARA FABRICAR Y VENDER</h3>
+            <EmptyMedia className="material-image empty-image-placeholder" />
+            <h3>+500 ARCHIVOS STL DE JUGUETES Y MODELOS 3D</h3>
             <CheckList
               items={[
-                "+100 proyectos de herrería organizados para consulta",
-                "Modelos de mesas, estanterías, portones, remolques y estructuras",
-                "Proyectos para estudiar diferentes posibilidades de fabricación",
-                "Referencias para ampliar el catálogo de productos de tu taller",
-                "Acceso digital inmediato",
+                "+500 archivos STL organizados para descargar",
+                "Juguetes, figuras, personajes y modelos 3D",
+                "Archivos STL para explorar diferentes posibilidades de impresión 3D",
+                "Más modelos para ampliar tu biblioteca de impresión",
+                "Acceso digital inmediato a los archivos STL",
               ]}
             />
             <p className="delivery-box">
@@ -426,9 +308,9 @@ function Price({
           </article>
 
           <div className="bonus-heading">
-            <h2>EL PLAN COMPLETO INCLUYE AÚN MÁS</h2>
+            <h2>EL PLAN COMPLETO INCLUYE AÚN MÁS MODELOS</h2>
             <p>
-              También recibirás 4 bonos complementarios para aprovechar aún más los proyectos
+              También recibirás bonos complementarios para ampliar aún más tu biblioteca de modelos 3D
             </p>
           </div>
 
@@ -439,18 +321,7 @@ function Price({
                   BONO {i + 1}
                   {i === 2 ? " E 4" : ""}
                 </span>
-                <img
-                  className="bonus-image"
-                  src={[
-                    "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%201%20latam%20.webp",
-                    "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%202%20LATAM.webp",
-                    "https://raw.githubusercontent.com/samucaschat1-lgtm/cafereceitas/main/public/bonus%203%20LATAM.webp",
-                  ][i]}
-                  alt={i === 2 ? "Bonos 3 y 4" : `Bono ${i + 1}`}
-                  loading="lazy"
-                  decoding="async"
-                  draggable={false}
-                />
+                <EmptyMedia className="bonus-image empty-image-placeholder" />
                 <h3>{bonus.title}</h3>
                 <p>{bonus.subtitle}</p>
                 <CheckList items={bonus.items} />
@@ -474,19 +345,12 @@ function Price({
       <article className="plan basic">
         <h3>PLAN BÁSICO</h3>
 
-        <img
-  className="plan-image"
-  src="/ChatGPT%20Image%2022%20de%20set.%20de%202026%2C%2023_09_34.webp"
-  alt="Plano Básico"
-  loading="lazy"
-  decoding="async"
-  draggable={false}
-/>
+        <EmptyMedia className="plan-image empty-image-placeholder" />
         <CheckList
           items={[
-            "+100 proyectos para fabricar y vender",
-            "Proyectos de mesas, estanterías, portones y muebles metálicos",
-            "Modelos de remolques y estructuras",
+            "+500 archivos STL de juguetes y modelos 3D",
+            "Juguetes, figuras y modelos 3D para imprimir",
+            "Modelos 3D de diferentes categorías",
             "Acceso inmediato al material digital",
           ]}
         />
@@ -514,14 +378,7 @@ function Price({
         <div className="bestseller">MÁS VENDIDO</div>
         <h3>PLAN COMPLETO</h3>
 
-        <img
-  className="plan-image"
-  src="/8E1EA8BD-6531-4B5D-82FC-2A0B99F7AB17.webp"
-  alt="Plano Premium"
-  loading="lazy"
-  decoding="async"
-  draggable={false}
-/>
+        <EmptyMedia className="plan-image empty-image-placeholder" />
 
         <span className="bonus-badge">
           ⚡ MÁS PROYECTOS + BONOS
@@ -529,7 +386,7 @@ function Price({
 
         <CheckList
           items={[
-            "+100 proyectos para fabricar y vender",
+            "+500 archivos STL de juguetes y modelos 3D",
             "🎁 Bono 1 - Guía de Precios para Herrería",
             "🎁 Bono 2 - Catálogo de Productos para Ofrecer",
             "🎁 Bono 3 - Catálogo de Ideas",
@@ -563,9 +420,9 @@ function Price({
 </section>
       <section className="section section-alt reviews">
         <div className="container">
-          <h2>LO QUE DICEN QUIENES YA USAN LOS PROYECTOS</h2>
+          <h2>LO QUE DICEN QUIENES YA USAN LOS MODELOS 3D</h2>
           <p className="reviews-sub">
-            Herreros y talleres que ampliaron sus posibilidades de fabricación con la biblioteca.
+            Personas que ampliaron su biblioteca de modelos para impresión 3D.
           </p>
           <div className="reviews-grid">
             {[
@@ -573,25 +430,25 @@ function Price({
                 name: "Carlos Martínez",
                 place: "Taller de herrería · Ciudad de México",
                 text: "Tenía siempre los mismos modelos para ofrecer. Ahora, cuando un cliente pide algo diferente, abro la biblioteca y ya tengo varios proyectos para mostrarle. Se cerró mi primer portón corredizo en dos semanas.",
-                avatar: avatarHomem1,
+                avatar: null,
               },
               {
                 name: "Jorge Ramírez",
                 place: "Metálicas y soldadura · Bogotá",
                 text: "Lo mejor es tener todo organizado en un solo lugar. Antes perdía horas buscando referencias por internet; ahora consulto el proyecto, saco mis medidas y directo al taller. Ahorra muchísimo tiempo.",
-                avatar: avatarHomem2,
+                avatar: null,
               },
               {
                 name: "Luis Alvarado",
                 place: "Herrería y muebles metálicos · Lima",
                 text: "Las mesas y estanterías me sirvieron para ampliar el catálogo de mi taller. Presenté tres modelos nuevos a mis clientes y ya me pidieron dos. La inversión se recuperó con el primer trabajo.",
-                avatar: "/sr2.jpg",
+                avatar: null,
               },
               {
                 name: "Andrés Pérez",
                 place: "Taller metálico · Guadalajara",
                 text: "Estaba empezando y no sabía por dónde arrancar. Con los proyectos pude estudiar modelos de parrillas y estructuras, y fabricar mis primeras piezas con seguridad. Muy recomendable.",
-                avatar: "/sr.jpg",
+                avatar: null,
               },
             ].map((review) => (
               <article className="review-card" key={review.name}>
@@ -600,13 +457,7 @@ function Price({
                 </div>
                 <p className="review-text">“{review.text}”</p>
                 <div className="review-author">
-                  <img
-                    src={review.avatar}
-                    alt={review.name}
-                    loading="lazy"
-                    decoding="async"
-                    draggable={false}
-                  />
+                  <EmptyMedia className="review-avatar-placeholder" />
                   <div>
                     <strong>{review.name}</strong>
                     <span>{review.place}</span>
@@ -624,23 +475,7 @@ function Price({
       <section className="section guarantee">
         <div className="container guarantee-card">
           <span className="badge">🔒 Riesgo cero para ti</span>
-          <img
-            className="guarantee-seal-image"
-            src="https://raw.githubusercontent.com/samucaschat1-lgtm/projetosparafabricar/main/public/selo.PNG"
-            alt="Sello de garantía de 15 días — satisfacción o reembolso"
-            loading="lazy"
-            decoding="async"
-            draggable={false}
-            style={{
-              width: "min(100%, 260px)",
-              height: "auto",
-              maxHeight: 300,
-              objectFit: "contain",
-              display: "block",
-              margin: ".25rem auto 1rem",
-              borderRadius: 18,
-            }}
-          />
+          <EmptyMedia className="guarantee-seal-image empty-image-placeholder" />
           <div>
             <h2>
               GARANTÍA DE 15 DÍAS <mark>SATISFACCIÓN O REEMBOLSO</mark>
@@ -679,7 +514,7 @@ function Price({
       <footer>
         <div className="container">
           <p>
-            Copyright © 2026 | +100 Proyectos para Fabricar y Vender
+            Copyright © 2026 | +500 Archivos STL de Juguetes y Modelos 3D
             <br />
             Todos los derechos reservados.
           </p>
@@ -687,10 +522,10 @@ function Price({
             Este sitio no está afiliado a Facebook™, Instagram™, Google™ ni a ninguna otra plataforma mencionada.
           </p>
           <p>
-            Todos los derechos sobre la obra “+100 Proyectos para Fabricar y Vender” están reservados al productor, de acuerdo con la legislación aplicable.
+            Todos los derechos sobre el material digital “+500 Archivos STL de Juguetes y Modelos 3D” están reservados al productor, de acuerdo con la legislación aplicable.
           </p>
           <p>
-            Este producto es un material digital de consulta y referencia para herrería. Los resultados pueden variar según los conocimientos, las herramientas, la experiencia y la aplicación de cada persona.
+            Este producto es un material digital de consulta y referencia para impresión 3D. Los resultados pueden variar según los conocimientos, las herramientas, la experiencia y la aplicación de cada persona.
           </p>
         </div>
       </footer>
