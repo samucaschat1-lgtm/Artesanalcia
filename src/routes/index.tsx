@@ -5,16 +5,16 @@ import { Check, ChevronDown } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "+500 Arquivos STL de Brinquedos e Modelos 3D" },
+      { title: "Mega Pack 3D · Edição 2026" },
       {
         name: "description",
-        content: "Más de 500 arquivos STL de brinquedos e modelos 3D listos para baixar e imprimir.",
+        content: "+500 Arquivos STL de Brinquedos e Modelos 3D Prontos Para Você Imprimir, Criar e Vender.",
       },
-      { name: "author", content: "+500 Arquivos STL de Brinquedos e Modelos 3D" },
-      { property: "og:title", content: "+500 Arquivos STL de Brinquedos e Modelos 3D" },
+      { name: "author", content: "Mega Pack 3D · Edição 2026" },
+      { property: "og:title", content: "Mega Pack 3D · Edição 2026" },
       {
         property: "og:description",
-        content: "Una biblioteca digital de arquivos STL para imprimir juguetes, figuras y modelos 3D.",
+        content: "+500 Arquivos STL de Brinquedos e Modelos 3D para imprimir, criar e vender.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
 });
 
 const Cta = ({ children }: { children: ReactNode }) => (
-  <a href="#planes" className="cta">
+  <a href="#planos" className="cta">
     {children}
   </a>
 );
@@ -45,60 +45,79 @@ const CheckList = ({ items }: { items: string[] }) => (
 );
 
 const benefits: [string, string][] = [
-  ["+500 arquivos STL", "Una gran variedad de archivos 3D para baixar, organizar y tener siempre disponibles quando quiser imprimir algo nuevo."],
-  ["Brinquedos y modelos 3D", "Encontre diferentes categorias de juguetes, figuras, personagens, objetos decorativos y modelos para impressão 3D."],
-  ["Prontos para imprimir", "Ten una biblioteca digital de arquivos STL para consultar y elegir tus próximos modelos de impressão."],
-  ["Mais opções para criar", "Amplie tu colección de modelos 3D y descubre nuevas piezas para imprimir, personalizar y coleccionar."],
+  ["Brinquedos articulados", "Modelos com diferentes movimentos e possibilidades para imprimir e criar."],
+  ["Dragões e criaturas", "Modelos de criaturas e personagens para ampliar sua coleção."],
+  ["Dinossauros", "Diversos modelos de dinossauros para imprimir, colecionar ou criar produtos."],
+  ["Animais 3D", "Modelos de animais para diferentes projetos e aplicações."],
+  ["Fidgets e brinquedos", "Opções variadas para imprimir e explorar novos produtos."],
+  ["Robôs e modelos mecânicos", "Modelos com visual mecânico para quem gosta de criar peças diferentes."],
+  ["Miniaturas", "Miniaturas para colecionar, presentear ou utilizar em novos projetos."],
+  ["Modelos para coleção", "Uma variedade de modelos para ampliar seu acervo de impressão 3D."],
+  ["Modelos para decoração", "Peças para criar objetos decorativos e produtos personalizados."],
+  ["Utilidades e acessórios", "Modelos funcionais para diferentes necessidades do dia a dia."],
+  ["Modelos para presentes", "Ideias para criar presentes personalizados com impressão 3D."],
+  ["Peças para produção", "Modelos para testar, produzir e transformar em novas oportunidades."],
 ];
 
 const problems = [
-  "Pasar horas buscando arquivos STL en diferentes sitios para encontrar un modelo que te interese.",
-  "Ter pocas opções de brinquedos e modelos 3D para imprimir en tu colección.",
-  "Encontrar una idea para imprimir y no tener un archivo STL adecuado para comenzar.",
-  "Perder tiempo buscando, organizando y separando archivos de diferentes fuentes.",
+  "Quer encontrar novos modelos para imprimir.",
+  "Deseja criar brinquedos e produtos diferentes.",
+  "Gosta de produzir peças com impressão 3D.",
+  "Quer ampliar seu catálogo de produtos.",
+  "Busca modelos variados em um único lugar.",
+  "Quer economizar tempo procurando arquivos.",
+  "Deseja explorar encomendas e vendas com impressão 3D.",
 ];
 
 const solutions = [
-  "Ter +500 arquivos STL organizados para consultar quando quiser imprimir algo nuevo.",
-  "Encontrar juguetes, figuras y modelos 3D para diferentes momentos y proyectos.",
-  "Elegir rápidamente un modelo y tener el archivo listo para llevar a tu flujo de impressão.",
-  "Ampliar tu biblioteca digital y descubrir nuevas posibilidades para imprimir y personalizar.",
+  "Não possui interesse em impressão 3D.",
+  "Procura apenas arquivos gratuitos aleatórios.",
+  "Não pretende utilizar os modelos.",
+  "Não tem interesse em produzir brinquedos ou modelos 3D.",
 ];
+
 const bonuses = [
   {
-    title: "COLECCIÓN EXTRA DE FIGURAS 3D",
-    subtitle: "modelos adicionales para ampliar tu biblioteca de impressão",
-    items: ["Más figuras para imprimir", "Nuevos modelos para coleccionar", "Ideas para personalizar tus impresiones", "Arquivos organizados para facilitar tu consulta"],
-    value: "$27",
+    title: "🎁 BÔNUS 01 — GUIA DE PRODUTOS 3D PARA VENDER",
+    subtitle: "Descubra diferentes tipos de produtos que você pode criar com impressão 3D e ideias para ampliar seu catálogo.",
+    items: ["Tipos de produtos para criar", "Ideias para ampliar seu catálogo", "Possibilidades com impressão 3D"],
+    value: "R$27",
   },
   {
-    title: "CATÁLOGO DE IDEAS PARA IMPRESIÓN 3D",
-    subtitle: "referencias para descubrir qué puedes imprimir",
-    items: ["Ideas de juguetes y objetos 3D", "Diferentes estilos de modelos", "Referencias para tus próximas impresiones", "Más variedad para tu colección"],
-    value: "$27",
+    title: "🎁 BÔNUS 02 — TABELA DE PREÇOS PARA PRODUTOS 3D",
+    subtitle: "Uma referência para ajudar você a organizar seus preços e calcular o valor dos seus produtos.",
+    items: ["Referência de preços", "Organização dos valores", "Apoio para calcular seus produtos"],
+    value: "R$27",
   },
   {
-    title: "PACK EXTRA + GUÍA DE ORGANIZACIÓN",
-    subtitle: "más archivos y una forma práctica de mantener tu biblioteca organizada",
-    items: ["Modelos adicionales", "Categorias para organizar tus STL", "Ideas para separar tus archivos", "Más facilidad para encontrar tus modelos"],
-    value: "$47",
+    title: "🎁 BÔNUS 03 — GUIA RÁPIDO DE CONFIGURAÇÃO PARA IMPRESSÃO",
+    subtitle: "Orientações práticas para facilitar seus primeiros testes e ajustes na impressão dos modelos.",
+    items: ["Orientações práticas", "Primeiros testes", "Ajustes de impressão"],
+    value: "R$27",
+  },
+  {
+    title: "🎁 BÔNUS 04 — MOCKUPS PRONTOS PARA DIVULGAÇÃO",
+    subtitle: "Materiais visuais para ajudar você a apresentar seus produtos e criar divulgações mais profissionais.",
+    items: ["Mockups para produtos", "Materiais para divulgação", "Apresentação mais profissional"],
+    value: "R$27",
+  },
+  {
+    title: "🎁 BÔNUS 05 — GUIA DE ACABAMENTO E PINTURA PARA PEÇAS 3D",
+    subtitle: "Dicas para melhorar o acabamento, personalizar seus modelos e valorizar suas peças na hora da venda.",
+    items: ["Dicas de acabamento", "Personalização dos modelos", "Valorização das peças"],
+    value: "R$27",
   },
 ];
 
 const faq: [string, string][] = [
-  ["¿Cómo receberé el material?", "Após a confirmação da compra, você receberá acceso al material digital para baixar los archivos y comenzar a consultar tu biblioteca STL."],
-  ["¿Qué inclui el plan básico?", "O plano básico inclui el material principal con +500 arquivos STL de brinquedos e modelos 3D para baixar e imprimir."],
-  ["¿Qué inclui el plan completo?", "O plano completo inclui los +500 arquivos STL más los bonos complementarios para ampliar y organizar tu biblioteca de modelos 3D."],
-  ["¿Necesito una impresora 3D para usarlo?", "Los archivos están pensados para impressão 3D. Você pode baixarlos y utilizarlos según tu impresora, materiales y configuración."],
-  ["¿Sirve para quienes están comenzando?", "Sí. La biblioteca puede servir como fuente de modelos para conocer diferentes posibilidades de impressão 3D, respetando las configuraciones y conocimientos necesarios para cada modelo."],
-  ["¿Qué tipos de modelos forman parte del material?", "La biblioteca está enfocada en brinquedos e modelos 3D, incluindo figuras, personagens, objetos y diferentes modelos para imprimir."],
-  ["¿Qué es un archivo STL?", "STL es uno de los formatos más utilizados para modelos destinados a impressão 3D. Você pode abrirlo o prepararlo en el software compatible con tu impresora."],
-  ["¿Puedo imprimir los modelos en mi casa?", "Sí, siempre que cuentes con una impresora 3D compatible y realices la preparación y configuración adecuadas para cada archivo."],
-  ["¿Puedo personalizar los modelos?", "Depende del archivo y del software que utilices. Muchos modelos pueden ser escalados o modificados antes de imprimirlos."],
-  ["¿Necesito alguna aplicación para usarlo?", "Você precisará un programa compatible para abrir o preparar los arquivos STL antes de enviarlos a tu impresora 3D."],
-  ["¿Puedo guardar los archivos?", "Sí. Después de receber el material, puedes baixar y organizar los archivos en tu dispositivo según tus necesidades."],
-  ["¿Existe garantía?", "Sí. Tienes 15 días de garantía para acceder y probar el material. Si no es lo que necesitas, puedes solicitar el reembolso dentro de ese plazo."],
-  ["¿El acceso es por tiempo limitado?", "No. Una vez recibido el material, puedes conservar los archivos para consultarlos quando quiser."],
+  ["O que eu recebo após a compra?", "Você recebe o acesso ao pack com mais de 500 arquivos STL de brinquedos e modelos 3D, além dos bônus incluídos no plano escolhido."],
+  ["São arquivos físicos ou digitais?", "São arquivos digitais para utilização em impressão 3D."],
+  ["Quantos arquivos STL estão inclusos?", "A coleção principal possui mais de 500 arquivos STL de brinquedos e modelos 3D."],
+  ["Preciso ter uma impressora 3D?", "Para imprimir os arquivos, você precisa ter acesso a uma impressora 3D ou utilizar um serviço de impressão 3D."],
+  ["Posso acessar os arquivos depois?", "O acesso é vitalício, conforme as condições apresentadas na oferta."],
+  ["Como recebo meu acesso?", "Após a confirmação do pagamento, você recebe as instruções para acessar sua coleção digital."],
+  ["Os modelos extras estão inclusos?", "Sim, os modelos extras fazem parte dos bônus do Plano Completo."],
+  ["Existe garantia?", "Sim. A oferta possui garantia de 7 dias, conforme as condições apresentadas no momento da compra."],
 ];
 
 function TimeUnit({ value, label }: { value: number; label: string }) {
@@ -123,7 +142,7 @@ function Urgency() {
   return (
     <section className="urgency">
       <div className="narrow urgency-inner">
-        <h2>⏰ ⏰ Aprovecha la condición especial para acceder a los +500 arquivos STL</h2>
+        <h2>⏰ Aproveite enquanto o Plano Completo está em promoção</h2>
         <div className="timer">
           <TimeUnit value={Math.floor(seconds / 60)} label="min" />
           <b>:</b>
@@ -137,7 +156,7 @@ function Urgency() {
 function Carousel({ landscape = false }: { landscape?: boolean }) {
   const placeholders = Array.from({ length: 8 }, (_, i) => i);
   return (
-    <div className={`carousel ${landscape ? "carousel-landscape" : "carousel-portrait"}`} aria-label="Espacios reservados para futuros modelos 3D">
+    <div className={`carousel ${landscape ? "carousel-landscape" : "carousel-portrait"}`} aria-label="Espaços reservados para futuros modelos 3D">
       <div className="carousel-track">
         {[...placeholders, ...placeholders].map((i, index) => (
           <div className="carousel-item" key={`placeholder-${i}-${index}`}>
@@ -164,49 +183,51 @@ function Price({
     <div className="price">
       <p>de {old} por:</p>
       <div>
-        <small>$</small>
+        <small>R$</small>
         <strong>{price}</strong>
       </div>
       <p>{installments}</p>
-        <b>🔥 Ahorras {save}</b>
+      <b>🔥 Você economiza {save}</b>
     </div>
   );
-}function Index() {
-  const today = new Intl.DateTimeFormat("es-419").format(new Date());
+}
+
+function Index() {
+  const today = new Intl.DateTimeFormat("pt-BR").format(new Date());
 
   return (
     <main>
-      <div className="topbar">⚡ Oferta especial disponible solo hoy {today}</div>
+      <div className="topbar">⚡ Oferta especial disponível hoje • {today}</div>
 
       <section className="hero">
         <div className="narrow hero-inner">
+          <p className="eyebrow">Mega Pack 3D · Edição 2026</p>
           <h1>
-            DESCUBRE <mark>+500 ARCHIVOS STL</mark> DE
-            <mark>JUGUETES Y MODELOS 3D</mark>
+            +500 <mark>ARQUIVOS STL</mark> DE
+            <mark>BRINQUEDOS E MODELOS 3D</mark> PRONTOS PARA VOCÊ IMPRIMIR, CRIAR E VENDER
           </h1>
           <EmptyMedia className="hero-product empty-image-placeholder" />
 
           <Price
-            old="$19"
-            price="4"
-            installments="pago único de $4"
-            save="$15"
+            old="R$19,90"
+            price="10,90"
+            installments="pagamento único"
+            save="R$9,00"
           />
 
           <p className="support">
-            Accede a una biblioteca digital con +500 arquivos STL de brinquedos e modelos 3D para baixar, preparar e imprimir.
+            Enquanto você pensa, outras pessoas já estão usando a impressão 3D para criar brinquedos, modelos e produtos para vender. Coloque sua impressora 3D para trabalhar e tenha centenas de opções para produzir, testar e transformar em novas oportunidades de venda.
           </p>
           <CheckList
             items={[
-              "+500 arquivos STL para baixar y usar en tus impresiones 3D",
-              "Encontre juguetes, figuras, personagens, objetos y modelos 3D de diferentes categorias",
-              "Amplie tu biblioteca de modelos y descubre nuevas posibilidades para imprimir y personalizar",
+              "Acesso digital",
+              "Liberação imediata",
+              "Pagamento seguro",
             ]}
           />
-          <Cta>👉 ACCEDER AHORA</Cta>
+          <Cta>QUERO GARANTIR MEU ACESSO</Cta>
           <p className="delivery">
-            Recibes todo de inmediato, directamente en tu
-            <br /> WhatsApp y correo electrónico
+            Acesso digital • Liberação imediata • Pagamento seguro
           </p>
         </div>
       </section>
@@ -215,26 +236,30 @@ function Price({
 
       <section className="previews section-alt">
         <div className="container">
-          <h2>VEJA ALGUNS DOS MODELOS 3D</h2>
+          <h2>VEJA TUDO O QUE VOCÊ VAI RECEBER NESSA COLEÇÃO EXCLUSIVA</h2>
+          <p>
+            São +500 arquivos STL de brinquedos e modelos 3D, organizados em diferentes categorias para você sempre ter novas opções para imprimir, criar e vender.
+          </p>
         </div>
         <Carousel />
         <div className="narrow centered">
           <p>
-            Todo viene organizado para que puedas consultar, baixar y elegir tus próximos modelos 3D sin perder tiempo buscando archivos en diferentes lugares.
+            São centenas de possibilidades reunidas em um único acervo para você não depender de pesquisas intermináveis por arquivos espalhados na internet.
           </p>
           <div className="process">
-            <b>📲 DESCARGA</b><span>➡</span><b>📁 ELIGE</b><span className="down">⬇</span><b>🖨️ IMPRIME!</b>
+            <b>📁 ESCOLHA</b><span>➡</span><b>🖨️ IMPRIMA</b><span className="down">⬇</span><b>💰 VENDA!</b>
           </div>
-          <Cta>👉 QUIERO LOS +500 ARCHIVOS STL</Cta>
+          <Cta>QUERO GARANTIR MEU ACESSO</Cta>
         </div>
         <Carousel />
       </section>
 
       <section className="section light">
         <div className="container">
-          <h2>
-            UNA BIBLIOTECA COMPLETA DE MODELOS PARA IMPRESIÓN 3D
-          </h2>
+          <h2>+500 ARQUIVOS STL DE BRINQUEDOS E MODELOS 3D PARA IMPRIMIR</h2>
+          <p className="section-intro">
+            E dezenas de outros modelos para você transformar em impressões reais. Tenha uma grande variedade de arquivos reunidos em um único acervo para encontrar novas ideias sem precisar procurar modelo por modelo na internet.
+          </p>
           <div className="grid-two">
             {benefits.map(([title, text]) => (
               <article className="info-card" key={title}>
@@ -249,37 +274,41 @@ function Price({
             ))}
           </div>
           <div className="centered">
-            <Cta>QUIERO ACCEDER A LOS PROYECTOS</Cta>
+            <Cta>QUERO ACESSAR A COLEÇÃO</Cta>
           </div>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <h2>
-            ¿HAS PENSADO EN TENER +500 ARCHIVOS STL PARA ELEGIR TU PRÓXIMA IMPRESIÓN?
-          </h2>
+          <h2>VEJA COMO ESSE MATERIAL PODE TRANSFORMAR SUA IMPRESSÃO 3D</h2>
           <EmptyMedia className="problem-image empty-image-placeholder" />
           <div className="problem-grid">
-            <ul>
-              {problems.map((item) => (
-                <li key={item}>
-                  <span>❌</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <ul>
-              {solutions.map((item) => (
-                <li key={item}>
-                  <span>✅</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div>
+              <h3>É para você</h3>
+              <ul>
+                {problems.map((item) => (
+                  <li key={item}>
+                    <span>✅</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3>Não é para você</h3>
+              <ul>
+                {solutions.map((item) => (
+                  <li key={item}>
+                    <span>❌</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           <div className="centered">
-            <Cta>QUERO VER OS +500 ARQUIVOS STL</Cta>
+            <Cta>QUERO MEU ACESSO</Cta>
           </div>
         </div>
         <Carousel landscape />
@@ -289,37 +318,32 @@ function Price({
         <div className="container">
           <h2>TUDO O QUE VOCÊ VAI RECEBER</h2>
           <article className="main-material">
-            <span className="badge">ACCESO INMEDIATO</span>
+            <span className="badge">ACESSO IMEDIATO</span>
             <EmptyMedia className="material-image empty-image-placeholder" />
-            <h3>+500 ARCHIVOS STL DE JUGUETES Y MODELOS 3D</h3>
+            <h3>+500 ARQUIVOS STL DE BRINQUEDOS E MODELOS 3D</h3>
             <CheckList
               items={[
-                "+500 arquivos STL organizados para baixar",
-                "Brinquedos, figuras, personagens y modelos 3D",
-                "Arquivos STL para explorar diferentes posibilidades de impressão 3D",
-                "Más modelos para ampliar tu biblioteca de impressão",
-                "Acceso digital inmediato a los arquivos STL",
+                "Uma biblioteca com centenas de modelos para você imprimir, testar e transformar em produtos físicos.",
+                "Acesso digital imediato à coleção principal.",
+                "Modelos variados reunidos em um único acervo.",
               ]}
             />
             <p className="delivery-box">
-              Recibes todo de inmediato, directamente en tu WhatsApp y correo electrónico
+              Acesso imediato, sem enrolação.
             </p>
           </article>
 
           <div className="bonus-heading">
-            <h2>EL PLAN COMPLETO INCLUYE AÚN MÁS MODELOS</h2>
+            <h2>E AINDA TEM UM BÔNUS ESPECIAL…</h2>
             <p>
-              También você receberá bonos complementarios para ampliar aún más tu biblioteca de modelos 3D
+              Além da coleção principal, você recebe modelos extras para ampliar ainda mais sua biblioteca e ter novas opções para imprimir.
             </p>
           </div>
 
           <div className="bonus-grid">
             {bonuses.map((bonus, i) => (
               <article className="bonus-card" key={bonus.title}>
-                <span className="bonus-label">
-                  BÔNUS {i + 1}
-                  {i === 2 ? " E 4" : ""}
-                </span>
+                <span className="bonus-label">BÔNUS {i + 1}</span>
                 <EmptyMedia className="bonus-image empty-image-placeholder" />
                 <h3>{bonus.title}</h3>
                 <p>{bonus.subtitle}</p>
@@ -327,7 +351,69 @@ function Price({
                 <div className="value">
                   <s>{bonus.value}</s>
                   <span>→</span>
-                  <strong>GRATIS</strong>
+                  <strong>GRÁTIS</strong>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="centered">
+            <Cta>QUERO TUDO ISSO</Cta>
+          </div>
+          <p className="centered bonus-note"><strong>Bônus incluso</strong></p>
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="container">
+          <h2>E AINDA TEM UM BÔNUS ESPECIAL…</h2>
+          <article className="main-material">
+            <span className="badge">EXCLUSIVO DO PLANO COMPLETO</span>
+            <EmptyMedia className="material-image empty-image-placeholder" />
+            <h3>LEVE TAMBÉM O PACK DE MODELOS EXTRAS 3D</h3>
+            <p>
+              Além da coleção principal, você recebe modelos extras para ampliar ainda mais sua biblioteca e ter novas opções para imprimir.
+            </p>
+          </article>
+          <Carousel />
+          <div className="centered">
+            <Cta>QUERO MEUS BÔNUS</Cta>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <h2>MODELOS 3D PREMIUM: UMA SELEÇÃO ESPECIAL PARA AMPLIAR SEU CATÁLOGO</h2>
+          <p className="section-intro">
+            A seleção com modelos diferenciados do acervo. Tenha acesso a uma seleção especial de modelos 3D para ampliar suas opções de produção e encontrar peças diferentes para imprimir e oferecer aos seus clientes.
+          </p>
+          <Carousel />
+          <div className="centered">
+            <Cta>QUERO OS MODELOS PREMIUM</Cta>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="container">
+          <h2>ACESSO IMEDIATO, SEM ENROLAÇÃO</h2>
+          <p className="section-intro">
+            Tudo 100% digital. Sem esperar entrega física: você recebe o acesso e já pode começar a explorar os modelos.
+          </p>
+          <div className="grid-two">
+            {[
+              ["01", "Faça sua compra", "Escolha a forma de pagamento e conclua o pedido com segurança."],
+              ["02", "Receba as instruções", "As informações de acesso chegam logo após a confirmação."],
+              ["03", "Entre na coleção", "Acesse a área com todos os modelos organizados por categoria."],
+              ["04", "Escolha seus modelos", "Navegue pelas categorias e selecione o que quer imprimir."],
+              ["05", "Comece a imprimir e vender", "Baixe os arquivos e coloque sua impressora 3D para trabalhar."],
+            ].map(([number, title, text]) => (
+              <article className="info-card" key={number}>
+                <span className="card-icon"><strong>{number}</strong></span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
                 </div>
               </article>
             ))}
@@ -335,169 +421,129 @@ function Price({
         </div>
       </section>
 
-      <section id="planes" className="section section-alt plans">
-  <div className="container">
-    <div className="offer-label">⏰ OFERTA ESPECIAL</div>
-    <h2>ELIGE LA MEJOR FORMA DE ACCEDER A LOS PROYECTOS</h2>
-
-    <div className="plans-grid">
-      <article className="plan basic">
-        <h3>PLAN BÁSICO</h3>
-
-        <EmptyMedia className="plan-image empty-image-placeholder" />
-        <CheckList
-          items={[
-            "+500 arquivos STL de brinquedos e modelos 3D",
-            "Brinquedos, figuras y modelos 3D para imprimir",
-            "Modelos 3D de diferentes categorias",
-            "Acesso imediato al material digital",
-          ]}
-        />
-
-        <Price
-          old="$19"
-          price="4"
-          installments="pago único de $4"
-          save="$15"
-        />
-
-        <div className="local-currency-notice">
-          <p>💳 Tu pago se convierte a tu moneda local.</p>
-        </div>
-
-        <a
-          className="cta"
-          href="https://pay.hotmart.com/T107722244V?off=3a1ek6wc&checkoutMode=10"
-        >
-          QUIERO EL PLAN BÁSICO
-        </a>
-      </article>
-
-      <article className="plan complete">
-        <div className="bestseller">MÁS VENDIDO</div>
-        <h3>PLAN COMPLETO</h3>
-
-        <EmptyMedia className="plan-image empty-image-placeholder" />
-
-        <span className="bonus-badge">
-          ⚡ MÁS PROYECTOS + BÔNUSS
-        </span>
-
-        <CheckList
-          items={[
-            "+500 arquivos STL de brinquedos e modelos 3D",
-            "🎁 Bônus 1 - Guía de Precios para Herrería",
-            "🎁 Bônus 2 - Catálogo de Productos para Ofrecer",
-            "🎁 Bônus 3 - Catálogo de Ideas",
-            "🎁 Bônus 4 - Lista de Proveedores",
-            "Acesso imediato por WhatsApp y correo electrónico",
-          ]}
-        />
-
-        <Price
-          old="$38"
-          price="8"
-          installments="pago único de $8"
-          save="$30"
-        />
-
-        <div className="local-currency-notice">
-          <p>💳 Tu pago se convierte a tu moneda local.</p>
-        </div>
-
-        <a
-          className="cta"
-          href="https://pay.hotmart.com/T107722244V?off=igxudoqu&checkoutMode=10"
-        >
-          QUIERO EL PLAN COMPLETO
-        </a>
-
-        <EmptyMedia className="secure-seal" />
-      </article>
-    </div>
-  </div>
-</section>
       <section className="section section-alt reviews">
         <div className="container">
-          <h2>O QUE DIZEM QUEM JÁ USA OS MODELOS 3D</h2>
+          <h2>QUEM JÁ ESTÁ IMPRIMINDO E CRIANDO COM MODELOS 3D</h2>
           <p className="reviews-sub">
-            Personas que ampliaron su biblioteca de modelos para impressão 3D.
+            Algumas mensagens de clientes que receberam a coleção e começaram a explorar os modelos.
           </p>
           <div className="reviews-grid">
-            {[
-              {
-                name: "Carlos Martínez",
-                place: "Taller de impressão 3D · Ciudad de México",
-                text: "Tenía siempre los mismos modelos para ofrecer. Ahora, cuando un cliente pide algo diferente, abro la biblioteca y ya tengo varios proyectos para mostrarle. Se cerró mi primer portón corredizo en dos semanas.",
-                avatar: null,
-              },
-              {
-                name: "Jorge Ramírez",
-                place: "Metálicas y soldadura · Bogotá",
-                text: "Lo mejor es tener todo organizado en un solo lugar. Antes perdía horas buscando referencias por internet; ahora consulto el proyecto, saco mis medidas y directo al taller. Ahorra muchísimo tiempo.",
-                avatar: null,
-              },
-              {
-                name: "Luis Alvarado",
-                place: "Herrería y muebles metálicos · Lima",
-                text: "Las mesas y estanterías me sirvieron para ampliar el catálogo de mi taller. Presenté tres modelos nuevos a mis clientes y ya me pidieron dos. La inversión se recuperó con el primer trabajo.",
-                avatar: null,
-              },
-              {
-                name: "Andrés Pérez",
-                place: "Taller metálico · Guadalajara",
-                text: "Estaba empezando y no sabía por dónde arrancar. Con los proyectos pude estudiar modelos de parrillas y estructuras, y fabricar mis primeras piezas con seguridad. Muy recomendable.",
-                avatar: null,
-              },
-            ].map((review) => (
-              <article className="review-card" key={review.name}>
-                <div className="review-stars" aria-label="5 de 5 estrellas">
-                  ★★★★★
-                </div>
-                <p className="review-text">“{review.text}”</p>
+            {[1, 2, 3].map((item) => (
+              <article className="review-card" key={item}>
+                <div className="review-stars" aria-label="Depoimento de cliente">★★★★★</div>
+                <p className="review-text">“Depoimento de cliente”</p>
                 <div className="review-author">
                   <EmptyMedia className="review-avatar-placeholder" />
                   <div>
-                    <strong>{review.name}</strong>
-                    <span>{review.place}</span>
+                    <strong>Cliente da coleção</strong>
+                    <span>Usuário de impressão 3D</span>
                   </div>
                 </div>
               </article>
             ))}
           </div>
           <div className="centered">
-            <Cta>👉 QUIERO ACCEDER A LOS PROYECTOS</Cta>
+            <Cta>QUERO FAZER PARTE</Cta>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <h2>SUA IMPRESSORA JÁ ESTÁ PRONTA. AGORA FALTA ESCOLHER O QUE ELA VAI CRIAR.</h2>
+          <p className="section-intro">
+            Você já tem a tecnologia nas mãos. Agora pode ter também um acervo com centenas de possibilidades para imprimir, testar e transformar em produtos.
+          </p>
+          <p className="section-intro">
+            Imprima para você. Crie presentes. Produza brinquedos. Faça encomendas. Amplie seu catálogo. Ou explore novas possibilidades de renda com produtos feitos na impressão 3D.
+          </p>
+          <p className="section-intro"><strong>Tudo começa escolhendo o primeiro modelo.</strong></p>
+          <p className="centered"><strong>+500 Arquivos STL de Brinquedos e Modelos 3D.</strong></p>
+          <p className="centered"><strong>Imprima hoje. Crie e venda seus produtos.</strong></p>
+          <div className="centered">
+            <Cta>QUERO MEU ACESSO</Cta>
+          </div>
+        </div>
+      </section>
+
+      <section id="planos" className="section section-alt plans">
+        <div className="container">
+          <div className="offer-label">⏰ OFERTA ESPECIAL</div>
+          <h2>APROVEITE ENQUANTO O PLANO COMPLETO ESTÁ EM PROMOÇÃO</h2>
+          <p className="section-intro">Comece pelo essencial ou leve a coleção completa com todos os bônus.</p>
+
+          <div className="plans-grid">
+            <article className="plan basic">
+              <h3>PLANO BÁSICO</h3>
+              <p><strong>Essencial</strong></p>
+              <EmptyMedia className="plan-image empty-image-placeholder" />
+              <CheckList
+                items={[
+                  "+500 Arquivos STL de Brinquedos e Modelos 3D",
+                  "Acesso Vitalício",
+                  "Envio Imediato",
+                  "Não inclui bônus",
+                ]}
+              />
+              <Price old="R$19,90" price="10,90" installments="Pagamento único" save="R$9,00" />
+              <div className="local-currency-notice">
+                <p>💳 Pagamento único.</p>
+              </div>
+              <a className="cta" href="https://pay.hotmart.com/T107722244V?off=3a1ek6wc&checkoutMode=10">
+                QUERO O PLANO BÁSICO
+              </a>
+            </article>
+
+            <article className="plan complete">
+              <div className="bestseller">MAIS COMPLETO • RECOMENDADO</div>
+              <h3>PLANO COMPLETO</h3>
+              <EmptyMedia className="plan-image empty-image-placeholder" />
+              <span className="bonus-badge">⚡ TODOS OS BÔNUS</span>
+              <CheckList
+                items={[
+                  "+500 Arquivos STL de Brinquedos e Modelos 3D",
+                  "Uso comercial, caso contemplado pela licença dos arquivos",
+                  "Bônus 1: Guia de Produtos 3D para Vender",
+                  "Bônus 2: Tabela de Preços para Produtos 3D",
+                  "Bônus 3: Guia de Configuração para Impressão",
+                  "Bônus 4: Mockups para Divulgação",
+                  "Bônus 5: Guia de Acabamento e Pintura",
+                  "Bônus 6: Pack de Modelos Extras 3D",
+                  "Bônus 7: Modelos 3D Premium",
+                  "Acesso Vitalício",
+                  "Envio Imediato",
+                ]}
+              />
+              <Price old="R$97,00" price="37,90" installments="Hoje, pagamento único" save="R$59,10" />
+              <div className="local-currency-notice">
+                <p>💳 Pagamento único • Acesso vitalício.</p>
+              </div>
+              <a className="cta" href="https://pay.hotmart.com/T107722244V?off=igxudoqu&checkoutMode=10">
+                QUERO O PLANO COMPLETO
+              </a>
+              <EmptyMedia className="secure-seal" />
+            </article>
           </div>
         </div>
       </section>
 
       <section className="section guarantee">
         <div className="container guarantee-card">
-          <span className="badge">🔒 Riesgo cero para ti</span>
+          <span className="badge">ACESSO IMEDIATO • 7 DIAS DE GARANTIA</span>
           <EmptyMedia className="guarantee-seal-image empty-image-placeholder" />
           <div>
-            <h2>
-              GARANTÍA DE 15 DÍAS <mark>SATISFACCIÓN O REEMBOLSO</mark>
-            </h2>
-            <p>No tienes que comprar a ciegas.</p>
+            <h2>SUA COMPRA 100% SEGURA E SEM RISCO NENHUM</h2>
+            <p>Você recebe acesso imediato a mais de 500 arquivos STL de brinquedos e modelos 3D, além dos bônus incluídos na oferta.</p>
             <p>
-              Después de la compra, tienes <strong>15 días</strong> para acceder al material, abrir los proyectos y probar el contenido para ver si tiene sentido para tu rutina de fabricación.
+              Se dentro de <strong>7 dias</strong> sentir que o material não faz sentido para você, é só pedir o reembolso conforme as condições da garantia.
             </p>
-            <p>
-              Si por cualquier motivo sientes que no era lo que necesitabas,
-              solo tienes que solicitar el reembolso dentro de ese plazo.
-            </p>
-            <p>Sin burocracia. Sin dolores de cabeza. Sin complicaciones.</p>
-            <div className="guarantee-box">
-              El riesgo lo asumimos nosotros para que puedas probar el material con tranquilidad y comprobar si los proyectos tienen sentido para tu taller.
-            </div>
           </div>
         </div>
       </section>
 
       <section className="section section-alt faq">
         <div className="faq-wrap">
-          <h2>PREGUNTAS FRECUENTES</h2>
+          <h2>DÚVIDAS FREQUENTES</h2>
           {faq.map(([question, answer]) => (
             <details key={question}>
               <summary>
@@ -510,22 +556,21 @@ function Price({
         </div>
       </section>
 
+      <section className="section section-alt">
+        <div className="container centered">
+          <h2>COMECE HOJE A EXPLORAR CENTENAS DE MODELOS PARA IMPRESSÃO 3D</h2>
+          <p>
+            Tenha +500 arquivos STL de brinquedos e modelos 3D e todos os bônus reunidos em uma única oferta.
+          </p>
+          <Cta>QUERO MEU ACESSO</Cta>
+          <p>Acesso imediato • Acesso vitalício • 7 dias de garantia</p>
+        </div>
+      </section>
+
       <footer>
         <div className="container">
-          <p>
-            Copyright © 2026 | +500 Arquivos STL de Brinquedos e Modelos 3D
-            <br />
-            Todos los derechos reservados.
-          </p>
-          <p>
-            Este sitio no está afiliado a Facebook™, Instagram™, Google™ ni a ninguna otra plataforma mencionada.
-          </p>
-          <p>
-            Todos los derechos sobre el material digital “+500 Arquivos STL de Brinquedos e Modelos 3D” están reservados al productor, de acuerdo con la legislación aplicable.
-          </p>
-          <p>
-            Este producto es un material digital de consulta y referencia para impressão 3D. Los resultados pueden variar según los conocimientos, las herramientas, la experiencia y la aplicación de cada persona.
-          </p>
+          <p>© 2026 — Todos os direitos reservados.</p>
+          <p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.</p>
         </div>
       </footer>
     </main>
