@@ -752,3 +752,12 @@ body{
   transform:scaleY(1.30) !important;
   transform-origin:center center !important;
 }
+
+
+/* Achatamento horizontal aplicado aos mockups substituídos */
+.cacha-page .hero-mockup,
+.cacha-page .plan.simple .basic-mockup,
+.cacha-page .plan.featured > img{
+  transform:scaleY(0.78) !important;
+  transform-origin:center center !important;
+}
