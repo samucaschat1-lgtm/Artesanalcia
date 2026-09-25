@@ -839,3 +839,9 @@ body{
 .cacha-page .hero-mockup{
   max-width:min(560px,90%) !important;
 }
+
+/* Pequeno ajuste de posição da imagem do Hero */
+.cacha-page .hero-mockup{
+  position:relative !important;
+  left:-8px !important;
+}
