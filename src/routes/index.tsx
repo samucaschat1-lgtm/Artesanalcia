@@ -8,7 +8,7 @@ const CAKTO_FULL = "https://pay.cakto.com.br/v2muve7";
 export const Route = createFileRoute("/")({
   head: () => ({
     links: [
-      { rel: "preload", as: "image", href: IMG + "mockup-novo-800-q80.webp", fetchpriority: "high" },
+      { rel: "preload", as: "image", href: IMG + "mockup-novo-800-q80.webp" },
     ],
     meta: [
       { title: "+150 Receitas de Cachaça Artesanal" },
@@ -150,7 +150,7 @@ function FAQ() {
     ["Vou receber garrafas ou um livro físico?","Não. O produto é 100% digital."],
     ["Como recebo o material?","Após a confirmação da compra, o acesso ao material é disponibilizado digitalmente."],
     ["Funciona no celular?","Sim. Por ser digital, você pode consultar o material pelo celular."],
-    ["Tem garantia?","Sim. Sim. Você tem 7 dias para conhecer o material e solicitar o reembolso conforme as condições da plataforma."]
+    ["Tem garantia?","Sim. Você tem 7 dias para conhecer o material e solicitar o reembolso conforme as condições da plataforma."]
   ];
   return <section className="faq section"><div className="section-kicker">DÚVIDAS FREQUENTES</div><h2>Perguntas frequentes</h2>{items.map(([q,a])=><details key={q}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</section>
 }
