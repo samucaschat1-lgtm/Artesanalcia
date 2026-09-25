@@ -285,7 +285,6 @@ function Price({
         <Carousel landscape />
       </section>
 
-      <section className="section section-alt">
       <section className="section receive">
         <div className="container">
           <h2>TUDO O QUE VOCÊ VAI RECEBER</h2>
