@@ -934,3 +934,13 @@ body{
 .featured small{
   font-family:var(--font-sans);
 }
+
+
+/* Remover caixas arredondadas apenas das descrições dos planos */
+.plans .checks,
+.plans .checks li{
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+}
