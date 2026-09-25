@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 const IMG = "https://maisde150receitasdecachacas.vercel.app/assets/optimized/";
-const CAKTO_40 = "https://pay.cakto.com.br/4468wep";
-const CAKTO_FULL = "https://pay.cakto.com.br/v2muve7";
+const CAKTO_40 = "https://pay.cakto.com.br/s398a9j_1138649";
+const CAKTO_FULL = "https://pay.cakto.com.br/hu9et7p_1138688";
 
 export const Route = createFileRoute("/")({
   head: () => ({
