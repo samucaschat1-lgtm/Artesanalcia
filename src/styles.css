@@ -188,3 +188,57 @@ body,.cacha-page,button,input,textarea,select{font-family:var(--font-sans)}
   .plan.simple .price{font-size:38px;margin:20px 0 18px}
   .plan.simple .cta{min-height:62px;font-size:14px}
 }
+
+
+/* Carrosseis maiores e mais impactantes */
+.preview .marquee{
+  margin-top:32px;
+  margin-bottom:72px;
+}
+.preview .marquee img{
+  width:260px;
+  height:330px;
+  border-radius:14px;
+}
+.preview .preview-large img{
+  width:300px;
+  height:385px;
+}
+.preview .marquee-track{
+  gap:18px;
+  animation-duration:42s;
+}
+.preview .preview-large .marquee-track{
+  animation-duration:42s;
+}
+.bonus-marquee{
+  max-width:1200px;
+  margin:42px auto 55px;
+  padding:4px 0 12px;
+}
+.bonus-marquee .marquee-track{
+  gap:20px;
+  animation-duration:40s;
+}
+.bonus-marquee img{
+  width:270px;
+  height:350px;
+  object-fit:cover;
+  border-radius:16px;
+  flex:none;
+  box-shadow:0 14px 30px #0003;
+}
+@media(max-width:850px){
+  .preview .marquee img{width:220px;height:280px}
+  .preview .preview-large img{width:250px;height:320px}
+  .bonus-marquee img{width:220px;height:285px}
+}
+@media(max-width:520px){
+  .preview .marquee{margin-top:24px;margin-bottom:55px}
+  .preview .marquee img{width:185px;height:235px}
+  .preview .preview-large img{width:210px;height:270px}
+  .preview .marquee-track{gap:12px;animation-duration:34s}
+  .bonus-marquee{margin:30px -20px 38px;padding:4px 0 10px}
+  .bonus-marquee .marquee-track{gap:12px;animation-duration:32s}
+  .bonus-marquee img{width:190px;height:245px;border-radius:12px}
+}
