@@ -51,7 +51,11 @@ function Index() {
           <li>Receitas explicadas passo a passo</li><li>Infusões com frutas do Brasil</li><li>Drinks, licores e combinações variadas</li><li>Material digital para consultar no celular</li>
         </ul>
         <a className="cta" href="#oferta">🥃 QUERO MINHAS RECEITAS DE CACHAÇAS</a>
-        <div className="micro">WhatsApp&nbsp;&nbsp;·&nbsp;&nbsp;E-mail · Acesso imediato</div>
+        <div className="micro trust-micro">
+          <span><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="" aria-hidden="true" />WhatsApp</span>
+          <span><img src="https://cdn.simpleicons.org/gmail/EA4335" alt="" aria-hidden="true" />E-mail</span>
+          <span>Acesso imediato</span>
+        </div>
       </section>
 
       <section className="dark-section preview" id="receitas">
