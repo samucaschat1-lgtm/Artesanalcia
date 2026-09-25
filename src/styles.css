@@ -845,3 +845,14 @@ body{
   position:relative !important;
   left:-8px !important;
 }
+
+
+/* Performance: renderizar as seções abaixo da dobra somente quando necessário */
+.cacha-page > section:not(.hero){
+  content-visibility:auto;
+  contain-intrinsic-size:800px;
+}
+.cacha-page .marquee-track,
+.cacha-page .testimonial-track{
+  will-change:transform;
+}
