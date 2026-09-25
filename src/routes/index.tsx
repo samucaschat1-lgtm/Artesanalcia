@@ -79,10 +79,12 @@ function Index() {
 
       <section className="testimonials section">
         <div className="section-kicker">RESULTADOS COMPARTILHADOS</div>
-        <h2>Quem conhece o material, compartilha:</h2>
-        <p>Relatos de quem já conheceu a coleção de receitas e materiais extras.</p>
+        <h2>Veja o que dizem sobre o material:</h2>
+        <p>Confira os relatos sobre as receitas de cachaças artesanais.</p>
         <div className="testimonial-grid">
-          {["“Material muito organizado e fácil de consultar. Gostei bastante da variedade de receitas.”","“As receitas e os guias extras deixam o material bem completo para quem quer testar sabores diferentes.”","“Gostei de ter tudo reunido em um único material e poder consultar pelo celular.”"].map((t,i)=><div className="quote" key={i}><div className="stars">★★★★★</div><p>{t}</p><strong>Cliente verificado</strong></div>)}
+          {[3,5,2,4,1].map((n)=><article className="quote testimonial-image" key={n}>
+            <img src={IMG + "depoimento-" + n + "-600.webp"} alt={"Depoimento " + n + " sobre as receitas de cachaças artesanais"} loading="lazy" decoding="async" />
+          </article>)}
         </div>
       </section>
 
