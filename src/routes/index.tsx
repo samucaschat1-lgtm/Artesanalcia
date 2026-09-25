@@ -185,8 +185,7 @@ function Index() {
         <div className="narrow hero-inner">
           <p className="eyebrow">Mega Pack 3D · Edição 2026</p>
           <h1>
-            +500 <mark>ARQUIVOS STL</mark> DE
-            <mark>BRINQUEDOS E MODELOS 3D</mark> PRONTOS PARA VOCÊ IMPRIMIR, CRIAR E VENDER
+            +500 <mark>ARQUIVOS STL</mark> DE <mark>BRINQUEDOS E MODELOS 3D</mark> PRONTOS PARA VOCÊ IMPRIMIR, CRIAR E VENDER
           </h1>
           <EmptyMedia className="hero-product empty-image-placeholder" />
 
