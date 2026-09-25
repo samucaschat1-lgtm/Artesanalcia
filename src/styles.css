@@ -93,3 +93,8 @@ body,.cacha-page,button,input,textarea,select{font-family:var(--font-sans)}
   html{scroll-behavior:auto}
   .marquee-track,.testimonial-track{animation:none!important}
 }
+
+
+/* Mockup do plano básico */
+.basic-mockup{width:min(280px,100%);height:190px;object-fit:contain;display:block;margin:0 auto 14px}
+@media(max-width:520px){.basic-mockup{width:min(250px,100%);height:170px;margin-bottom:12px}}
