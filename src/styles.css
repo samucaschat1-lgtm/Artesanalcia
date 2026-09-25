@@ -820,3 +820,11 @@ body{
   transform:scaleX(1.18) scaleY(0.92) !important;
   transform-origin:center center !important;
 }
+
+/* Redução adicional do tamanho das imagens */
+.cacha-page .hero-mockup,
+.cacha-page .plan.simple .basic-mockup,
+.cacha-page .plan.featured > img{
+  transform:scaleX(1.18) scaleY(0.82) !important;
+  transform-origin:center center !important;
+}
