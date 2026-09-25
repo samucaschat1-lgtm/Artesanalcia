@@ -40,3 +40,6 @@ body,.cacha-page,button,input,textarea,select{font-family:var(--font-sans)}
 .offer .section-kicker{color:var(--gold)}.price{color:var(--brown)}.installments strong,.cash strong{color:var(--green)}
 .badge{background:var(--gold);letter-spacing:.04em}.faq summary{color:var(--brown);font-weight:850}.faq summary span{color:var(--gold)}
 .final-cta h2{color:#fff}.micro,footer{font-family:var(--font-sans)}
+
+/* Formas de pagamento */
+.payment h3{color:var(--brown);font-size:22px;margin-bottom:8px}.payment>p{color:var(--muted);font-weight:600}.pay-icons{gap:14px;margin:24px 0 30px}.pay-icons img{width:72px;height:42px;object-fit:contain;background:#fff;border:1px solid #e8ddd2;border-radius:10px;padding:8px 12px;display:block}.pay-icons img:nth-child(3){padding:7px 10px}.pay-icons img:nth-child(4){padding:8px 12px}@media(max-width:520px){.pay-icons{gap:8px}.pay-icons img{width:66px;height:40px}}
