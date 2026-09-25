@@ -279,7 +279,7 @@ function Price({
             </ul>
           </div>
           <div className="centered">
-            <Cta>QUIERO VER LOS +100 PROYECTOS</Cta>
+            <Cta>QUIERO VER LOS +500 ARCHIVOS STL</Cta>
           </div>
         </div>
         <Carousel landscape />
@@ -428,7 +428,7 @@ function Price({
             {[
               {
                 name: "Carlos Martínez",
-                place: "Taller de herrería · Ciudad de México",
+                place: "Taller de impresión 3D · Ciudad de México",
                 text: "Tenía siempre los mismos modelos para ofrecer. Ahora, cuando un cliente pide algo diferente, abro la biblioteca y ya tengo varios proyectos para mostrarle. Se cerró mi primer portón corredizo en dos semanas.",
                 avatar: null,
               },
