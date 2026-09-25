@@ -22,9 +22,10 @@ export const Route = createFileRoute("/")({
 });
 
 function Countdown() {
-  const [seconds, setSeconds] = useState(13 * 60 + 56);
+  const initialSeconds = 13 * 60 + 56;
+  const [seconds, setSeconds] = useState(initialSeconds);
   useEffect(() => {
-    const timer = setInterval(() => setSeconds((s) => (s > 0 ? s - 1 : 13 * 60 + 56)), 1000);
+    const timer = setInterval(() => setSeconds((s) => (s > 0 ? s - 1 : initialSeconds)), 1000);
     return () => clearInterval(timer);
   }, []);
   const m = String(Math.floor(seconds / 60)).padStart(2, "0");
@@ -32,7 +33,7 @@ function Countdown() {
   return <>{m}:{s}</>;
 }
 
-const bonuses = [
+const bonuses: readonly (readonly [string, string, string, string])[] = [
   ["BÔNUS 01", "bonus-1-600.webp", "Manual de Higiene e de Conservação", "Conheça os cuidados de higiene, armazenamento e conservação da sua cachaça."],
   ["BÔNUS 02", "bonus-2-600.webp", "Guia de Precificação e Apresentação Profissional", "Organize seus custos e aprimore a apresentação do seu produto artesanal."],
   ["BÔNUS 03", "bonus-3-600.webp", "50 Drinks e Coquetéis", "Explore 50 combinações para levar criatividade e tradição a cada brinde."],
@@ -152,5 +153,16 @@ function FAQ() {
     ["Funciona no celular?","Sim. Por ser digital, você pode consultar o material pelo celular."],
     ["Tem garantia?","Sim. Você tem 7 dias para conhecer o material e solicitar o reembolso conforme as condições da plataforma."]
   ];
-  return <section className="faq section"><div className="section-kicker">DÚVIDAS FREQUENTES</div><h2>Perguntas frequentes</h2>{items.map(([q,a])=><details key={q}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</section>
+  return (
+    <section className="faq section">
+      <div className="section-kicker">DÚVIDAS FREQUENTES</div>
+      <h2>Perguntas frequentes</h2>
+      {items.map(([q, a]) => (
+        <details key={q}>
+          <summary>{q}<span>+</span></summary>
+          <p>{a}</p>
+        </details>
+      ))}
+    </section>
+  );
 }
