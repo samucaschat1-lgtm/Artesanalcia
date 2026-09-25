@@ -113,10 +113,10 @@ function Index() {
         <h3>🔒 Formas de pagamento</h3>
         <p>Cartão de crédito em até 5x sem juros ou Pix aprovado na hora</p>
         <div className="pay-icons" aria-label="Formas de pagamento">
-          <img src="https://cdn.simpleicons.org/visa/1434CB" alt="Visa"/>
-          <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="Mastercard"/>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Logotipo_da_Elo.svg" alt="Elo"/>
-          <img src="https://cdn.simpleicons.org/pix/32BCAD" alt="Pix"/>
+          <img src="https://cdn.simpleicons.org/visa/1434CB" alt="Visa" width="56" height="32" loading="lazy" decoding="async"/>
+          <img src="https://cdn.simpleicons.org/mastercard/EB001B" alt="Mastercard" width="56" height="32" loading="lazy" decoding="async"/>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Logotipo_da_Elo.svg" alt="Elo" width="56" height="32" loading="lazy" decoding="async"/>
+          <img src="https://cdn.simpleicons.org/pix/32BCAD" alt="Pix" width="56" height="32" loading="lazy" decoding="async"/>
         </div>
         <img src={IMG+"selo-compra-segura-600.webp"} alt="Compra segura, satisfação garantida e privacidade protegida" className="seal"/>
         <img src={IMG+"garantia-7-dias-risco-zero-420.webp"} alt="Selo de garantia de 7 dias com risco zero" className="guarantee-img"/>
