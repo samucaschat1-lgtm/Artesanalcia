@@ -812,3 +812,11 @@ body{
   height:auto !important;
   object-fit:contain !important;
 }
+
+/* Reduzir levemente o tamanho das imagens mantendo o achatamento horizontal */
+.cacha-page .hero-mockup,
+.cacha-page .plan.simple .basic-mockup,
+.cacha-page .plan.featured > img{
+  transform:scaleX(1.18) scaleY(0.92) !important;
+  transform-origin:center center !important;
+}
