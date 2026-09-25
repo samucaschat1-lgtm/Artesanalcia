@@ -89,24 +89,6 @@ const bonuses = [
     items: ["Referência de preços", "Organização dos valores", "Apoio para calcular seus produtos"],
     value: "R$27",
   },
-  {
-    title: "🎁 BÔNUS 03 — GUIA RÁPIDO DE CONFIGURAÇÃO PARA IMPRESSÃO",
-    subtitle: "Orientações práticas para facilitar seus primeiros testes e ajustes na impressão dos modelos.",
-    items: ["Orientações práticas", "Primeiros testes", "Ajustes de impressão"],
-    value: "R$27",
-  },
-  {
-    title: "🎁 BÔNUS 04 — MOCKUPS PRONTOS PARA DIVULGAÇÃO",
-    subtitle: "Materiais visuais para ajudar você a apresentar seus produtos e criar divulgações mais profissionais.",
-    items: ["Mockups para produtos", "Materiais para divulgação", "Apresentação mais profissional"],
-    value: "R$27",
-  },
-  {
-    title: "🎁 BÔNUS 05 — GUIA DE ACABAMENTO E PINTURA PARA PEÇAS 3D",
-    subtitle: "Dicas para melhorar o acabamento, personalizar seus modelos e valorizar suas peças na hora da venda.",
-    items: ["Dicas de acabamento", "Personalização dos modelos", "Valorização das peças"],
-    value: "R$27",
-  },
 ];
 
 const faq: [string, string][] = [
