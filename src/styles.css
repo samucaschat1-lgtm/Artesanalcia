@@ -476,3 +476,33 @@ body{
     max-height:none;
   }
 }
+
+
+/* Correção definitiva: imagens dos planos sem distorção */
+.plan.simple .basic-mockup,
+.plan.featured > img{
+  width:auto !important;
+  max-width:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center;
+  display:block !important;
+  flex:none !important;
+  transform:none !important;
+}
+.plan.simple .basic-mockup{
+  max-width:min(350px,100%) !important;
+}
+.plan.featured > img{
+  max-width:min(390px,100%) !important;
+}
+@media(max-width:520px){
+  .plan.simple .basic-mockup{
+    max-width:min(330px,100%) !important;
+  }
+  .plan.featured > img{
+    max-width:min(330px,100%) !important;
+  }
+}
