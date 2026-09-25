@@ -856,3 +856,9 @@ body{
 .cacha-page .testimonial-track{
   will-change:transform;
 }
+
+
+/* Performance final: evitar trabalho de pintura fora da viewport */
+.cacha-page .marquee-track,
+.cacha-page .testimonial-track{backface-visibility:hidden;transform:translateZ(0);}
+.cacha-page img{content-visibility:auto;}
