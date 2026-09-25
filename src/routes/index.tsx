@@ -100,7 +100,7 @@ const faq: [string, string][] = [
   ["O que eu recebo?", "Você recebe acesso digital à coleção com mais de 5.000 projetos, moldes e referências, conforme o plano escolhido."],
   ["Os projetos são digitais?", "Sim. O material é digital e pode ser consultado pelo celular, tablet ou computador."],
   ["Preciso ter uma oficina?", "Não. O material serve como biblioteca de referências para quem fabrica, estuda projetos ou busca novas ideias de produtos."],
-  ["Posso usar os projetos para fabricar produtos?", "A utilização deve seguir a licença e as condições aplicáveis aos arquivos. Confira os termos do material recebido antes de uso comercial."],
+  ["Posso usar os projetos para fabricar produtos?", "A utilização deve seguir a licença e as condições aplicáveis aos arquivos. Consulta los términos do material recebido antes de uso comercial."],
   ["Como recebo o acesso?", "Após a confirmação do pagamento, você recebe as instruções de acesso ao material digital."],
   ["O acesso é vitalício?", "O acesso é disponibilizado conforme as condições apresentadas na oferta e no checkout."],
   ["O material funciona no celular?", "Sim. Por ser digital, você pode consultar os materiais pelo celular, tablet ou computador."],
@@ -138,7 +138,7 @@ function Price({
     <div className="price">
       <p>de {old} por:</p>
       <div>
-        <small>R$</small>
+        <small>$</small>
         <strong>{price}</strong>
       </div>
       <p>pagamento único</p>
@@ -168,7 +168,7 @@ function Index() {
             vender.
           </p>
           <EmptyMedia className="hero-product empty-image-placeholder" />
-          <Price old="R$19,90" price="4,00" save="R$15,90" />
+          <Price old="$9,90" price="4" save="$5,90" />
           <CheckList
             items={[
               "Acceso digital inmediato",
@@ -420,7 +420,7 @@ function Index() {
           <div className="plans-grid">
             <article className="plan basic">
               <h3>PLAN BÁSICO</h3>
-              <p><strong>ESSENCIAL</strong></p>
+              <p><strong>ESENCIAL</strong></p>
               <EmptyMedia className="plan-image empty-image-placeholder" />
               <CheckList
                 items={[
@@ -430,7 +430,7 @@ function Index() {
                   "Consulta desde celular y computadora",
                 ]}
               />
-              <Price old="R$19,90" price="4,00" save="R$15,90" />
+              <Price old="$9,90" price="4" save="$5,90" />
               <Checkout href={BASIC_CHECKOUT}>QUIERO EL PLAN BÁSICO</Checkout>
             </article>
 
@@ -451,7 +451,7 @@ function Index() {
                   "Garantía de 7 días",
                 ]}
               />
-              <Price old="R$29,90" price="8,00" save="R$21,90" />
+              <Price old="$14,90" price="8" save="$6,90" />
               <Checkout href={PREMIUM_CHECKOUT}>QUIERO EL PLAN COMPLETO</Checkout>
               <EmptyMedia className="secure-seal" />
             </article>
@@ -497,7 +497,7 @@ function Index() {
             a fabricar, crear y vender.
           </p>
           <Checkout href={PREMIUM_CHECKOUT}>QUIERO EL PLAN COMPLETO</Checkout>
-          <p>Acesso digital • Pago único • Garantía de 7 días</p>
+          <p>Acceso digital • Pago único • Garantía de 7 días</p>
         </div>
       </section>
 
