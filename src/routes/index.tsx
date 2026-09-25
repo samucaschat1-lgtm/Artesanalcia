@@ -11,9 +11,9 @@ export const Route = createFileRoute("/")({
       { rel: "preload", as: "image", href: IMG + "mockup-novo-800-q80.webp" },
     ],
     meta: [
-      { title: "+150 Receitas de Cachaça Artesanal" },
-      { name: "description", content: "Biblioteca de Cachaças Artesanais com mais de 150 receitas, infusões, drinks e materiais extras." },
-      { property: "og:title", content: "+150 Receitas de Cachaça Artesanal" },
+      { title: "+200 Receitas de Cachaça Artesanal" },
+      { name: "description", content: "Biblioteca de Cachaças Artesanais com mais de 200 receitas, infusões, drinks e materiais extras." },
+      { property: "og:title", content: "+200 Receitas de Cachaça Artesanal" },
       { property: "og:description", content: "Para começar a produzir na sua própria casa." },
       { property: "og:type", content: "website" },
     ],
@@ -47,8 +47,8 @@ function Index() {
 
       <section className="hero">
         <div className="eyebrow">BIBLIOTECA DE CACHAÇAS ARTESANAIS</div>
-        <h1><em>+150 Receitas de Cachaça Artesanal</em> Para Começar a Produzir na sua própria casa</h1>
-        <img className="hero-mockup" src={IMG + "mockup-novo-800-q80.webp"} fetchPriority="high" decoding="async" alt="Kit +150 Receitas de Cachaças Artesanais" />
+        <h1><em>+200 Receitas de Cachaça Artesanal</em> Para Começar a Produzir na sua própria casa</h1>
+        <img className="hero-mockup" src={IMG + "mockup-novo-800-q80.webp"} fetchPriority="high" decoding="async" alt="Kit +200 Receitas de Cachaças Artesanais" />
         <p className="lead">Explore receitas, infusões e combinações com frutas brasileiras para preparar sabores especiais e valorizar nossa tradição. Um universo de aromas e sabores em um só material.</p>
         <ul className="checks">
           <li>Receitas explicadas passo a passo</li><li>Infusões com frutas do Brasil</li><li>Drinks, licores e combinações variadas</li><li>Material digital para consultar no celular</li>
@@ -62,7 +62,7 @@ function Index() {
       </section>
 
       <section className="dark-section preview" id="receitas">
-        <div className="section-kicker">+150 RECEITAS NO MATERIAL COMPLETO</div>
+        <div className="section-kicker">+200 RECEITAS NO MATERIAL COMPLETO</div>
         <h2>Tradição e sabores para inspirar suas receitas:</h2>
         <a className="text-link" href="#oferta">Ver receitas completas ↓</a>
         <div className="marquee"><div className="marquee-track">{[...Array(2)].flatMap((_,set)=>["img-6-440.webp","img-9-440.webp","img-1-440.webp","img-4-440.webp","img-7-440.webp","img-2-440.webp","img-5-440.webp"].map((x,i)=><img key={"r"+set+i} src={IMG+x} alt={"Receita de cachaça "+(i+1)} loading="lazy" decoding="async" />))}</div></div>
@@ -117,7 +117,7 @@ function Index() {
         <h2>Escolha como quer começar hoje:</h2>
         <div className="plans">
           <article className="plan simple"><img className="basic-mockup" src={IMG+"mockup-novo-800-q80.webp"} alt="40 receitas de cachaças artesanais" loading="lazy" decoding="async"/><h3>40 RECEITAS DE CACHAÇAS</h3><ul><li>Material 100% digital</li><li>Acesso imediato após a compra</li></ul><div className="price">R$10,00</div><a className="cta" href={CAKTO_40}>QUERO 40 RECEITAS</a></article>
-          <article className="plan featured"><div className="badge">⭐ MELHOR CUSTO-BENEFÍCIO</div><img src="/ABD2FC2B-38C6-43EF-9AFD-93A72D439626.webp" alt="Kit completo com mais de 150 receitas de cachaças artesanais" loading="lazy" decoding="async"/><h3>KIT COMPLETO +150 RECEITAS</h3><p>Para quem quer explorar a tradição da cachaça, descobrir novos sabores e ter um repertório completo sempre à mão.</p><h4>O que está incluído:</h4><ul><li>+150 receitas de cachaças artesanais</li><li>Manual de Higiene e de Conservação</li><li>Guia de Precificação e Apresentação Profissional</li><li>50 Drinks e Coquetéis</li><li>Guia de Madeiras e Sabores</li><li>Guia de Harmonização</li><li>Material 100% digital</li><li>Acesso imediato</li><li>Garantia de 7 dias</li></ul><s>R$97,00</s><div className="installments">5x de <strong>R$4,98</strong></div><div className="cash">ou <strong>R$24,90 à vista</strong></div><a className="cta" href={CAKTO_FULL}>QUERO O KIT COMPLETO POR R$24,90</a><small>Pagamento único • Acesso imediato • Garantia de 7 dias</small></article>
+          <article className="plan featured"><div className="badge">⭐ MELHOR CUSTO-BENEFÍCIO</div><img src="/ABD2FC2B-38C6-43EF-9AFD-93A72D439626.webp" alt="Kit completo com mais de 200 receitas de cachaças artesanais" loading="lazy" decoding="async"/><h3>KIT COMPLETO +200 RECEITAS</h3><p>Para quem quer explorar a tradição da cachaça, descobrir novos sabores e ter um repertório completo sempre à mão.</p><h4>O que está incluído:</h4><ul><li>+200 receitas de cachaças artesanais</li><li>Manual de Higiene e de Conservação</li><li>Guia de Precificação e Apresentação Profissional</li><li>50 Drinks e Coquetéis</li><li>Guia de Madeiras e Sabores</li><li>Guia de Harmonização</li><li>Material 100% digital</li><li>Acesso imediato</li><li>Garantia de 7 dias</li></ul><s>R$97,00</s><div className="installments">5x de <strong>R$4,98</strong></div><div className="cash">ou <strong>R$24,90 à vista</strong></div><a className="cta" href={CAKTO_FULL}>QUERO O KIT COMPLETO POR R$24,90</a><small>Pagamento único • Acesso imediato • Garantia de 7 dias</small></article>
         </div>
       </section>
 
@@ -137,8 +137,8 @@ function Index() {
       <section className="risk section"><div className="section-kicker">🛡️ VOCÊ COMPRA SEM RISCO</div><h2>Conheça o material por 7 dias</h2><p>Explore o material com tranquilidade. Se precisar solicitar o reembolso dentro do prazo, siga as condições da plataforma.</p></section>
 
       <FAQ />
-      <section className="final-cta"><h2>Leve a tradição e os sabores do Brasil para suas próprias receitas.</h2><a className="cta" href="#oferta">🥃 QUERO ACESSO ÀS +150 RECEITAS</a></section>
-      <footer>© 2026 — +150 Receitas de Cachaças Artesanais<br/><small>Material digital educacional destinado a maiores de 18 anos. Aprecie com moderação.</small></footer>
+      <section className="final-cta"><h2>Leve a tradição e os sabores do Brasil para suas próprias receitas.</h2><a className="cta" href="#oferta">🥃 QUERO ACESSO ÀS +200 RECEITAS</a></section>
+      <footer>© 2026 — +200 Receitas de Cachaças Artesanais<br/><small>Material digital educacional destinado a maiores de 18 anos. Aprecie com moderação.</small></footer>
     </main>
   );
 }
@@ -147,7 +147,7 @@ function FAQ() {
   const items = [
     ["Preciso ter experiência para acompanhar?","Não. O material foi organizado para facilitar a consulta, mesmo para quem está começando."],
     ["Quais sabores vou encontrar?","Você encontrará combinações variadas, infusões com frutas, licores, drinks e outras sugestões."],
-    ["O que está incluído no Kit Completo?","Você recebe mais de 150 receitas, além dos cinco bônus apresentados nesta página."],
+    ["O que está incluído no Kit Completo?","Você recebe mais de 200 receitas, além dos cinco bônus apresentados nesta página."],
     ["Vou receber garrafas ou um livro físico?","Não. O produto é 100% digital."],
     ["Como recebo o material?","Após a confirmação da compra, o acesso ao material é disponibilizado digitalmente."],
     ["Funciona no celular?","Sim. Por ser digital, você pode consultar o material pelo celular."],
