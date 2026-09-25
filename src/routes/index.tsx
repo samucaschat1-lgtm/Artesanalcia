@@ -81,10 +81,12 @@ function Index() {
         <div className="section-kicker">RESULTADOS COMPARTILHADOS</div>
         <h2>Veja o que dizem sobre o material:</h2>
         <p>Confira os relatos sobre as receitas de cachaças artesanais.</p>
-        <div className="testimonial-grid">
-          {[3,5,2,4,1].map((n)=><article className="quote testimonial-image" key={n}>
-            <img src={IMG + "depoimento-" + n + "-600.webp"} alt={"Depoimento " + n + " sobre as receitas de cachaças artesanais"} loading="lazy" decoding="async" />
-          </article>)}
+        <div className="testimonial-carousel">
+          <div className="testimonial-track">
+            {[3,5,2,4,1,3,5,2,4,1].map((n,i)=><article className="quote testimonial-image" key={i}>
+              <img src={IMG + "depoimento-" + n + "-600.webp"} alt={"Depoimento " + n + " sobre as receitas de cachaças artesanais"} loading="lazy" decoding="async" />
+            </article>)}
+          </div>
         </div>
       </section>
 
