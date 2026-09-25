@@ -802,3 +802,13 @@ body{
   .cacha-page .plan.simple .basic-mockup,
   .cacha-page .plan.featured > img{max-width:100% !important;}
 }
+
+/* Ajuste horizontal das imagens principais */
+.cacha-page .hero-mockup,
+.cacha-page .plan.simple .basic-mockup,
+.cacha-page .plan.featured > img{
+  transform:scaleX(1.18) !important;
+  transform-origin:center center !important;
+  height:auto !important;
+  object-fit:contain !important;
+}
