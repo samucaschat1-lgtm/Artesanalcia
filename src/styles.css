@@ -73,3 +73,9 @@ body,.cacha-page,button,input,textarea,select{font-family:var(--font-sans)}
   .bonus-total>b{font-size:26px}
   .bonus-total span{font-size:11px}
 }
+
+/* Ícones de confiança do hero */
+.trust-micro{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap}
+.trust-micro span{display:inline-flex;align-items:center;gap:6px;color:#7b7068;font-weight:600}
+.trust-micro img{width:17px;height:17px;display:block;object-fit:contain}
+@media(max-width:520px){.trust-micro{gap:12px}.trust-micro span{font-size:11px}.trust-micro img{width:16px;height:16px}}
