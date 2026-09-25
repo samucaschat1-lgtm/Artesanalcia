@@ -244,14 +244,14 @@ body,.cacha-page,button,input,textarea,select{font-family:var(--font-sans)}
 }
 
 
-/* Ajuste dos carrosseis: o primeiro permanece compacto e o segundo volta ao tamanho original */
+/* Ajuste dos carrosseis: somente o carrossel de baixo fica maior */
 .preview .marquee:not(.preview-large) img{width:170px;height:215px}
-.preview .preview-large img{width:195px;height:250px}
+.preview .preview-large img{width:300px;height:385px}
 @media(max-width:850px){
   .preview .marquee:not(.preview-large) img{width:170px;height:215px}
-  .preview .preview-large img{width:195px;height:250px}
+  .preview .preview-large img{width:250px;height:320px}
 }
 @media(max-width:520px){
   .preview .marquee:not(.preview-large) img{width:125px;height:165px}
-  .preview .preview-large img{width:145px;height:190px}
+  .preview .preview-large img{width:210px;height:270px}
 }
