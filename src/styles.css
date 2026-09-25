@@ -51,3 +51,14 @@
   .previews,.section,footer{content-visibility:auto;contain-intrinsic-size:1px 600px}
 }
 .carousel-track{backface-visibility:hidden;transform:translateZ(0)}
+
+/* Reservas de imagem: todos os espaços permanecem no layout para futuras imagens */
+.empty-image-placeholder,.carousel-placeholder{visibility:hidden;background:transparent;}
+.empty-media.hero-product{width:100%;max-width:560px;height:300px;margin:0 auto .2rem;}
+.empty-media.problem-image{width:100%;max-width:500px;height:300px;margin:0 auto .9rem;}
+.empty-media.material-image{width:100%;max-width:520px;height:360px;margin:0 auto 1.25rem;}
+.empty-media.bonus-image{width:100%;aspect-ratio:4/3;height:auto;display:block;}
+.empty-media.plan-image{width:100%;max-width:320px;height:360px;margin:0 auto .75rem;display:block;}
+.empty-media.guarantee-seal-image{width:min(100%,260px);height:260px;margin:.25rem auto 1rem;display:block;}
+.review-avatar-placeholder{width:44px;height:44px;border-radius:50%;flex:none;visibility:hidden;}
+@media (max-width:767px){.empty-media.hero-product{height:260px}.empty-media.problem-image{height:250px}.empty-media.material-image{height:300px}.empty-media.plan-image{height:300px}}
