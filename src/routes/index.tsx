@@ -46,14 +46,14 @@ const CheckList = ({ items }: { items: string[] }) => (
 
 const benefits: [string, string][] = [
   ["+500 arquivos STL", "Una gran variedad de archivos 3D para baixar, organizar y tener siempre disponibles quando quiser imprimir algo nuevo."],
-  ["Juguetes y modelos 3D", "Encontre diferentes categorias de juguetes, figuras, personagens, objetos decorativos y modelos para impressão 3D."],
-  ["Prontos para imprimir", "Ten una biblioteca digital de arquivos STL para consultar y elegir tus próximos modelos de impresión."],
+  ["Brinquedos y modelos 3D", "Encontre diferentes categorias de juguetes, figuras, personagens, objetos decorativos y modelos para impressão 3D."],
+  ["Prontos para imprimir", "Ten una biblioteca digital de arquivos STL para consultar y elegir tus próximos modelos de impressão."],
   ["Mais opções para criar", "Amplie tu colección de modelos 3D y descubre nuevas piezas para imprimir, personalizar y coleccionar."],
 ];
 
 const problems = [
   "Pasar horas buscando arquivos STL en diferentes sitios para encontrar un modelo que te interese.",
-  "Ter pocas opciones de brinquedos e modelos 3D para imprimir en tu colección.",
+  "Ter pocas opções de brinquedos e modelos 3D para imprimir en tu colección.",
   "Encontrar una idea para imprimir y no tener un archivo STL adecuado para comenzar.",
   "Perder tiempo buscando, organizando y separando archivos de diferentes fuentes.",
 ];
@@ -61,14 +61,14 @@ const problems = [
 const solutions = [
   "Ter +500 arquivos STL organizados para consultar quando quiser imprimir algo nuevo.",
   "Encontrar juguetes, figuras y modelos 3D para diferentes momentos y proyectos.",
-  "Elegir rápidamente un modelo y tener el archivo listo para llevar a tu flujo de impresión.",
+  "Elegir rápidamente un modelo y tener el archivo listo para llevar a tu flujo de impressão.",
   "Ampliar tu biblioteca digital y descubrir nuevas posibilidades para imprimir y personalizar.",
 ];
 const bonuses = [
   {
     title: "COLECCIÓN EXTRA DE FIGURAS 3D",
-    subtitle: "modelos adicionales para ampliar tu biblioteca de impresión",
-    items: ["Más figuras para imprimir", "Nuevos modelos para coleccionar", "Ideas para personalizar tus impresiones", "Archivos organizados para facilitar tu consulta"],
+    subtitle: "modelos adicionales para ampliar tu biblioteca de impressão",
+    items: ["Más figuras para imprimir", "Nuevos modelos para coleccionar", "Ideas para personalizar tus impresiones", "Arquivos organizados para facilitar tu consulta"],
     value: "$27",
   },
   {
@@ -80,13 +80,13 @@ const bonuses = [
   {
     title: "PACK EXTRA + GUÍA DE ORGANIZACIÓN",
     subtitle: "más archivos y una forma práctica de mantener tu biblioteca organizada",
-    items: ["Modelos adicionales", "Categorías para organizar tus STL", "Ideas para separar tus archivos", "Más facilidad para encontrar tus modelos"],
+    items: ["Modelos adicionales", "Categorias para organizar tus STL", "Ideas para separar tus archivos", "Más facilidad para encontrar tus modelos"],
     value: "$47",
   },
 ];
 
 const faq: [string, string][] = [
-  ["¿Cómo recibiré el material?", "Após a confirmação da compra, você receberá acceso al material digital para baixar los archivos y comenzar a consultar tu biblioteca STL."],
+  ["¿Cómo receberé el material?", "Após a confirmação da compra, você receberá acceso al material digital para baixar los archivos y comenzar a consultar tu biblioteca STL."],
   ["¿Qué inclui el plan básico?", "O plano básico inclui el material principal con +500 arquivos STL de brinquedos e modelos 3D para baixar e imprimir."],
   ["¿Qué inclui el plan completo?", "O plano completo inclui los +500 arquivos STL más los bonos complementarios para ampliar y organizar tu biblioteca de modelos 3D."],
   ["¿Necesito una impresora 3D para usarlo?", "Los archivos están pensados para impressão 3D. Você pode baixarlos y utilizarlos según tu impresora, materiales y configuración."],
@@ -96,7 +96,7 @@ const faq: [string, string][] = [
   ["¿Puedo imprimir los modelos en mi casa?", "Sí, siempre que cuentes con una impresora 3D compatible y realices la preparación y configuración adecuadas para cada archivo."],
   ["¿Puedo personalizar los modelos?", "Depende del archivo y del software que utilices. Muchos modelos pueden ser escalados o modificados antes de imprimirlos."],
   ["¿Necesito alguna aplicación para usarlo?", "Você precisará un programa compatible para abrir o preparar los arquivos STL antes de enviarlos a tu impresora 3D."],
-  ["¿Puedo guardar los archivos?", "Sí. Después de recibir el material, puedes baixar y organizar los archivos en tu dispositivo según tus necesidades."],
+  ["¿Puedo guardar los archivos?", "Sí. Después de receber el material, puedes baixar y organizar los archivos en tu dispositivo según tus necesidades."],
   ["¿Existe garantía?", "Sí. Tienes 15 días de garantía para acceder y probar el material. Si no es lo que necesitas, puedes solicitar el reembolso dentro de ese plazo."],
   ["¿El acceso es por tiempo limitado?", "No. Una vez recibido el material, puedes conservar los archivos para consultarlos quando quiser."],
 ];
@@ -295,9 +295,9 @@ function Price({
             <CheckList
               items={[
                 "+500 arquivos STL organizados para baixar",
-                "Juguetes, figuras, personagens y modelos 3D",
-                "Archivos STL para explorar diferentes posibilidades de impressão 3D",
-                "Más modelos para ampliar tu biblioteca de impresión",
+                "Brinquedos, figuras, personagens y modelos 3D",
+                "Arquivos STL para explorar diferentes posibilidades de impressão 3D",
+                "Más modelos para ampliar tu biblioteca de impressão",
                 "Acceso digital inmediato a los arquivos STL",
               ]}
             />
@@ -317,7 +317,7 @@ function Price({
             {bonuses.map((bonus, i) => (
               <article className="bonus-card" key={bonus.title}>
                 <span className="bonus-label">
-                  BONO {i + 1}
+                  BÔNUS {i + 1}
                   {i === 2 ? " E 4" : ""}
                 </span>
                 <EmptyMedia className="bonus-image empty-image-placeholder" />
@@ -348,9 +348,9 @@ function Price({
         <CheckList
           items={[
             "+500 arquivos STL de brinquedos e modelos 3D",
-            "Juguetes, figuras y modelos 3D para imprimir",
+            "Brinquedos, figuras y modelos 3D para imprimir",
             "Modelos 3D de diferentes categorias",
-            "Acceso inmediato al material digital",
+            "Acesso imediato al material digital",
           ]}
         />
 
@@ -380,17 +380,17 @@ function Price({
         <EmptyMedia className="plan-image empty-image-placeholder" />
 
         <span className="bonus-badge">
-          ⚡ MÁS PROYECTOS + BONOS
+          ⚡ MÁS PROYECTOS + BÔNUSS
         </span>
 
         <CheckList
           items={[
             "+500 arquivos STL de brinquedos e modelos 3D",
-            "🎁 Bono 1 - Guía de Precios para Herrería",
-            "🎁 Bono 2 - Catálogo de Productos para Ofrecer",
-            "🎁 Bono 3 - Catálogo de Ideas",
-            "🎁 Bono 4 - Lista de Proveedores",
-            "Acceso inmediato por WhatsApp y correo electrónico",
+            "🎁 Bônus 1 - Guía de Precios para Herrería",
+            "🎁 Bônus 2 - Catálogo de Productos para Ofrecer",
+            "🎁 Bônus 3 - Catálogo de Ideas",
+            "🎁 Bônus 4 - Lista de Proveedores",
+            "Acesso imediato por WhatsApp y correo electrónico",
           ]}
         />
 
