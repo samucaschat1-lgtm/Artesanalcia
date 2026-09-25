@@ -740,3 +740,15 @@ body{
     width:min(330px,100%) !important;
   }
 }
+
+
+/* Correção final do achatamento vertical dos mockups */
+.cacha-page .hero-mockup,
+.cacha-page .plan.simple .basic-mockup,
+.cacha-page .plan.featured > img{
+  object-fit:fill !important;
+  aspect-ratio:4 / 5 !important;
+  height:auto !important;
+  transform:scaleY(1.30) !important;
+  transform-origin:center center !important;
+}
