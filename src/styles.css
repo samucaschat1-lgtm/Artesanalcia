@@ -692,3 +692,19 @@ body{
     max-width:48px !important;
   }
 }
+
+
+/* Correção visual final dos mockups: recupera a altura aparente da arte sem alterar o layout */
+.cacha-page .hero-mockup,
+.cacha-page .plan.simple .basic-mockup,
+.cacha-page .plan.featured > img{
+  transform:scaleY(1.14) !important;
+  transform-origin:center center !important;
+}
+@media(max-width:520px){
+  .cacha-page .hero-mockup,
+  .cacha-page .plan.simple .basic-mockup,
+  .cacha-page .plan.featured > img{
+    transform:scaleY(1.10) !important;
+  }
+}
