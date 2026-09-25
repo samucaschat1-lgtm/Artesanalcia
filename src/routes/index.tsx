@@ -48,7 +48,7 @@ function Index() {
       <section className="hero">
         <div className="eyebrow">BIBLIOTECA DE CACHAÇAS ARTESANAIS</div>
         <h1><em>+150 Receitas de Cachaça Artesanal</em> Para Começar a Produzir na sua própria casa</h1>
-        <img className="hero-mockup" src={IMG + "mockup-novo-800-q80.webp" fetchPriority="high" decoding="async" alt="Kit +150 Receitas de Cachaças Artesanais" />
+        <img className="hero-mockup" src={IMG + "mockup-novo-800-q80.webp"} fetchPriority="high" decoding="async" alt="Kit +150 Receitas de Cachaças Artesanais" />
         <p className="lead">Explore receitas, infusões e combinações com frutas brasileiras para preparar sabores especiais e valorizar nossa tradição. Um universo de aromas e sabores em um só material.</p>
         <ul className="checks">
           <li>Receitas explicadas passo a passo</li><li>Infusões com frutas do Brasil</li><li>Drinks, licores e combinações variadas</li><li>Material digital para consultar no celular</li>
