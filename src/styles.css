@@ -285,3 +285,165 @@ body,.cacha-page,button,input,textarea,select{font-family:var(--font-sans)}
 .plan.simple a[href*="4468wep"]:hover{filter:brightness(1.08) saturate(1.08);transform:translateY(-3px);box-shadow:0 7px 0 #087326,0 17px 34px #16a53a80,inset 0 1px 0 #ffffff66}
 .plan.simple a[href*="4468wep"]:active{transform:translateY(2px);box-shadow:0 3px 0 #087326,0 8px 16px #16a53a55}
 @media(max-width:520px){.plan.simple a[href*="4468wep"]{min-height:62px;font-size:14px;padding:17px 18px}}
+
+
+/* Refinamento visual premium — página mais elegante e moderna */
+body{
+  background:
+    radial-gradient(circle at 8% 4%,#fff8eb 0,transparent 28%),
+    radial-gradient(circle at 92% 18%,#f1dfc1 0,transparent 24%),
+    var(--bg);
+}
+.cacha-page{position:relative}
+.hero{
+  position:relative;
+  max-width:1120px;
+  padding:64px 24px 82px;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  width:520px;height:520px;
+  left:50%;top:100px;
+  transform:translateX(-50%);
+  background:radial-gradient(circle,#d5a45a22 0,transparent 68%);
+  pointer-events:none;
+  z-index:0;
+}
+.hero>*{position:relative;z-index:1}
+.hero h1{
+  max-width:980px;
+  text-wrap:balance;
+  text-shadow:0 2px 18px #6b3b1710;
+}
+.hero-mockup{
+  width:min(620px,96%);
+  max-height:540px;
+  margin:4px auto 28px;
+  filter:drop-shadow(0 24px 34px #3a21142a);
+}
+.lead{max-width:820px;font-size:19px}
+.checks{
+  background:#fffaf1cc;
+  border:1px solid #e2d1b6;
+  border-radius:18px;
+  padding:18px 22px;
+  box-shadow:0 12px 32px #3a21140b;
+}
+.checks li{padding:4px 0}
+
+.dark-section{
+  position:relative;
+  background:
+    radial-gradient(circle at 15% 10%,#8a5b321c,transparent 30%),
+    radial-gradient(circle at 85% 80%,#c58a3220,transparent 28%),
+    linear-gradient(145deg,#2e1b10,#422617 55%,#2b190e);
+}
+.dark-section:before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,#ffffff04,transparent);
+  pointer-events:none;
+}
+.recipe-grid img,.marquee img{
+  box-shadow:0 10px 25px #120a0526;
+  border:1px solid #ffffff18;
+}
+.marquee img{transition:transform .25s ease,filter .25s ease}
+.marquee img:hover{transform:translateY(-5px);filter:brightness(1.05)}
+
+.section{padding-top:88px;padding-bottom:88px}
+.section>h2{max-width:900px;margin-left:auto;margin-right:auto}
+.steps article,.quote,.security-card,.plan,.faq details{
+  box-shadow:0 12px 34px #3922150b;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.steps article:hover,.quote:hover,.plan:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 42px #39221518;
+}
+.steps article{background:linear-gradient(145deg,#fffdf8,#f8efdf);border-color:#e1d0b1}
+.step-icon{
+  width:48px;height:48px;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 10px;
+  background:#f0dfbd;border-radius:14px;
+}
+
+.testimonials{position:relative}
+.testimonial-image img{box-shadow:0 14px 30px #24140b18}
+
+.bonus{
+  position:relative;
+  background:
+    radial-gradient(circle at 80% 20%,#b47b321c,transparent 28%),
+    linear-gradient(145deg,#342012,#422617);
+}
+.bonus .section-kicker{color:#e6b96e}
+.bonus-grid{gap:18px}
+.bonus-card{
+  box-shadow:0 12px 28px #1c0d0718;
+  border:1px solid #e4d2b4;
+}
+.bonus-card img{box-shadow:0 5px 14px #2b170b12}
+
+.offer{
+  padding-top:80px;
+  padding-bottom:88px;
+}
+.plans{max-width:1050px;margin:0 auto}
+.plan{padding:34px}
+.plan.simple{
+  background:linear-gradient(145deg,#fffefb,#f7ecd8);
+}
+.featured{
+  background:linear-gradient(145deg,#fffefb,#f5ead7);
+  box-shadow:0 20px 55px #6d431d22;
+}
+.featured>img{
+  width:min(390px,100%);
+  filter:drop-shadow(0 18px 26px #3a211428);
+}
+.badge{
+  box-shadow:0 6px 15px #7c531c33;
+}
+.price{font-size:38px}
+.featured .installments{font-weight:900}
+.payment{
+  padding-top:35px;
+  padding-bottom:70px;
+}
+.pay-icons img{filter:drop-shadow(0 3px 5px #0001)}
+.security-card{
+  background:linear-gradient(145deg,#fffdf8,#f5ead8);
+}
+
+.risk{
+  background:
+    radial-gradient(circle at 50% 0,#c58a3224,transparent 45%),
+    #eee3cc;
+  padding-top:70px;
+  padding-bottom:70px;
+}
+.faq details:hover{border-color:#c58a32;box-shadow:0 10px 25px #39221512}
+.faq summary{min-height:58px;align-items:center}
+.final-cta{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 0,#c58a3230,transparent 42%),
+    linear-gradient(145deg,#2b190e,#432618);
+}
+.final-cta .cta{box-shadow:0 7px 0 #087326,0 18px 38px #16a53a44}
+
+@media(max-width:520px){
+  .hero{padding:48px 16px 58px}
+  .hero h1{font-size:35px}
+  .lead{font-size:16px}
+  .checks{padding:14px 16px;border-radius:14px}
+  .section{padding-top:62px;padding-bottom:62px}
+  .dark-section{padding-top:58px;padding-bottom:58px}
+  .offer{padding-top:58px;padding-bottom:62px}
+  .plan{padding:24px 18px}
+  .featured>img{width:min(330px,100%)}
+}
