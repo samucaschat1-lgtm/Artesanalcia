@@ -944,3 +944,39 @@ body{
   background:transparent !important;
   box-shadow:none !important;
 }
+
+/* Performance mobile: reduzir custo de memória e pintura sem mudar o layout */
+@media (max-width: 850px){
+  .cacha-page .marquee-track,
+  .cacha-page .testimonial-track{
+    will-change:auto;
+    backface-visibility:visible;
+  }
+
+  .cacha-page .steps article,
+  .cacha-page .quote,
+  .cacha-page .bonus-card,
+  .cacha-page .security-card,
+  .cacha-page .plan{
+    contain:layout paint;
+  }
+}
+
+@media (max-width: 520px){
+  .cacha-page .hero{
+    contain:layout paint;
+  }
+
+  .cacha-page .marquee,
+  .cacha-page .testimonial-carousel{
+    contain:layout paint;
+  }
+
+  .cacha-page .cta{
+    box-shadow:0 4px 0 #087326,0 8px 18px #16a53a40,inset 0 1px 0 #ffffff44;
+  }
+
+  .cacha-page .cta:hover{
+    transform:none;
+  }
+}
