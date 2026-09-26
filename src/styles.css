@@ -980,3 +980,108 @@ body{
     transform:none;
   }
 }
+
+/* Centralização consistente de textos e imagens */
+.cacha-page .hero,
+.cacha-page .dark-section,
+.cacha-page .section,
+.cacha-page .final-cta,
+.cacha-page footer{
+  text-align:center;
+}
+.cacha-page .hero > *,
+.cacha-page .dark-section > *,
+.cacha-page .section > *,
+.cacha-page .final-cta > *{
+  margin-left:auto;
+  margin-right:auto;
+}
+.cacha-page .hero h1,
+.cacha-page .hero .lead,
+.cacha-page .section>h2,
+.cacha-page .section>p,
+.cacha-page .dark-section>h2,
+.cacha-page .dark-section>.section-intro{
+  text-align:center;
+}
+.cacha-page img{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.cacha-page .checks{
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+.cacha-page .checks li{
+  text-align:center;
+}
+.cacha-page .checks li:before{
+  margin-right:7px;
+}
+.cacha-page .steps article,
+.cacha-page .bonus-card,
+.cacha-page .plan,
+.cacha-page .security-card,
+.cacha-page .quote,
+.cacha-page .faq details{
+  text-align:center;
+}
+.cacha-page .bonus-card p,
+.cacha-page .bonus-card h3,
+.cacha-page .plan li,
+.cacha-page .steps p,
+.cacha-page .quote p,
+.cacha-page .faq details p{
+  text-align:center;
+}
+@media(max-width:520px){
+  .cacha-page .hero,
+  .cacha-page .section,
+  .cacha-page .dark-section,
+  .cacha-page .final-cta{
+    padding-left:16px;
+    padding-right:16px;
+  }
+  .cacha-page .checks{
+    width:100%;
+    max-width:420px;
+  }
+  .cacha-page .checks li{
+    text-align:center;
+  }
+  .cacha-page .bonus-card{
+    text-align:center;
+  }
+  .cacha-page .bonus-card p,
+  .cacha-page .bonus-card h3{
+    text-align:center;
+  }
+  .cacha-page .bonus-card img{
+    grid-column:1/-1;
+    grid-row:2;
+    justify-self:center;
+    margin:0 auto 8px;
+  }
+  .cacha-page .bonus-card h3{
+    grid-column:1/-1;
+    grid-row:3;
+  }
+  .cacha-page .bonus-card p{
+    grid-column:1/-1;
+    grid-row:4;
+  }
+  .cacha-page .bonus-card>b{
+    grid-column:1/-1;
+    grid-row:5;
+  }
+  .cacha-page .bonus-price{
+    grid-column:1/-1;
+    grid-row:6;
+  }
+  .cacha-page .bonus-card small{
+    grid-column:1/-1;
+    grid-row:7;
+  }
+}
