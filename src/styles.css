@@ -1085,3 +1085,24 @@ body{
     grid-row:7;
   }
 }
+
+
+/* Carrosséis automáticos contínuos — nunca param */
+.cacha-page .marquee-track,
+.cacha-page .testimonial-track{
+  animation-play-state:running !important;
+}
+
+/* Não pausar ao passar o mouse ou tocar */
+.cacha-page .marquee:hover .marquee-track,
+.cacha-page .testimonial-carousel:hover .testimonial-track{
+  animation-play-state:running !important;
+}
+
+/* Movimento contínuo também para quem prefere reduzir movimento */
+@media(prefers-reduced-motion:reduce){
+  .cacha-page .marquee-track,
+  .cacha-page .testimonial-track{
+    animation-play-state:running !important;
+  }
+}
